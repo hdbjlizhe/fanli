@@ -6,7 +6,7 @@
 
 set cstm_cont    美丽商品优惠购
 
-2.显示自定义方案
+2.显示自定义文案
 
 set show_cstm  true/false
 
