@@ -2,20 +2,24 @@
 
 1.自定义文案
 
-cstm_cont    美丽商品优惠购
+set cstm_cont    美丽商品优惠购
 
-2.显示历史价格
+2.显示自定义方案
 
-show_lsjg    true/false 
+set show_cstm  true/false
 
-3.显示货比3家
+3.显示历史价格
 
-show_hb3j    true/false
+set show_lsjg    true/false 
 
-4.显示图片
+4.显示货比3家
 
-show_pict    true/false
+set show_hb3j    true/false
 
-5.显示几张图片
+5.显示图片
 
-show_pict_num 1/2/3/4/5                     
+set show_pict    true/false
+
+6.显示几张图片
+
+set show_pict_num 1/2/3/4/5                     
