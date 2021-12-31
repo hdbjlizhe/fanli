@@ -36,4 +36,4 @@ set fanli listen qqgroup:263723430,wxgroup:22853622845
 
 9.转发给谁
 
-set fanli trasferto qq:282617666,qq:263723430,wx:othersuid
+set fanli trasferto qqgroup:263723430,wxgroup:othersuid
