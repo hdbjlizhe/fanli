@@ -24,4 +24,16 @@ set show_pict    true/false
 
 6.显示几张图片
 
-set show_pict_num 1/2/3/4/5                     
+set show_pict_num 1/2/3/4/5  
+
+7.开始监听转发
+
+set fanli transfer true/false
+
+8.监听谁
+
+set fanli listen qqgroup:263723430,wxgroup:22853622845
+
+9.转发给谁
+
+set fanli trasferto qq:282617666,qq:263723430,wx:othersuid
