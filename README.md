@@ -50,6 +50,8 @@ set fanli transfer true/false
 
 set fanli transferFrom qqgroup:263723430,wxgroup:22853622845
 
+set fanli transferListen qq:282617666,wx:wx_gheitil
+
 9.转发给谁
 
 set fanli trasferTo qqgroup:263723430,wxgroup:othersuid
