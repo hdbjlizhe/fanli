@@ -2,6 +2,18 @@
 
 交流群：418353744 线报群：263723430
 
+# 基础设置
+
+set fanli apikey XXXXXXXXXXXXXXXXXXXXX(dingdanxia apikey)
+
+pdd设置参考https://github.com/hdbjlizhe/fanli_pdd
+
+set fanli client_id XXXX(拼多多)
+
+set fanli client_key XXXX(拼多多)
+
+set fanli pid XXX(拼多多)
+
 # 显示
 
 1.自定义文案
