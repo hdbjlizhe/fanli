@@ -48,10 +48,10 @@ set fanli transfer true/false
 
 8.监听谁
 
-set fanli transferFrom qqgroup:263723430,wxgroup:22853622845
+set fanli transferFrom qqgroup:418353744,qqgroup:263723430,wxgroup:22853622845
 
-set fanli transferListen qq:282617666,wx:wx_gheitil
+set fanli transferListen qq:282617666,wx:hdbjlizhe
 
 9.转发给谁
 
-set fanli trasferTo qqgroup:263723430,wxgroup:othersuid
+set fanli trasferTo qqgroup:418353744,qqgroup:263723430,wxgroup:22853622845
