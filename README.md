@@ -40,18 +40,28 @@ set fanli show_pict    true/false
 
 set fanli show_pict_num 1/2/3/4/5 
 
+# 咖啡码
+
+指令：喝咖啡xxxxxxxxxx（说明：订单完成时间1小时内用此命令，订单完成时间为收货确认时间）
+
+或
+
+指令：喝咖啡xxxxxxxxxx+2021-12-31 10:00:00（说明：订单完成时间超过1小时用此命令）
+
+说明：xxxxxxxxxx为订单号，后面为订单完成时间（非下单时间）
+
+如果在确认收货后的1小时内可不用加时间
+
 # 监听转发
 
-7.开始监听转发
+set fanli transfer true/false 说明：开启关闭监听转链转发
 
-set fanli transfer true/false
-
-8.监听谁
+监听谁
 
 set fanli transferFrom qqgroup:418353744,qqgroup:263723430,wxgroup:22853622845
 
 set fanli transferListen qq:282617666,wx:hdbjlizhe
 
-9.转发给谁
+转发给谁
 
 set fanli trasferTo qqgroup:418353744,qqgroup:263723430,wxgroup:22853622845
