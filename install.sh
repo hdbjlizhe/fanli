@@ -48,13 +48,17 @@ sillyGirl()
     git clone https://ghproxy.com/https://github.com/ufuckee/jd_cookie.git;
     git clone https://ghproxy.com/https://github.com/cdle/jd_price.git;
     #编译
-    if [[ $? == 0 ]]; then 
-        cd ..;
-        sleep 3s 
-        echo "开始编译..."
-        go build;
-        echo "编译完成！！！"
-    fi
+    #if [[ $? == 0 ]]; then 
+    #    cd ..;
+    #    sleep 3s 
+    #    echo "开始编译..."
+    #    go build;
+    #    echo "编译完成！！！"
+    #fi
+    cd ..
+    sleep 3s
+    wget https://github.com/hdbjlizhe/fanli/releases/download/main/sillyGirl_amd64.tar.gz
+    tar -xzvf sillyGirl_amd64.tar.gz
     #将备份的文件拷进sillyGirl文件夹
     sleep 3s
     cd ..
