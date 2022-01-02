@@ -106,6 +106,9 @@ sillyGirl()
         echo "当前存在sillyGirl目录,准备备份数据文件..."
         cp sillyGirl/sillyGirl.cache ./
         sleep 3s
+        echo "准备备份sets.conf..."
+        cp sillyGirl/sets.conf ./
+        sleep 3s
         echo "准备备份js文件..."
         cp -r sillyGirl/develop/replies ./
         echo "sillyGirl文件夹删除中..."
@@ -156,6 +159,9 @@ sillyGirl()
     cd ..
     echo "拷贝数据文件到sillyGirl目录"
     cp ./sillyGirl.cache sillyGirl/;
+    sleep 3s
+    echo "拷贝sets.conf到sillyGirl目录"
+    cp ./sets.conf sillyGirl/;
     sleep 3s
     echo "拷贝js文件到sillyGirl目录"
     cp -r replies sillyGirl/develop/;
