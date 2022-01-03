@@ -12,9 +12,9 @@ set fanli jingpinku_appkey xxxxx
 
 set fanli jd_union_id xxxx
 
-淘宝对接
+淘宝和唯品会对接
 
-set fanli apikey XXXXXXXXXXXXXXXXXXXXX(dingdanxia apikey)
+set fanli apikey XXXXX(dingdanxia apikey)
 
 拼多多对接
 
