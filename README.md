@@ -64,4 +64,4 @@ set fanli transferListen qq:282617666,wx:hdbjlizhe
 
 转发给谁
 
-set fanli trasferTo qqgroup:418353744,qqgroup:263723430,wxgroup:22853622845
+set fanli transferTo qqgroup:418353744,qqgroup:263723430,wxgroup:22853622845
