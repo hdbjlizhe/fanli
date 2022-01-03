@@ -4,9 +4,19 @@
 
 # 基础设置
 
+JD对接
+
+set fanli jingpinku_appid xxxxx
+
+set fanli jingpinku_appkey xxxxx
+
+set fanli jd_union_id xxxx
+
+淘宝对接
+
 set fanli apikey XXXXXXXXXXXXXXXXXXXXX(dingdanxia apikey)
 
-pdd设置参考https://github.com/hdbjlizhe/fanli_pdd
+拼多多对接
 
 set fanli client_id XXXX(拼多多)
 
