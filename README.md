@@ -68,9 +68,11 @@ set fanli show_pict_num 1/2/3/4/5
 
 set fanli transfer true/false 说明：开启关闭监听转链转发
 
-监听谁
+监听什么群
 
 set fanli transferFrom qqgroup:418353744,qqgroup:263723430,wxgroup:22853622845
+
+监听上面设置的群中的某个人
 
 set fanli transferListen qq:282617666,wx:hdbjlizhe
 
