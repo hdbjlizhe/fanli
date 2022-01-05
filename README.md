@@ -4,10 +4,6 @@
 
 线报群：263723430
 
-# 更新版本
-
-指令：更新/update
-
 # 基础设置
 
 京东/淘宝/唯品会需要设置的参数：
@@ -27,6 +23,10 @@ set fanli client_id XXXX  (说明：多多进宝client_id)
 set fanli client_secret XXXX (说明：多多进宝client_secret)
 
 set fanli pid XXX (说明：多多进宝pid)
+
+# 更新版本
+
+指令：更新/update
 
 # 显示
 
