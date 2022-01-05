@@ -4,7 +4,7 @@
 
 # 基础设置
 
-京东/淘宝对接
+京东/淘宝/唯品会对接
 
 set fanli jingpinku_appid xxxxx
 
