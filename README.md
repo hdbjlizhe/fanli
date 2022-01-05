@@ -8,7 +8,7 @@
 
 # 基础设置
 
-京东/淘宝/唯品会对接
+京东/淘宝/唯品会需要设置的参数：
 
 set fanli jingpinku_appid xxxxx(京品库)
 
@@ -18,7 +18,7 @@ set fanli jd_union_id xxxx(京东联盟)
 
 set fanli apikey XXXXX(dingdanxia apikey)
 
-拼多多对接
+拼多多需要设置的参数：
 
 set fanli client_id XXXX(拼多多)
 
