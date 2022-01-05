@@ -10,21 +10,21 @@
 
 京东/淘宝/唯品会需要设置的参数：
 
-set fanli jingpinku_appid xxxxx(京品库)
+set fanli jingpinku_appid xxxxx (说明：京品库appid)
 
-set fanli jingpinku_appkey xxxxx(京品库)
+set fanli jingpinku_appkey xxxxx (说明：京品库appkey)
 
-set fanli jd_union_id xxxx(京东联盟)
+set fanli jd_union_id xxxx (说明：京东联盟ID)
 
-set fanli apikey XXXXX(dingdanxia apikey)
+set fanli apikey XXXXX (说明：订单夹apikey)
 
 拼多多需要设置的参数：
 
-set fanli client_id XXXX(拼多多)
+set fanli client_id XXXX  (说明：多多进宝client_id)
 
-set fanli client_secret XXXX(拼多多)
+set fanli client_secret XXXX (说明：多多进宝client_secret)
 
-set fanli pid XXX(拼多多)
+set fanli pid XXX (说明：多多进宝pid)
 
 # 显示
 
