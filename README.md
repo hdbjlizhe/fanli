@@ -20,7 +20,7 @@ set fanli apikey XXXXX(dingdanxia apikey)
 
 set fanli client_id XXXX(拼多多)
 
-set fanli client_key XXXX(拼多多)
+set fanli client_secret XXXX(拼多多)
 
 set fanli pid XXX(拼多多)
 
