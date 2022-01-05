@@ -16,7 +16,7 @@ set fanli jingpinku_appkey xxxxx (说明：京品库appkey)
 
 set fanli jd_union_id xxxx (说明：京东联盟ID)
 
-set fanli apikey XXXXX (说明：订单夹apikey)
+set fanli apikey XXXXX (说明：订单侠apikey)
 
 拼多多需要设置的参数：
 
