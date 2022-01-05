@@ -4,15 +4,13 @@
 
 # 基础设置
 
-JD对接
+京东/淘宝对接
 
 set fanli jingpinku_appid xxxxx
 
 set fanli jingpinku_appkey xxxxx
 
 set fanli jd_union_id xxxx
-
-淘宝和唯品会对接
 
 set fanli apikey XXXXX(dingdanxia apikey)
 
