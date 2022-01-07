@@ -90,4 +90,4 @@ set fanli transferTo qqgroup:418353744,qqgroup:263723430,wxgroup:22853622845
 
 # 短链的转链
 
-set fanli replyGroup false  (关闭群里的短链转链和回复)
+set fanli replyGroup 418353744  想回复短链的群
