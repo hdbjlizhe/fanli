@@ -54,8 +54,7 @@ set fanli show_pict    true/false
 
 set fanli show_pict_num 1/2/3/4/5 
 
-![QQ图片20220107115320](https://user-images.githubusercontent.com/22290807/148489408-c1501386-f9c5-4deb-a5c5-ed8412f010e5.jpg)
-
+![QQ图片20220107115320](https://user-images.githubusercontent.com/22290807/148489504-747120d5-bfef-436e-baeb-2af993eb81d7.jpg)
 
 # 咖啡码
 
