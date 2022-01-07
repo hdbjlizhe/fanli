@@ -54,6 +54,9 @@ set fanli show_pict    true/false
 
 set fanli show_pict_num 1/2/3/4/5 
 
+![QQ图片20220107115320](https://user-images.githubusercontent.com/22290807/148489408-c1501386-f9c5-4deb-a5c5-ed8412f010e5.jpg)
+
+
 # 咖啡码
 
 指令：喝咖啡xxxxxxxxxx（说明：订单完成时间1小时内用此命令，订单完成时间为收货确认时间）
