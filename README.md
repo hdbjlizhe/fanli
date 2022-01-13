@@ -76,7 +76,7 @@ set fanli onReplyGroup  true/false
 
 如果在确认收货后的1小时内发送指令可不用加时间
 
-# 监听转发
+# 短链的监听转发
 
 set fanli transfer true/false 说明：开启关闭监听转链转发
 
