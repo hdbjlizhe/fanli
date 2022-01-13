@@ -54,6 +54,10 @@ set fanli show_pict    true/false
 
 set fanli show_pict_num 1/2/3/4/5 
 
+7.是否回复群内的商品链接
+
+set fanli onReplyGroup  true/false
+
 ![QQ图片20220107115320](https://user-images.githubusercontent.com/22290807/148489504-747120d5-bfef-436e-baeb-2af993eb81d7.jpg)
 
 # 咖啡码
