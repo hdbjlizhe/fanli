@@ -92,7 +92,7 @@ set fanli transferListen qq:282617666,wx:hdbjlizhe
 
 set fanli transferTo qqgroup:418353744,qqgroup:263723430,wxgroup:22853622845
 
-# 短链的转链
+# 转链回复
 
 想让机器人在某个群对群内发送的短链进行转链回复,方法有二
 
