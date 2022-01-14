@@ -16,6 +16,12 @@ set fanli jd_union_id xxxx (说明：京东联盟ID)
 
 set fanli apikey XXXXX (说明：订单侠apikey)
 
+set fanli zhe_appkey xxxxx（折淘客appkey）
+
+set fanli zhe_sid xxxxx(折淘客sid)
+
+set fanli tb_union_pid xxxxxxx(淘宝联盟下的推广位)
+
 拼多多需要设置的参数：
 
 set fanli client_id XXXX  (说明：多多进宝client_id)
@@ -23,6 +29,8 @@ set fanli client_id XXXX  (说明：多多进宝client_id)
 set fanli client_secret XXXX (说明：多多进宝client_secret)
 
 set fanli pid XXX (说明：多多进宝pid)
+
+
 
 # 更新版本
 
