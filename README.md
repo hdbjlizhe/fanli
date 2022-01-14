@@ -81,9 +81,9 @@ set fanli show_pict_num 1/2/3/4/5
 
 set fanli transfer true/false 说明：开启关闭监听转链转发
 
-set fanli transferFrom qqgroup:418353744,qqgroup:263723430,wxgroup:22853622845    监听什么群
+set fanli transferFrom 418353744,263723430,22853622845    监听什么群
 
-set fanli transferListen qq:282617666,wx:hdbjlizhe 监听上面设置的群中的某个人
+set fanli transferListen 282617666,hdbjlizhe 监听上面设置的群中的某个人
 
 set fanli transferTo qqgroup:418353744,qqgroup:263723430,wxgroup:22853622845 转发给谁转发给谁
 
@@ -91,9 +91,9 @@ set fanli transferTo qqgroup:418353744,qqgroup:263723430,wxgroup:22853622845 转
 
 set fanli transferTb true/false 说明：开启关闭监听转链转发
 
-set fanli transferTbFrom qqgroup:418353744,qqgroup:263723430,wxgroup:22853622845  监听什么群
+set fanli transferTbFrom 418353744,263723430,22853622845  监听什么群
 
-set fanli transferTbListen qq:282617666,wx:hdbjlizhe  监听上面设置的群中的某个人
+set fanli transferTbListen 282617666,hdbjlizhe  监听上面设置的群中的某个人
 
 set fanli transferTbTo qqgroup:418353744,qqgroup:263723430,wxgroup:22853622845 转发给谁
 
