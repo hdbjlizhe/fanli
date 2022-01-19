@@ -48,7 +48,7 @@ set fanli cstm_cont    美丽商品优惠购
 
 set fanli show_cstm  true/false
 
-指令：显示自定义方案/关闭自定义方案
+指令：显示自定义文案/关闭自定义文案
 
 3.显示历史价格
 
