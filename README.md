@@ -42,21 +42,31 @@ set fanli pid XXX (说明：多多进宝pid)
 
 set fanli cstm_cont    美丽商品优惠购
 
+指令：自定义方案：美丽商品优惠购
+
 2.显示自定义文案
 
 set fanli show_cstm  true/false
+
+指令：显示自定义方案/关闭自定义方案
 
 3.显示历史价格
 
 set fanli show_lsjg    true/false 
 
+指令：显示历史价格/关闭历史价格
+
 4.显示货比3家
 
 set fanli show_hb3j    true/false
 
+指令：显示货比3家/关闭货比3家
+
 5.显示图片
 
 set fanli show_pict    true/false
+
+指令：显示图片/关闭图片
 
 6.显示几张图片
 
