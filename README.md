@@ -77,6 +77,8 @@ set fanli show_pict_num 1/2/3/4/5
 
 # 显示海报模式
 
+海报模式需要公网，并且部署文件服务器
+
 ![QQ图片20220121152954](https://user-images.githubusercontent.com/22290807/150485051-09c31d3c-4dd0-431f-a7e8-4afea3f8715c.jpg)
 
 # 咖啡码
