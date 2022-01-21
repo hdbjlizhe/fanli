@@ -36,8 +36,7 @@ set fanli pid XXX (说明：多多进宝pid)
 
 指令：更新/update
 
-# 显示
-(文字模式)
+# 显示——(文字模式)
 
 1.自定义文案
 
@@ -76,8 +75,7 @@ set fanli show_pict_num 1/2/3/4/5
 
 ![QQ图片20220107115320](https://user-images.githubusercontent.com/22290807/148489504-747120d5-bfef-436e-baeb-2af993eb81d7.jpg)
 
-# 显示
-（海报模式）
+# 显示——（海报模式）
 
 海报模式指令：
 
