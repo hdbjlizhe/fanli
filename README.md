@@ -77,7 +77,21 @@ set fanli show_pict_num 1/2/3/4/5
 
 # 显示海报模式
 
-海报模式需要公网，并且部署文件服务器
+海报模式指令：
+
+set fanli reply_mode 1（说明：设置回复模式）
+
+set fanli host_name http://ikuai.zhelee.cn  (说明：设置域名)
+
+set fanli pict_cata /home/tmp     (说明：生成的海报存放的目录)
+
+海报模式需要公网并部署文件服务器，安装python3等相关软件，部署方式参照如下:
+
+（1）进入你需要作为服务器的目录,比如：cd /home/tmp,在目录内放个图片，后面测试用。
+
+（2）输入命令：nohup python3 -m http.server 9999 &   （说明：9999为端口号）
+
+（3）服务器ip+端口能访问表示成功。比如：http://ikuai.zhelee.cn:9999/1.jpg
 
 ![QQ图片20220121152954](https://user-images.githubusercontent.com/22290807/150485051-09c31d3c-4dd0-431f-a7e8-4afea3f8715c.jpg)
 
