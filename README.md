@@ -93,6 +93,8 @@ set fanli pict_cata /home/tmp     (说明：生成的海报存放的目录)
 
 （3）服务器ip+端口能访问表示成功。比如：http://ikuai.zhelee.cn:9999/1.jpg
 
+（4）查看服务： lsof -i
+
 ![QQ图片20220121152954](https://user-images.githubusercontent.com/22290807/150485051-09c31d3c-4dd0-431f-a7e8-4afea3f8715c.jpg)
 
 # 咖啡码
