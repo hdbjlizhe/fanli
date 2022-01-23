@@ -81,9 +81,9 @@ set fanli show_pict_num 1/2/3/4/5
 
 set fanli reply_mode 1（说明：设置回复模式）
 
-set fanli host_name http://ikuai.zhelee.cn  (说明：设置域名)
+set fanli host_name http://ikuai.zhelee.cn/  (说明：设置域名)
 
-set fanli pict_cata /home/tmp     (说明：生成的海报存放的目录)
+set fanli pict_cata /home/tmp/    (说明：生成的海报存放的目录，最后要有斜杠)
 
 海报模式需要公网并部署文件服务器，安装python3等相关软件，部署方式参照如下:
 
