@@ -83,11 +83,11 @@ set fanli reply_mode 1（说明：设置回复模式）
 
 set fanli host_name http://ikuai.zhelee.cn:9999/  (说明：设置域名)
 
-set fanli pict_cata /home/tmp/    (说明：生成的海报存放的目录，最后要有斜杠)
+set fanli pict_cata /root/sillyGirl/tmp/    (说明：生成的海报存放的目录，最后要有斜杠)
 
 海报模式需要公网并部署文件服务器，安装python3等相关软件，部署方式参照如下:
 
-（1）进入你需要作为服务器的目录,比如：cd /home/tmp,在目录内放个图片1.jpg，后面测试用。
+（1）进入你需要作为服务器的目录,比如：cd /root/sillyGirl/tmp,在目录内放个图片1.jpg，后面测试用。
 
 （2）输入命令：nohup python3 -m http.server 9999 &   （说明：9999为端口号）
 
