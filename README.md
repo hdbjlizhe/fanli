@@ -30,7 +30,7 @@ set fanli client_secret XXXX (说明：多多进宝client_secret)
 
 set fanli pid XXX (说明：多多进宝pid)
 
-# 京东红包
+# 显示京东领红包
 
 进入京东联盟->我的推广->京享红包推广->获取无线推广链接
 
