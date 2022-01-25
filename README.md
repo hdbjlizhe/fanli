@@ -113,7 +113,7 @@ set fanli pict_cata /root/sillyGirl/tmp/    (说明：生成的海报存放的�
 
 （1）进入你需要作为服务器的目录,比如：cd /root/sillyGirl/tmp,在目录内放个图片1.jpg，后面测试用。
 
-（2）输入命令：nohup python3 -m http.server 9999 &   （说明：9999为端口号）
+（2）输入命令：nohup python3 -m http.server 9999 &   （说明：9999为端口号,最好重启现下，再次运行左边的命令）
 
 （3）开放端口：比如：CentOS命令：firewall-cmd --zone=public --add-port=9999/tcp --permanent
 
