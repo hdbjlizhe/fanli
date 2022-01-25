@@ -42,6 +42,24 @@ set fanli jd_quan https://u.jd.com/PdOTAgr
 
 指令：更新/update
 
+# 模式
+
+0.文字模式
+
+set fanli reply_mode 0
+
+1.海报模式
+
+set fanli reply_mode 1
+
+2.京粉模式
+
+set fanli reply_mode 2
+
+3混合模式
+
+set fanli reply_mode 3
+
 # 显示——(文字模式)
 
 1.自定义文案
