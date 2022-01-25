@@ -85,7 +85,7 @@ set fanli show_pict_num 1/2/3/4/5
 
 海报模式指令：
 
-set fanli reply_mode 1（说明：设置回复模式）
+set fanli reply_mode 2（说明：设置回复模式）
 
 set fanli host_name http://ikuai.zhelee.cn:9999/  (说明：设置域名)
 
