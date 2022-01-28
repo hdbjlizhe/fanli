@@ -72,7 +72,7 @@ set fanli reply_mode 3
 
 set fanli cstm_cont    美丽商品优惠购
 
-指令：自定义方案：美丽商品优惠购
+指令：设置文案：美丽商品优惠购
 
 2.显示自定义文案
 
