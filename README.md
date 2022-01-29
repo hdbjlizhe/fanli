@@ -6,7 +6,7 @@
 
 # 基础设置
 
-京东/淘宝/唯品会需要设置的参数：
+### 京东/淘宝/唯品会需要设置的参数：
 
 set fanli jingpinku_appid xxxxx (说明：京品库appid)
 
@@ -22,13 +22,13 @@ set fanli zhe_sid xxxxx(说明：折淘客sid)
 
 set fanli tb_union_pid xxxxxxx(说明：淘宝联盟下的推广位)
 
-查询收益需要设置的参数：
+### 查询收益需要设置的参数：
 
 set fanli jd_union_appkey xxxxx(说明：京东联盟appkey)
 
 set fanli jd_union_secretkey xxxxx(说明：京东联盟secretkey)
 
-拼多多需要设置的参数：
+### 拼多多需要设置的参数：
 
 set fanli client_id XXXX  (说明：多多进宝client_id)
 
