@@ -24,17 +24,17 @@
 
 ### 查询收益需要设置的参数：
 
-set fanli jd_union_appkey xxxxx(说明：京东联盟appkey)
+`set fanli jd_union_appkey xxxxx`(说明：京东联盟appkey)
 
-set fanli jd_union_secretkey xxxxx(说明：京东联盟secretkey)
+`set fanli jd_union_secretkey xxxxx`(说明：京东联盟secretkey)
 
 ### 拼多多需要设置的参数：
 
-set fanli client_id XXXX  (说明：多多进宝client_id)
+`set fanli client_id XXXX`  (说明：多多进宝client_id)
 
-set fanli client_secret XXXX (说明：多多进宝client_secret)
+`set fanli client_secret XXXX` (说明：多多进宝client_secret)
 
-set fanli pid XXX (说明：多多进宝pid)
+`set fanli pid XXX` (说明：多多进宝pid)
 
 *********重要提示：以上参数设置完成后要重启、重启、重启（重要的事说3遍）才能生效，否则使用的是开箱初始化的参数*********
 
