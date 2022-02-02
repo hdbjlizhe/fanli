@@ -8,13 +8,15 @@
 
 ### 京东/淘宝/唯品会需要设置的参数：（带删除线的为精简掉的参数）
 
-`set fanli jingpinku_appid xxxxx` (说明：京品库appid)
+~~`set fanli jingpinku_appid xxxxx` (说明：京品库appid)~~
 
-`set fanli jingpinku_appkey xxxxx` (说明：京品库appkey)
+~~`set fanli jingpinku_appkey xxxxx` (说明：京品库appkey)~~
 
 `set fanli jd_union_id xxxx` (说明：京东联盟ID)
 
-`set fanli apikey XXXXX` (说明：订单侠apikey)
+`set fanli jd_union_key xxxxx` (说明：京东联盟API授权key)
+
+`set fanli apikey xxxxx` (说明：订单侠apikey)
 
 `set fanli zhe_appkey xxxxx`（说明：折淘客appkey）
 
@@ -24,9 +26,9 @@
 
 ### 查询收益需要设置的参数：
 
-`set fanli jd_union_appkey xxxxx`(说明：京东联盟appkey)
+~~`set fanli jd_union_appkey xxxxx`(说明：京东联盟appkey)~~
 
-`set fanli jd_union_secretkey xxxxx`(说明：京东联盟secretkey)
+~~`set fanli jd_union_secretkey xxxxx`(说明：京东联盟secretkey)~~
 
 ### 拼多多需要设置的参数：
 
