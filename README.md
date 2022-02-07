@@ -6,7 +6,7 @@
 
 # homeassistant插件
 
-set ha host http:/192.168.1.11:8123   （说明：ha地址）
+set ha host http://192.168.1.11:8123   （说明：ha地址）
 
 set ha token xxxxxx   (说明：长期令牌)
 
