@@ -194,7 +194,7 @@ set fanli pict_cata /root/sillyGirl/tmp/    (说明：生成的海报存放的�
 
 set fanli transfer true/false 说明：开启关闭监听转链转发
 
-set fanli transferJdFreq 10 说明：转发频率10分钟1次 
+set fanli transferJdFreq 10 说明：转发频率不低于10分钟1次 
 
 set fanli transferFrom 418353744,263723430,22853622845    监听什么群
 
@@ -206,7 +206,7 @@ set fanli transferTo qqgroup:418353744,qqgroup:263723430,wxgroup:22853622845 转
 
 set fanli transferTb true/false 说明：开启关闭监听转链转发
 
-set fanli transferJdFreq 10 说明：转发频率10分钟1次 
+set fanli transferJdFreq 10 说明：转发频率不低于10分钟1次 
 
 set fanli transferTbFrom 418353744,263723430,22853622845  监听什么群
 
