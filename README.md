@@ -191,6 +191,14 @@ set fanli transfer_remind true
 
 set fanli transfer_remind false
 
+指令：开启默认转发 （说明：单聊机器人时，分享商品到机器人后，机器人返回转链信息后，不提示直接转发线报群）
+
+set fanli transfer_default true
+
+指令：关闭默认转发 （说明：单聊机器人时，分享商品到机器人后，机器人返回转链信息后，默认不转发线报群）
+
+set fanli transfer_default false
+
 指令：开启价格监控提示（说明：单聊机器人时，分享商品到机器人后，机器人返回转链信息后，提示是否加入价格监控）
 
 set fanli watching_remind true
