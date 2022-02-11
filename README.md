@@ -185,11 +185,19 @@ set fanli cron_check_price 0 9,14 * * *（不设置默认为每天9点和14点�
 
 指令：开启转发线报群提示 （说明：单聊机器人时，分享商品到机器人后，机器人返回转链信息后，提示是否转发线报群）
 
+set fanli transfer_remind true
+
 指令：关闭转发线报群提示 （说明：单聊机器人时，分享商品到机器人后，机器人返回转链信息后，提示是否转发线报群）
+
+set fanli transfer_remind false
 
 指令：开启价格监控提示（说明：单聊机器人时，分享商品到机器人后，机器人返回转链信息后，提示是否加入价格监控）
 
+set fanli watching_remind true
+
 指令：关闭价格监控提示（说明：单聊机器人时，分享商品到机器人后，机器人返回转链信息后，提示是否加入价格监控）
+
+set fanli watching_remind false
 
 
 # 短链的监听转发
