@@ -60,7 +60,7 @@ set fanli jd_quan https://u.jd.com/PdOTAgr
 
 # 更新版本
 
-指令：更新/update
+指令：更新/升级/update
 
 # 模式
 
