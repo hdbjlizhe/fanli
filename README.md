@@ -34,11 +34,11 @@ set ha token xxxxxx   (说明：长期令牌)
 
 `set fanli tb_union_pid xxxxxxx`(说明：淘宝联盟下的推广位，必须是选择的淘宝授权帐号下的PID，格式为：mm_56655336_24530010_191526926)
 
-~~### 查询收益需要设置的参数：~~
+### 查询收益需要设置的参数：
 
-~~`set fanli jd_union_appkey xxxxx`(说明：京东联盟appkey)~~
+`set fanli jd_union_appkey xxxxx`(说明：京东联盟appkey)
 
-~~`set fanli jd_union_secretkey xxxxx`(说明：京东联盟secretkey)~~
+`set fanli jd_union_secretkey xxxxx`(说明：京东联盟secretkey)
 
 ### 拼多多需要设置的参数：
 
