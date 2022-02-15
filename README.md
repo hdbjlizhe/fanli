@@ -24,7 +24,7 @@ set ha token xxxxxx   (说明：长期令牌)
 
 `set fanli jd_union_id xxxx` (说明：京东联盟ID)
 
-~~`set fanli jd_union_key xxxxx` (说明：京东联盟API授权key)~~
+`set fanli jd_union_key xxxxx` (说明：京东联盟API授权key)
 
 `set fanli apikey xxxxx` (说明：订单侠apikey)
 
