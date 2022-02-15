@@ -255,3 +255,5 @@ set fanli transferTbTo qqgroup:418353744,qqgroup:263723430,wxgroup:22853622845 �
 # 关于命令屏蔽
 
 set fanli blocked_cmds 查询收益,收益查询
+
+设置完成后需重启
