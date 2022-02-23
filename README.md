@@ -185,17 +185,17 @@ set fanli pict_cata /root/sillyGirl/tmp/    (说明：生成的海报存放的�
 
 海报模式需要公网并部署文件服务器，安装python3等相关软件，部署方式参照如下:
 
-（1）进入你需要作为服务器的目录,比如：cd /root/sillyGirl/tmp,在目录内放个图片1.jpg，后面测试用。
+~~（1）进入你需要作为服务器的目录,比如：cd /root/sillyGirl/tmp,在目录内放个图片1.jpg，后面测试用。~~
 
-（2）输入命令：nohup python3 -m http.server 9999 &   （说明：9999为端口号,最好重启现下，再次运行左边的命令）
+~~（2）输入命令：nohup python3 -m http.server 9999 &   （说明：9999为端口号,最好重启现下，再次运行左边的命令）~~
 
-（3）开放端口：比如：CentOS命令：firewall-cmd --zone=public --add-port=9999/tcp --permanent
+~~（3）开放端口：比如：CentOS命令：firewall-cmd --zone=public --add-port=9999/tcp --permanent~~
 
-（4）机器人的9999端口映射到外网的9999端口 （说明：端口根据自己情况设置）
+~~（4）机器人的9999端口映射到外网的9999端口 （说明：端口根据自己情况设置）~~
 
-（5）服务器ip+端口能访问表示成功。比如：http://ikuai.zhelee.cn:9999/1.jpg
+~~（5）服务器ip+端口能访问表示成功。比如：http://ikuai.zhelee.cn:9999/1.jpg~~
 
-（4）查看服务： lsof -i，如果启动的目录错误，可记下服务的进程号，然后“kill -9 进程号”杀死进程，然后再cd到正确的目录，运行（2）所述命令
+~~（4）查看服务： lsof -i，如果启动的目录错误，可记下服务的进程号，然后“kill -9 进程号”杀死进程，然后再cd到正确的目录，运行（2）所述命令~~
 
 ![QQ图片20220121152954](https://user-images.githubusercontent.com/22290807/150485051-09c31d3c-4dd0-431f-a7e8-4afea3f8715c.jpg)
 
