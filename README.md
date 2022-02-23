@@ -179,7 +179,7 @@ set fanli show_pict_num 1/2/3/4/5
 
 set fanli reply_mode 2（说明：设置回复模式）
 
-set fanli host_name http://ikuai.zhelee.cn:9999  (说明：autMan域名+autMan端口)
+set fanli host_name http://ikuai.zhelee.cn:9999  (说明：autMan域名+autMan端口,确保公网可以访问此地址)
 
 ~~set fanli pict_cata /root/sillyGirl/tmp/    (说明：生成的海报存放的目录，最后要有斜杠)~~
 
