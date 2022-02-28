@@ -283,6 +283,9 @@ set fanli transferTbListen 282617666,hdbjlizhe  监听上面设置的群中的�
 
 set fanli transferTbTo qqgroup:418353744,qqgroup:263723430,wxgroup:22853622845 转发给谁
 
+表情转发也没问题
+![QQ图片20220228111143](https://user-images.githubusercontent.com/22290807/155918024-3a7cab02-1178-4dd7-97a3-39ef36d22440.png)
+
 
 ## 关于佣金分成
 
