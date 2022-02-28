@@ -259,6 +259,8 @@ set fanli watching_remind false
 
 ## 关于监听转发
 
+转发时一直带图片：set fanli transfer_pic true
+
 (1)京东转发
 
 set fanli transfer true/false 说明：开启关闭监听转链转发
