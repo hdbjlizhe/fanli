@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>安装</title>
+		<title>进程守护</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -33,24 +33,63 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>安装</h1>
+										<h1>进程守护</h1>
 									</header>
 
-									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+									<!-- Content -->
+									<h2 id="content">监听转发</h2>
+									<p>转发时一直带图片：set fanli transfer_pic true</p>
 
+									<h3>守护autMan进程</h3>
+									<p>1.vim /usr/lib/systemd/system/autMan.service #新建机器人系统服务文件
+										按键盘字母 i 进入编辑模式，复制下面esc 退出编辑模式，再输入命令 :wq 保存并退出。</p>
+									<pre><code>[Unit]
+Description=bot
+After=network.target mysql.service mariadb.service mysqld.service
+[Service]
+Type=forking
+ExecStart=/root/autMan/autMan -d
+PIDFile=/var/run/autMan.pid
+Restart=always
+User=root
+Group=root
+		
+[Install]
+WantedBy=multi-user.target
+Alias=autMan.service</code></pre>
+										<h3>守护控制</h3>
+										<p>分别输入下面的命令激活</p>
+										<pre><code>systemctl daemon-reload #重新加载所有被修改过的服务配置，否则配置不会生效
+systemctl enable autMan.service #设置为开机自启
+systemctl start autMan.service #启动服务
+# 其他常用的管理命令
+systemctl restart autMan.service #重启服务
+systemctl stop autMan.service #停止服务
+systemctl status autMan.service #查看运行状态</code></pre>
+										
+										
+										<h3>pm2守护onebot</h3>
+										<pre><code>pm2 start "node main 机器人QQ号" #pm2方式启动onebot
+pm2 list #查看进程
+pm2 restart "node main 机器人QQ号" #重启
+pm2 delete "node main 机器人QQ号" #结束进程</code></pre>
+										
+										<p>这样，你的机器人和onebot基本上不会掉线了。
+										如果你使用了systemd方式守护进程，再手动启动时，会提示已杀死进程。
+										你需要先停止系统进程，再重新进入机器人终端交互。</p>
+										<pre><code>stop autMan.service #停止机器人系统服务
+cd autMan#cd到机器人目录
+./autMan -t #终端交互启动机器人</code></pre> 
+										<p>qq经常容易风控，有时候qq不回复消息了，但是检查进程和对接都是好的，那极有可能就是机器人被风控了。</p>
 
-									<hr class="major" />
+									
+									
+										
+										<div class="row">
+											
+										</div>
 
-									<h2>Linux类系统</h2>
-									<p>使用以下脚本一键式安装：</p>
-									<p><b><i>s=autMan;f=fanli;a=arm64;if [[ $(uname -a | grep "x86_64") != "" ]];then a=amd64;fi ;if [ ! -d $s ];then mkdir $s;fi ;cd $s;wget https://mirror.ghproxy.com/https://github.com/hdbjlizhe/${f}/releases/download/main/autMan_$a.tar.gz && tar -zxvf autMan_$a.tar.gz && rm -rf autMan_$a.tar.gz && chmod 777 $s;pkill -9 $s;$(pwd)/$s -t;</i></b></p>
-
-									<hr class="major" />
-
-									<h2>Windows系统</h2>
-									<p>下载解压后直接运行exe文件</p>
-									<p><a href="https://mirror.ghproxy.com/https://github.com/hdbjlizhe/fanli/releases/download/main/autMan_win.tar.gz">https://mirror.ghproxy.com/https://github.com/hdbjlizhe/fanli/releases/download/main/autMan_win.tar.gz</a></p>
-
+					
 								</section>
 
 						</div>

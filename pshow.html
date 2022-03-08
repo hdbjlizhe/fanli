@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>安装</title>
+		<title>显示参数及指令</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -33,24 +33,65 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>安装</h1>
+										<h1>显示参数设置</h1>
 									</header>
 
-									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+									<!-- Content -->
+									<h2 id="content">显示参数设置</h2>
+
+									<p>显示模式</p>
+									<pre><code>0.文字模式
+
+指令：文字模式
+set fanli reply_mode 0
+1.海报模式
+指令：海报模式
+set fanli reply_mode 1
+2.京粉模式
+指令：京粉模式
+set fanli reply_mode 2
+3.混合模式
+指令：混合模式
+set fanli reply_mode 3
+</code></pre>
+									<p>显示内容</p>
+<pre><code>1.自定义文案
+set fanli cstm_cont 美丽商品优惠购
+指令：设置文案：美丽商品优惠购
+2.显示自定义文案
+set fanli show_cstm true/false
+指令：显示自定义文案/关闭自定义文案
+3.显示历史价格
+set fanli show_lsjg true/false
+指令：显示历史价格/关闭历史价格
+4.显示货比3家
+set fanli show_hb3j true/false
+指令：显示货比3家/关闭货比3家
+5.显示图片
+set fanli show_pict true/false
+指令：显示图片/关闭图片
+6.显示几张图片
+set fanli show_pict_num 1/2/3/4/5
+</cod></pre>
+									<p>海报设置</p>
+<pre><code>set fanli host_name http://ikuai.zhelee.cn:9999 
+(说明：autMan域名+autMan端口,确保公网可以访问此地址)
+</code></pre>
+
+									<p>京粉模式</p>
+									<pre><code>显示模式之京粉模式（京东红包）
+进入京东联盟->我的推广->京享红包推广->获取无线推广链接
+set fanli jd_quan https://u.jd.com/PdOTAgr</code></pre>
 
 
-									<hr class="major" />
 
-									<h2>Linux类系统</h2>
-									<p>使用以下脚本一键式安装：</p>
-									<p><b><i>s=autMan;f=fanli;a=arm64;if [[ $(uname -a | grep "x86_64") != "" ]];then a=amd64;fi ;if [ ! -d $s ];then mkdir $s;fi ;cd $s;wget https://mirror.ghproxy.com/https://github.com/hdbjlizhe/${f}/releases/download/main/autMan_$a.tar.gz && tar -zxvf autMan_$a.tar.gz && rm -rf autMan_$a.tar.gz && chmod 777 $s;pkill -9 $s;$(pwd)/$s -t;</i></b></p>
 
-									<hr class="major" />
+									
+										<div class="row">
+											
+										</div>
 
-									<h2>Windows系统</h2>
-									<p>下载解压后直接运行exe文件</p>
-									<p><a href="https://mirror.ghproxy.com/https://github.com/hdbjlizhe/fanli/releases/download/main/autMan_win.tar.gz">https://mirror.ghproxy.com/https://github.com/hdbjlizhe/fanli/releases/download/main/autMan_win.tar.gz</a></p>
-
+					
 								</section>
 
 						</div>

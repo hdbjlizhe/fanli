@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>安装</title>
+		<title>对接WX</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -33,26 +33,50 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>安装</h1>
+										<h1>对接WX</h1>
 									</header>
 
-									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
-
-
-									<hr class="major" />
-
-									<h2>Linux类系统</h2>
-									<p>使用以下脚本一键式安装：</p>
-									<p><b><i>s=autMan;f=fanli;a=arm64;if [[ $(uname -a | grep "x86_64") != "" ]];then a=amd64;fi ;if [ ! -d $s ];then mkdir $s;fi ;cd $s;wget https://mirror.ghproxy.com/https://github.com/hdbjlizhe/${f}/releases/download/main/autMan_$a.tar.gz && tar -zxvf autMan_$a.tar.gz && rm -rf autMan_$a.tar.gz && chmod 777 $s;pkill -9 $s;$(pwd)/$s -t;</i></b></p>
-
-									<hr class="major" />
-
-									<h2>Windows系统</h2>
-									<p>下载解压后直接运行exe文件</p>
-									<p><a href="https://mirror.ghproxy.com/https://github.com/hdbjlizhe/fanli/releases/download/main/autMan_win.tar.gz">https://mirror.ghproxy.com/https://github.com/hdbjlizhe/fanli/releases/download/main/autMan_win.tar.gz</a></p>
-
+									<!-- Content -->
+										<h2 id="content">说明</h2>
+										<p>WX框架目前可选方案有可爱猫、vlw等。当前以vlw为例</p>
+										<h3>需要的软件</h3>
+										<ol>
+											<li>win 平台的系统（测试win7可行）</li>
+											<li>vlw(http://a.vlmai.cn/)框架。(群文件夹vlw下载)</li>
+											<li>cn.sxyo.xYo_httpApi_WeChat.vlw.dl插件（群文件夹vlw下载)</li>
+											<li>电脑上安装要求版本的微信，（群文件夹vlw下载）</li>
+										</ol>
+										<h3>vlw的配置</h3>
+										<ol>
+											<li>首先给他安个家，建议英文或拼音目录</li>
+											<li>把插件放到plugin目录下</li>
+										</ol>
+										<span class="image fit"><img src="images/vlw01.png" alt="" /></span>
+										<h3>登录微信</h3>
+										<span class="image fit"><img src="images/vlw02.png" alt="" /></span>
+										<h3>启用插件</h3>
+										<span class="image fit"><img src="images/vlw03.png" alt="" /></span>
+										<h3>插件设置</h3>
+										<span class="image fit"><img src="images/vlw04.png" alt="" /></span>
+										<h3>autMan设置</h3>
+										<span class="image fit"><img src="images/vlw05.png" alt="" /></span>							
+										<pre><code>set wx vlw addr http://域名:端口/wx/receive   ##对应第一条
+set wx dynamic_ip true   ##设置动态网络地址，适用于家庭宽带而可爱猫在云服务器的情况下（根据自己情况，我是不是应该关了它）## 对应第二条
+set wx relay_mode true  ##设置图片转发模式，否则可能会出现此图片来自xx未经允许不得使用的提示
+set wx vlw_addr http://域名:端口   ##你的vlw框架的域名+端口；服务器就ip+端口   #对应第八条
+set wx vlw_token 你的token  ##你设置的token  ##对应第九条</code></pre>
+										<h3>排错</h3>
+										<ol>
+											<li>首先访问你的机器人地址，看是否正常</li>
+											<li>然后是访问vlw框架地址，看是否正常</li>
+											<li>给机器人发送 list wx 指令查看设置</li>
+											<li>手动启动机器人./autMan -t，然后微信发送命令，看看终端输出</li>
+										</ol>
+										<div class="row">
+											
+										</div>
+					
 								</section>
-
 						</div>
 					</div>
 

@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>安装</title>
+		<title>申请京东联盟账号</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -15,11 +15,9 @@
 
 		<!-- Wrapper -->
 			<div id="wrapper">
-
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-
 							<!-- Header -->
 								<header id="header">
 									<a href="index.html" class="logo">autMan</a>
@@ -33,24 +31,22 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>安装</h1>
+										<h1>短链验证</h1>
 									</header>
+									<!-- Content -->
+									<h2 id="content">说明</h2>
+									<h3>京东验证短链</h3>
+									<p>京东APP，随便找一个商品，将商品分享给机器人，机器人会返回一个短链，点击短链进行购买（下单不支持），下单后到京粉APP查询订单。如果存在则参数设置没问题，如果不存在刚才下的订单，就给机器人发送指令：“查看返利参数”检查参数设置的对不对。</p>
+									<h3>淘宝验证短链</h3>
+									<p>淘宝也一样，下单后到淘宝联盟APP查询下的单在不在，注意，淘宝有很多商品没有佣金，短链格式为：s.click.taobao这种样式的为有佣金的商品</p>
+									<h3>拼多多验证短链</h3>
+									<p>拼多多去多多进宝APP查看订单（据说拼多多可能是别人用你的短链下的单才有返佣金，自己用自己短链下单没佣金。），唯品会去唯享客查看订单</p>
+									<span class="image fit"><img src="images/verify.png" alt="" /></span>
+										<div class="row">
+											
+										</div>
 
-									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
-
-
-									<hr class="major" />
-
-									<h2>Linux类系统</h2>
-									<p>使用以下脚本一键式安装：</p>
-									<p><b><i>s=autMan;f=fanli;a=arm64;if [[ $(uname -a | grep "x86_64") != "" ]];then a=amd64;fi ;if [ ! -d $s ];then mkdir $s;fi ;cd $s;wget https://mirror.ghproxy.com/https://github.com/hdbjlizhe/${f}/releases/download/main/autMan_$a.tar.gz && tar -zxvf autMan_$a.tar.gz && rm -rf autMan_$a.tar.gz && chmod 777 $s;pkill -9 $s;$(pwd)/$s -t;</i></b></p>
-
-									<hr class="major" />
-
-									<h2>Windows系统</h2>
-									<p>下载解压后直接运行exe文件</p>
-									<p><a href="https://mirror.ghproxy.com/https://github.com/hdbjlizhe/fanli/releases/download/main/autMan_win.tar.gz">https://mirror.ghproxy.com/https://github.com/hdbjlizhe/fanli/releases/download/main/autMan_win.tar.gz</a></p>
-
+					
 								</section>
 
 						</div>

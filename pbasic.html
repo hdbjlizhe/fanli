@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>安装</title>
+		<title>基本参数</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -33,24 +33,40 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>安装</h1>
+										<h1>基本参数设置</h1>
 									</header>
 
-									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+									<!-- Content -->
+									<h2 id="content">转链参数</h2>
 
+									<p>京东/淘宝转链</p>
+									<ol>
 
-									<hr class="major" />
+										<li><s>set fanli jingpinku_appid xxxxx (说明：京品库appid)</s></li>
+										<li><s>set fanli jingpinku_appkey xxxxx (说明：京品库appkey)</s></li>
+										<li><s>set fanli jd_union_id xxxx (说明：京东联盟ID)</s></li>
+										<li><s>set fanli jd_union_key xxxxx (说明：京东联盟API授权key)</s></li>
+										<li>set fanli jd_union_appkey xxxxx(说明：京东联盟appkey)</li>
+										<li>set fanli jd_union_secretkey xxxxx(说明：京东联盟secretkey)</li>
+										<li>set fanli apikey xxxxx (说明：订单侠apikey)</li>
+										<li>set fanli zhe_appkey xxxxx（说明：折淘客appkey）</li>
+										<li><s>set fanli zhe_sid xxxxx(说明：折淘客sid)</s></li>
+										<li><s>set fanli tb_union_pid xxxxxxx(说明：淘宝联盟下的推广位，必须是选择的淘宝授权帐号下的PID，格式为：mm_56655336_24530010_191526926)</s></li>
+									</ol>
+									<p>拼多多</p>
+									<ol>
+										<li>set fanli client_id XXXX (说明：多多进宝client_id)</li>
+										<li>set fanli client_secret XXXX (说明：多多进宝client_secret)</li>
+										<li>set fanli pid XXX (说明：多多进宝pid)</li>
+									</ol>
+									<p>重要提示：以上参数设置完成后要重启、重启、重启（重要的事说3遍）才能生效，否则使用的是开箱初始化的参数</p>
+									</ol>
+										
+										<div class="row">
+											
+										</div>
 
-									<h2>Linux类系统</h2>
-									<p>使用以下脚本一键式安装：</p>
-									<p><b><i>s=autMan;f=fanli;a=arm64;if [[ $(uname -a | grep "x86_64") != "" ]];then a=amd64;fi ;if [ ! -d $s ];then mkdir $s;fi ;cd $s;wget https://mirror.ghproxy.com/https://github.com/hdbjlizhe/${f}/releases/download/main/autMan_$a.tar.gz && tar -zxvf autMan_$a.tar.gz && rm -rf autMan_$a.tar.gz && chmod 777 $s;pkill -9 $s;$(pwd)/$s -t;</i></b></p>
-
-									<hr class="major" />
-
-									<h2>Windows系统</h2>
-									<p>下载解压后直接运行exe文件</p>
-									<p><a href="https://mirror.ghproxy.com/https://github.com/hdbjlizhe/fanli/releases/download/main/autMan_win.tar.gz">https://mirror.ghproxy.com/https://github.com/hdbjlizhe/fanli/releases/download/main/autMan_win.tar.gz</a></p>
-
+					
 								</section>
 
 						</div>

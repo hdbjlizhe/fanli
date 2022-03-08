@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>安装</title>
+		<title>价格监控和购物车</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -33,24 +33,56 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>安装</h1>
+										<h1>价格监听和转链转发</h1>
 									</header>
 
-									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+									<!-- Content -->
+									<h2 id="content">价格监听</h2>
 
+									<h3>使用方法</h3>
+									<ol>
+										<li>开启价格监控提示</li>
+										<li>分享商品到机器人</li>
+										<li>当提示是否加入价格监控时输入y</li>
+										<li>指令：购物车，显示购物车内商品</li>
+									</ol>
 
-									<hr class="major" />
+									<h3>价格监测设置</h3>
+										<pre><code>set fanli cron_check_price 0 9,14 * * *（不设置默认为每天9点和14点进行价格监测）
+指令：购物车/查询监控 （说明：显示当前购物车内容，并进行价格比较）
+指令：删除商品1 （说明：删除当前购物车中1号价格监控位的商品）
+指令：清空购物车 （说明：将购物内商品全部删除）</code></pre>
+							
+									<h2 id="content">转链转发</h2>
 
-									<h2>Linux类系统</h2>
-									<p>使用以下脚本一键式安装：</p>
-									<p><b><i>s=autMan;f=fanli;a=arm64;if [[ $(uname -a | grep "x86_64") != "" ]];then a=amd64;fi ;if [ ! -d $s ];then mkdir $s;fi ;cd $s;wget https://mirror.ghproxy.com/https://github.com/hdbjlizhe/${f}/releases/download/main/autMan_$a.tar.gz && tar -zxvf autMan_$a.tar.gz && rm -rf autMan_$a.tar.gz && chmod 777 $s;pkill -9 $s;$(pwd)/$s -t;</i></b></p>
+									<h3>使用方法</h3>
+									<ol>
+										<li>开启转发线报群提示</li>
+										<li>分享商品到机器人</li>
+										<li>当提示是否转发到线报线时输入y</li>
+									</ol>
 
-									<hr class="major" />
+									<h3>相关命令</h3>
+										<pre><code>关于提示的开启和关闭
+指令：开启转发线报群提示 （说明：单聊机器人时，分享商品到机器人后，机器人返回转链信息后，提示是否转发线报群）
+set fanli transfer_remind true
+指令：关闭转发线报群提示 （说明：单聊机器人时，分享商品到机器人后，机器人返回转链信息后，提示是否转发线报群）
+set fanli transfer_remind false
+指令：开启默认转发 （说明：单聊机器人时，分享商品到机器人后，机器人返回转链信息后，不提示直接转发线报群）
+set fanli transfer_default true
+指令：关闭默认转发 （说明：单聊机器人时，分享商品到机器人后，机器人返回转链信息后，默认不转发线报群）
+set fanli transfer_default false
+指令：开启价格监控提示（说明：单聊机器人时，分享商品到机器人后，机器人返回转链信息后，提示是否加入价格监控）
+set fanli watching_remind true
+指令：关闭价格监控提示（说明：单聊机器人时，分享商品到机器人后，机器人返回转链信息后，提示是否加入价格监控）
+set fanli watching_remind false</code></pre>
+									
+										
+										<div class="row">
+											
+										</div>
 
-									<h2>Windows系统</h2>
-									<p>下载解压后直接运行exe文件</p>
-									<p><a href="https://mirror.ghproxy.com/https://github.com/hdbjlizhe/fanli/releases/download/main/autMan_win.tar.gz">https://mirror.ghproxy.com/https://github.com/hdbjlizhe/fanli/releases/download/main/autMan_win.tar.gz</a></p>
-
+					
 								</section>
 
 						</div>
