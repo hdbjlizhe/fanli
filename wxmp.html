@@ -37,9 +37,36 @@
 									<h2 id="content">说明</h2>
 									<p>无</p>
 
-										<h3>群主没有经验</h3>
-										<p>暂无，等待群友补充</p>
+										<h3>简介</h3>
+										<p>微信公众号分为订阅号（个人）和服务号（公司），个人是可以申请的哈。具体怎么申请参见官方文档：https://kf.qq.com/faq/120911VrYVrA151009eIrYvy.html</p>
+										<h3>参数获取和配置</h3>
+										<p>主要就是几个参数：开发者ID(AppID)、开发者密码(AppSecret)、服务器地址(URL)、令牌(Token)、消息加解密密钥(EncodingAESKey)</p>
+										<p>1、登陆公众号后台👉开发-基本配置👉启用开发者密码👉设置IP白名单。成功get到：开发者ID(AppID)、开发者密码(AppSecret)，IP白名单填你的服务器IP地址。这里启用后就要copy一下密码，因为启用后就只能重置了。</p>
+										<span class="image fit"><img src="images/wxmp01.png" alt="" /></span>
+										<span class="image fit"><img src="images/wxmp02.png" alt="" /></span>
+										<span class="image fit"><img src="images/wxmp03.png" alt="" /></span>
 
+										<h3>启用服务器配置</h3>
+										<p>修改配置?验证?启用
+										
+										成功get到：服务器IP地址、 令牌（token）、 消息加解密密钥(EncodingAESKey)
+										
+										服务器地址(URL)：这里的填你之前autMan的外网访问域名，但末尾一定要加/wx/，最末尾的“/”不能省略，否则会验证不通过。
+										令牌（token）：先在autMan中设置好token，例如设置的123rrr，这里就填123rrr。
+										消息加解密密钥(EncodingAESKey)：这里点后面的随机生成就行，但是要记录下面，后面要用。
+										以下参数都是autMan中需要设置的：</p>
+<pre><code>set wxmp app_id xxxxxx
+set wxmp app_secret xxxxxx
+set wxmp token xxxxxx
+set wxmp encoding_aes_key xxxxxx</code></pre>
+										
+										<span class="image fit"><img src="images/wxmp04.png" alt="" /></span>
+										<span class="image fit"><img src="images/wxmp05.png" alt="" /></span>
+										<span class="image fit"><img src="images/wxmp06.png" alt="" /></span>
+										<span class="image fit"><img src="images/wxmp07.png" alt="" /></span>
+										<span class="image fit"><img src="images/wxmp08.png" alt="" /></span>
+										<span class="image fit"><img src="images/wxmp09.png" alt="" /></span>
+										<p>到这里，就完成了与公众号的联通。</p>
 									
 										<div class="row">
 											
