@@ -77,7 +77,7 @@ pm2 delete "node main 机器人QQ号" #结束进程</code></pre>
 										<p>这样，你的机器人和onebot基本上不会掉线了。
 										如果你使用了systemd方式守护进程，再手动启动时，会提示已杀死进程。
 										你需要先停止系统进程，再重新进入机器人终端交互。</p>
-										<pre><code>stop autMan.service #停止机器人系统服务
+										<pre><code>systemctl stop autMan.service #停止机器人系统服务
 cd autMan#cd到机器人目录
 ./autMan -t #终端交互启动机器人</code></pre> 
 										<p>qq经常容易风控，有时候qq不回复消息了，但是检查进程和对接都是好的，那极有可能就是机器人被风控了。</p>
