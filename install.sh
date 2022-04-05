@@ -36,19 +36,19 @@ change()
 {
     if [[ "$os" == "debian"  &&  "$cpu" == "amd64" ]];then
         apt-get install wget git tar -y
-        url=https://dl.golang.com.cn/dl/go/go1.17.5.linux-amd64.tar.gz
+        url=https://dl.golang.com.cn/dl/go/go1.18.linux-amd64.tar.gz
         wget $url
-        tar -C /usr/local -xzf go1.17.5.linux-amd64.tar.gz
+        tar -C /usr/local -xzf go1.18.linux-amd64.tar.gz
     elif [[ "$os" == "centos"  &&  "$cpu" == "amd64"  ]];then
         yum install wget git openssl openssl-devel gcc make perl tar -y
-        url=https://dl.golang.com.cn/dl/go/go1.17.5.linux-amd64.tar.gz
+        url=https://dl.golang.com.cn/dl/go/go1.18.linux-amd64.tar.gz
         wget $url
-        tar -C /usr/local -xzf go1.17.5.linux-amd64.tar.gz
+        tar -C /usr/local -xzf go1.18.linux-amd64.tar.gz
     elif [[ $cpu == "arm64" ]];then
         apt-get install wget git tar -y
-        url=https://dl.golang.com.cn/dl/go/go1.17.5.linux-arm64.tar.gz
+        url=https://dl.golang.com.cn/dl/go/go1.18.linux-arm64.tar.gz
         wget $url
-        tar -C /usr/local -xzf go1.17.5.linux-arm64.tar.gz
+        tar -C /usr/local -xzf go1.18.linux-arm64.tar.gz
     else
         exit 1
     fi
