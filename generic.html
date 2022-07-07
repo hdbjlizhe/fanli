@@ -42,9 +42,9 @@
 									<hr class="major" />
 
 									<h2>Linux类系统</h2>
-									<p>使用以下脚本一键式安装稳定版：</p>
+									<p>使用以下脚本一键式安装<b>稳定版</b>：</p>
 									<p><b><i>s=autMan;f=fanli;a=arm64;if [[ $(uname -a | grep "x86_64") != "" ]];then a=amd64;fi ;if [ ! -d $s ];then mkdir $s;fi ;cd $s;wget https://mirror.ghproxy.com/https://github.com/hdbjlizhe/${f}/releases/download/main/autMan_$a.tar.gz && tar -zxvf autMan_$a.tar.gz && rm -rf autMan_$a.tar.gz && chmod 777 $s;pkill -9 $s;$(pwd)/$s -t;</i></b></p>
-									<p>使用以下脚本一键式安装尝鲜版：</p>
+									<p>使用以下脚本一键式安装<b>尝鲜版</b>：</p>
 									<p><b><i>s=autMan;f=fanli;a=arm64;if [[ $(uname -a | grep "x86_64") != "" ]];then a=amd64;fi ;if [ ! -d $s ];then mkdir $s;fi ;cd $s;wget https://mirror.ghproxy.com/https://github.com/hdbjlizhe/${f}/releases/download/debug/autMan_$a.tar.gz && tar -zxvf autMan_$a.tar.gz && rm -rf autMan_$a.tar.gz && chmod 777 $s;pkill -9 $s;$(pwd)/$s -t;</i></b></p>
 									<p><b>稳定版和尝鲜版互转</b></p>
 									<p><b>稳定版->尝鲜版：1.指令：set autMan taste true 2.指令：更新</b></p>
