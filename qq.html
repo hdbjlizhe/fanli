@@ -39,7 +39,7 @@
 									<!-- Content -->
 										<h2 id="content">说明</h2>
 										<p>QQ框架目前可选方案有node-onebot、oicq、go-cqhttp。QQ都容易被冻结，不要建议对接老号。</p>
-										<h3>安装node</h3>
+										<h3>安装node（amd64）</h3>
 											<p>可以先用命令 node -v 看下有没有返回版本号，如果有的话则说明已经安装。如果没有按而下步骤安装：</p>
 												<pre><code>mkdir nodejs #在当前目录下新建nodejs目录
 cd nodejs #cd到刚刚新建的目录
@@ -48,6 +48,21 @@ tar -xvf node-v16.14.0-linux-x64.tar.xz #解压压缩包
 cd node-v16.14.0-linux-x64 #进入解压目录
 vi /etc/profile #profile文件用于设置系统级的环境变量和启动程序，在这个文件下配置会对所有用户生效。
 export NODEJS_HOME=/root/nodejs/node-v16.14.0-linux-x64 #加入文本末尾
+export PATH=$PATH:$NODEJS_HOME/bin #加入文本末尾
+#然后按键盘字母i进入编辑模式，在最末尾粘贴下面
+source /etc/profile #刷新立即生效
+node -v #测试是否返回版本号，返回则代表安装成功
+</code></pre>
+									<h3>安装node（arm64）</h3>
+											<p>可以先用命令 node -v 看下有没有返回版本号，如果有的话则说明已经安装。如果没有按而下步骤安装：</p>
+												<pre><code>mkdir nodejs #在当前目录下新建nodejs目录
+cd nodejs #cd到刚刚新建的目录
+wget https://nodejs.org/dist/v16.14.0/node-v16.14.0-linux-arm64.tar.xz #下载压缩包
+apt install xz-utils
+tar -xvf node-v16.14.0-linux-arm64.tar.xz #解压压缩包
+cd node-v16.14.0-linux-arm64 #进入解压目录
+vi /etc/profile #profile文件用于设置系统级的环境变量和启动程序，在这个文件下配置会对所有用户生效。
+export NODEJS_HOME=/root/nodejs/node-v16.14.0-linux-arm64 #加入文本末尾
 export PATH=$PATH:$NODEJS_HOME/bin #加入文本末尾
 #然后按键盘字母i进入编辑模式，在最末尾粘贴下面
 source /etc/profile #刷新立即生效
