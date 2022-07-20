@@ -5,43 +5,59 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>显示参数及指令</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+	<title>显示参数及指令</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+<body class="is-preload">
 
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo">autMan</a>
-									<ul class="icons">
-										<li><a href="https://github.com/hdbjlizhe/fanli" class="icon brands fa-github"><span class="label">Github</span></a></li>
-										<li><a href="tencent://message/?uin=282617666&Site=&Menu=yes" target="_blank" title="点击添加群主" class="icon brands fa-qq"><span class="label">QQ</span></a></li>
-										<li><a href="#" class="icon brands fa-telegram"><span class="label">Telegram</span></a></li>
-									</ul>
-								</header>
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-							<!-- Content -->
-								<section>
-									<header class="main">
-										<h1>显示参数设置</h1>
-									</header>
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
 
-									<!-- Content -->
-									<h2 id="content">显示参数设置</h2>
+				<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo">autMan</a>
+					<ul class="icons">
+						<li><a href="https://github.com/hdbjlizhe/fanli" class="icon brands fa-github"><span
+									class="label">Github</span></a></li>
+						<li><a href="tencent://message/?uin=282617666&Site=&Menu=yes" target="_blank" title="点击添加群主"
+								class="icon brands fa-qq"><span class="label">QQ</span></a></li>
+						<li><a href="#" class="icon brands fa-telegram"><span class="label">Telegram</span></a></li>
+					</ul>
+				</header>
 
-									<p>显示模式</p>
-									<pre><code>0.文字模式
+				<!-- Content -->
+				<section>
+					<header class="main">
+						<h1>返利显示样式</h1>
+					</header>
+					
+					<h1>1.海报模式</h1>
+					<span class="image"><img src="images/mode-bill.jpg" alt="" /></span>
+					<p></p>
+					<h1>2.文字模式</h1>
+					<span class="image"><img src="images/mode-word.jpg" alt="" /></span>
+					<p></p>
+					<h1>3.京粉模式</h1>
+					<span class="image"><img src="images/mode-jingfen.jpg" alt="" /></span>
+					<p></p>
+					<h1>4.混合模式</h1>
+					<span class="image"><img src="images/mode-mix.jpg" alt="" /></span>
 
+					<p></p>
+					<h1>5.显示参数设置</h1>
+					<span class="image"><img src="images/fanli-mode.jpg" alt="" /></span>
+					<p></p>
+					<h1>6.显示模式的指令设置</h1>
+					<pre><code>0.文字模式
 指令：文字模式
 set fanli reply_mode 0
 1.海报模式
@@ -54,8 +70,8 @@ set fanli reply_mode 2
 指令：混合模式
 set fanli reply_mode 3
 </code></pre>
-									<p>显示内容</p>
-<pre><code>1.自定义文案
+					<p>显示内容</p>
+					<pre><code>1.自定义文案
 set fanli cstm_cont 美丽商品优惠购
 指令：设置文案：美丽商品优惠购
 2.显示自定义文案
@@ -72,142 +88,37 @@ set fanli show_pict true/false
 指令：显示图片/关闭图片
 6.显示几张图片
 set fanli show_pict_num 1/2/3/4/5
-</cod></pre>
-									<p>海报设置</p>
-<pre><code>set fanli host_name http://ikuai.zhelee.cn:9999 
+</code></pre>
+					<p>海报设置</p>
+					<pre><code>set fanli host_name http://ikuai.zhelee.cn:9999 
 (说明：autMan域名+autMan端口,确保公网可以访问此地址)
 </code></pre>
 
-									<p>京粉模式</p>
-									<pre><code>显示模式之京粉模式（京东红包）
+					<p>京粉模式</p>
+					<pre><code>显示模式之京粉模式（京东红包）
 进入京东联盟->我的推广->京享红包推广->获取无线推广链接
 set fanli jd_quan https://u.jd.com/PdOTAgr</code></pre>
-
-
-
-
-									
-										<div class="row">
-											
-										</div>
-
-					
-								</section>
-
-						</div>
-					</div>
-
-				<!-- Sidebar -->
-				<div id="sidebar">
-					<div class="inner">
-
-						<!-- Search -->
-							<section id="search" class="alt">
-								<form method="post" action="#">
-									<input type="text" name="query" id="query" placeholder="Search" />
-								</form>
-							</section>
-
-						<!-- Menu -->
-							<nav id="menu">
-								<header class="major">
-									<h2>目录</h2>
-								</header>
-								<ul>
-									<li><a href="index.html">主页</a></li>
-									<li>
-										<span class="opener">安装</span>
-										<ul>
-											<li><a href="generic.html">安装</a></li>
-											<li><a href="qq.html">对接QQ</a></li>
-											<li><a href="wx.html">对接WX</a></li>
-											<li><a href="tg.html">对接TG</a></li>
-											<li><a href="wxmp.html">对接公众号</a></li>
-										</ul>
-									</li>
-									<li>
-										<span class="opener">基础配置</span>
-										<ul>
-											<li><a href="jd.html">申请京东联盟账号</a></li>
-											<li><a href="tb.html">申请淘宝联盟账号</a></li>
-											<li><a href="pdd.html">申请多多进宝账号</a></li>
-											<li><a href="ddx.html">申请订单侠账号</a></li>
-											<li><a href="ztk.html">申请折淘客账号</a></li>
-										</ul>
-									</li>
-									<li>
-										<span class="opener">返利参数</span>
-										<ul>
-											<li><a href="pbasic.html">基本参数</a></li>
-											<li><a href="pshow.html">显示参数</a></li>
-											<li><a href="ptransfer.html">转发参数</a></li>
-											<li><a href="pwatching.html">价格监控和转链转发</a></li>
-											<li><a href="pcommision.html">佣金分红</a></li>
-										</ul>
-									</li>
-									<li><a href="operation.html">基础操作及咖啡码</a></li>
-									<li><a href="thread.html">进程守护</a></li>
-									<li><a href="verify.html">短链验证</a></li>
-									<li><a href="elements.html">保留</a></li>
-								</ul>
-							</nav>
-
-						<!-- Section -->
-							<section>
-								<header class="major">
-									<h2>打赏</h2>
-								</header>
-								<div class="mini-posts">
-									<article>
-										<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-										<p>支付宝</p>
-									</article>
-									<article>
-										<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-										<p>微信</p>
-									</article>
-									<article>
-										<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-										<p>数字人民币</p>
-									</article>
-								</div>
-
-								<!--
-								<ul class="actions">
-									<li><a href="#" class="button">详细</a></li>
-								</ul>
-								-->
-							</section>
-
-						<!-- Section -->
-							<section>
-								<header class="major">
-									<h2>联系作者</h2>
-								</header>
-								<p></p>
-								<ul class="contact">
-									<li class="icon solid fa-envelope"><a href="#">hdbjlizhe@163.com</a></li>
-									<li class="icon solid fa-phone">QQ：282617666</li>
-									<li class="icon solid fa-home">QQ群：418353744</li>
-								</ul>
-							</section>
-
-						<!-- Footer -->
-							<footer id="footer">
-								<p class="copyright">&copy; All rights reserved.</p>
-							</footer>
-
-					</div>
-				</div>
-
+				</section>
 			</div>
+		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<!-- Sidebar -->
+		<script src="assets/js/include.js"></script>
+		<div id="sidebar">
+			<div class="inner">
+				<include src="sidebar.html"></include>
+			</div>
+		</div>
 
-	</body>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
 </html>

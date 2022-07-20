@@ -7,7 +7,7 @@
 <html>
 
 <head>
-	<title>申请京东联盟账号</title>
+	<title>线报（京粉、值得买）</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -17,9 +17,11 @@
 
 	<!-- Wrapper -->
 	<div id="wrapper">
+
 		<!-- Main -->
 		<div id="main">
 			<div class="inner">
+
 				<!-- Header -->
 				<header id="header">
 					<a href="index.html" class="logo">autMan</a>
@@ -32,25 +34,33 @@
 					</ul>
 				</header>
 
+				<!--页面内目录-->
+				<section>
+					<p><b>本页面目录</b></p>
+					<div><a href="#1.京粉线报">1.京粉线报</a></div>
+					<div><a href="#2.值得买线报">2.值得买线报</a></div>
+				</section>
+
 				<!-- Content -->
 				<section>
-					<header class="main">
-						<h1>短链验证</h1>
-					</header>
 					<!-- Content -->
-					<h2 id="content">说明</h2>
-					<h3>京东验证短链</h3>
-					<p>京东APP，随便找一个商品，将商品分享给机器人，机器人会返回一个短链，点击短链进行购买（下单不支持），下单后到京粉APP查询订单。如果存在则参数设置没问题，如果不存在刚才下的订单，就给机器人发送指令：“查看返利参数”检查参数设置的对不对。
+					<h2 id="content">autMan后台地址：http://autMan的域名或ip:autMan端口/fanli/static</h2>
+
+					<h2><a id="1.京粉线报"></a>1.京粉线报</h2>
+					<p>可以实现京粉APP内线报的自动转链转发，包含好券商品、精选卖场、9.9包邮、京东配送、实时热销榜、为你推荐、数码家电、
+						超市、母婴玩具、家具日用、美妆穿搭、图书文具、今日必推、京东好物、京东秒杀、拼购商品、高收益榜、自营热卖榜、
+						秒杀进行中、新品首发、自营、京东爆品、首购商品、高佣榜单、视频商品、历史最低价商品榜、极速版商品、新人价商品
+						京喜9.9、京喜秒杀、秒杀未开始、时尚趋势品、3C新品、智能新品、3C长尾商品、时尚新品、时尚爆品、京喜自营、选品库
+						等
 					</p>
-					<h3>淘宝验证短链</h3>
-					<p>淘宝也一样，下单后到淘宝联盟APP查询下的单在不在，注意，淘宝有很多商品没有佣金，短链格式为：s.click.taobao这种样式的为有佣金的商品</p>
-					<h3>拼多多验证短链</h3>
-					<p>拼多多去多多进宝APP查看订单（据说拼多多可能是别人用你的短链下的单才有返佣金，自己用自己短链下单没佣金。），唯品会去唯享客查看订单</p>
-					<span class="image fit"><img src="images/verify.png" alt="" /></span>
-					<div class="row">
+					<span class="image fit"><img src="images/xianbao-rules.jpg" alt="" /></span>
 
-					</div>
 
+
+					<h2><a id="2.值得买线报"></a>2.值得买线报</h2>
+					<p>值得买线报依托值得买推荐生成自己短链后进行推送</p>
+					<span class="image fit"><img src="images/xianbao-rules.jpg" alt="" /></span>
+					
 
 				</section>
 
@@ -58,6 +68,7 @@
 		</div>
 
 		<!-- Sidebar -->
+
 		<div id="sidebar">
 			<div class="inner">
 				<include src="sidebar.html"></include>

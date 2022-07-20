@@ -5,174 +5,101 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>安装</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+	<title>安装</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+<body class="is-preload">
 
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo">autMan</a>
-									<ul class="icons">
-										<li><a href="https://github.com/hdbjlizhe/fanli" class="icon brands fa-github"><span class="label">Github</span></a></li>
-										<li><a href="tencent://message/?uin=282617666&Site=&Menu=yes" target="_blank" title="点击添加群主" class="icon brands fa-qq"><span class="label">QQ</span></a></li>
-										<li><a href="#" class="icon brands fa-telegram"><span class="label">Telegram</span></a></li>
-									</ul>
-								</header>
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-							<!-- Content -->
-								<section>
-									<header class="main">
-										<h1>安装</h1>
-									</header>
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
 
-									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+				<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo">autMan</a>
+					<ul class="icons">
+						<li><a href="https://github.com/hdbjlizhe/fanli" class="icon brands fa-github"><span
+									class="label">Github</span></a></li>
+						<li><a href="tencent://message/?uin=282617666&Site=&Menu=yes" target="_blank" title="点击添加群主"
+								class="icon brands fa-qq"><span class="label">QQ</span></a></li>
+						<li><a href="#" class="icon brands fa-telegram"><span class="label">Telegram</span></a></li>
+					</ul>
+				</header>
 
+				<!-- Content -->
+				<section>
+					<header class="main">
+						<h1>安装</h1>
+					</header>
 
-									<hr class="major" />
+					<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+					<h3><b>安装完成并启动后可进入autMan后台地址：http://autMan的ip:autMan端口/fanli/static<br />获取后台地址的指令：设置</b></h3>
 
-									<h2>Linux类系统</h2>
-									<p>使用以下脚本一键式安装<b>稳定版</b>：</p>
-									<p><b><i>s=autMan;f=fanli;a=arm64;if [[ $(uname -a | grep "x86_64") != "" ]];then a=amd64;fi ;if [ ! -d $s ];then mkdir $s;fi ;cd $s;wget https://mirror.ghproxy.com/https://github.com/hdbjlizhe/${f}/releases/download/main/autMan_$a.tar.gz && tar -zxvf autMan_$a.tar.gz && rm -rf autMan_$a.tar.gz && chmod 777 $s;pkill -9 $s;$(pwd)/$s -t;</i></b></p>
-									<p>使用以下脚本一键式安装<b>尝鲜版</b>：</p>
-									<p><b><i>s=autMan;f=fanli;a=arm64;if [[ $(uname -a | grep "x86_64") != "" ]];then a=amd64;fi ;if [ ! -d $s ];then mkdir $s;fi ;cd $s;wget https://mirror.ghproxy.com/https://github.com/hdbjlizhe/${f}/releases/download/debug/autMan_$a.tar.gz && tar -zxvf autMan_$a.tar.gz && rm -rf autMan_$a.tar.gz && chmod 777 $s;pkill -9 $s;$(pwd)/$s -t;</i></b></p>
-									<p><b>稳定版和尝鲜版互转</b></p>
-									<p><b>稳定版->尝鲜版：1.指令：set autMan taste true 2.指令：更新</b></p>
-									<p><b>尝鲜版->稳定版：1.指令：set autMan taste false 2.指令：更新</b></p>
-									<hr class="major" />
+					<hr class="major" />
 
-									<h2>Windows系统</h2>
-									<p>稳定版下载地址：<a href="https://mirror.ghproxy.com/https://github.com/hdbjlizhe/fanli/releases/download/main/autMan_win.tar.gz">https://github.com/hdbjlizhe/fanli/releases/download/main/autMan_win.tar.gz</a></p>
-									<p>尝鲜版下载地址：<a href="https://mirror.ghproxy.com/https://github.com/hdbjlizhe/fanli/releases/download/main/autMan_win.tar.gz">https://github.com/hdbjlizhe/fanli/releases/download/debug/autMan_win.tar.gz</a></p>
-									<p>下载解压，运行方法如下：1.打开命令提示符，2.cd到autMan文件夹，3.命令<b>.\\autMan -t<b>启动</p>
-									
+					<h1>Linux类系统</h1>
+					<p>稳定版：</p>
+					<p><b><i>s=autMan;f=fanli;a=arm64;if [[ $(uname -a | grep "x86_64") != "" ]];then a=amd64;fi ;if [ !
+								-d $s ];then mkdir $s;fi ;cd $s;wget
+								https://github.com/hdbjlizhe/${f}/releases/download/main/autMan_$a.tar.gz
+								&& tar -zxvf autMan_$a.tar.gz && rm -rf autMan_$a.tar.gz && chmod 777 $s;pkill -9
+								$s;$(pwd)/$s -t;</i></b></p>
+					<p>尝鲜版：</p>
+					<p><b><i>s=autMan;f=fanli;a=arm64;if [[ $(uname -a | grep "x86_64") != "" ]];then a=amd64;fi ;if [ !
+								-d $s ];then mkdir $s;fi ;cd $s;wget
+								https://github.com/hdbjlizhe/${f}/releases/download/debug/autMan_$a.tar.gz
+								&& tar -zxvf autMan_$a.tar.gz && rm -rf autMan_$a.tar.gz && chmod 777 $s;pkill -9
+								$s;$(pwd)/$s -t;</i></b></p>
+					<p>autMan(Linux系统含amd64\arm64)运行：</p>
+					<p><b><i>1.进入autMan文件夹：cd /root/autMan<br />2.指令启动：./autMan -t<br />3. 静默指令：重启</i></b></p>
+					<span class="image"><img src="images/start_autMan.jpg" alt="" /></span>
+					<hr class="major" />
 
-								</section>
+					<h1>Windows系统</h1>
+					<p>下载解压后直接运行exe文件</p>
+					<p>稳定版</p>
+					<p><a
+							href="https://github.com/hdbjlizhe/fanli/releases/download/main/autMan_win.tar.gz">https://github.com/hdbjlizhe/fanli/releases/download/main/autMan_win.tar.gz</a>
+					</p>
+					<p>尝鲜版</p>
+					<p><a
+							href="https://github.com/hdbjlizhe/fanli/releases/download/main/autMan_win.tar.gz">https://github.com/hdbjlizhe/fanli/releases/download/debug/autMan_win.tar.gz</a>
+					</p>
+					<p><b><i>1.启动windows命令提示符或powershell等命令行工具<br />2.进入autMan文件夹<br />3.指令启动：.\\autMan.exe -t<br />4.
+								静默指令：重启</i></b></p>
+					<p>autMan(Windows版本)运行：</p>
 
-						</div>
-					</div>
-
-				<!-- Sidebar -->
-				<div id="sidebar">
-					<div class="inner">
-
-						<!-- Search -->
-							<section id="search" class="alt">
-								<form method="post" action="#">
-									<input type="text" name="query" id="query" placeholder="Search" />
-								</form>
-							</section>
-
-						<!-- Menu -->
-							<nav id="menu">
-								<header class="major">
-									<h2>目录</h2>
-								</header>
-								<ul>
-									<li><a href="index.html">主页</a></li>
-									<li>
-										<span class="opener">安装</span>
-										<ul>
-											<li><a href="generic.html">安装autMan</a></li>
-											<li><a href="qq.html">对接QQ</a></li>
-											<li><a href="wx.html">对接WX</a></li>
-											<li><a href="tg.html">对接TG</a></li>
-											<li><a href="wxmp.html">对接公众号</a></li>
-										</ul>
-									</li>
-									<li>
-										<span class="opener">基础配置</span>
-										<ul>
-											<li><a href="jd.html">申请京东联盟账号</a></li>
-											<li><a href="tb.html">申请淘宝联盟账号</a></li>
-											<li><a href="pdd.html">申请多多进宝账号</a></li>
-											<li><a href="ddx.html">申请订单侠账号</a></li>
-											<li><a href="ztk.html">申请折淘客账号</a></li>
-										</ul>
-									</li>
-									<li>
-										<span class="opener">返利参数</span>
-										<ul>
-											<li><a href="pbasic.html">基本参数</a></li>
-											<li><a href="pshow.html">显示参数</a></li>
-											<li><a href="ptransfer.html">转发参数</a></li>
-											<li><a href="pwatching.html">价格监控和转链转发</a></li>
-											<li><a href="pcommision.html">佣金分红</a></li>
-										</ul>
-									</li>
-									<li><a href="operation.html">基础操作及咖啡码</a></li>
-									<li><a href="thread.html">进程守护</a></li>
-									<li><a href="verify.html">短链验证</a></li>
-									<li><a href="elements.html">保留</a></li>
-								</ul>
-							</nav>
-
-						<!-- Section -->
-							<section>
-								<header class="major">
-									<h2>打赏</h2>
-								</header>
-								<div class="mini-posts">
-									<article>
-										<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-										<p>支付宝</p>
-									</article>
-									<article>
-										<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-										<p>微信</p>
-									</article>
-									<article>
-										<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-										<p>数字人民币</p>
-									</article>
-								</div>
-
-								<!--
-								<ul class="actions">
-									<li><a href="#" class="button">详细</a></li>
-								</ul>
-								-->
-							</section>
-
-						<!-- Section -->
-							<section>
-								<header class="major">
-									<h2>联系作者</h2>
-								</header>
-								<p></p>
-								<ul class="contact">
-									<li class="icon solid fa-envelope"><a href="#">hdbjlizhe@163.com</a></li>
-									<li class="icon solid fa-phone">QQ：282617666</li>
-									<li class="icon solid fa-home">QQ群：418353744</li>
-								</ul>
-							</section>
-
-						<!-- Footer -->
-							<footer id="footer">
-								<p class="copyright">&copy; All rights reserved.</p>
-							</footer>
-
-					</div>
-				</div>
+					<span class="image"><img src="images/start_autMan_win.png" alt="" /></span>
+				</section>
 
 			</div>
+		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<!-- Sidebar -->
+		<div id="sidebar">
+			<div class="inner">
+				<include src="sidebar.html"></include>
+			</div>
+		</div>
 
-	</body>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/include.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
 </html>

@@ -5,192 +5,109 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>对接WX</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+	<title>对接WX</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+<body class="is-preload">
 
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo">autMan</a>
-									<ul class="icons">
-										<li><a href="https://github.com/hdbjlizhe/fanli" class="icon brands fa-github"><span class="label">Github</span></a></li>
-										<li><a href="tencent://message/?uin=282617666&Site=&Menu=yes" target="_blank" title="点击添加群主" class="icon brands fa-qq"><span class="label">QQ</span></a></li>
-										<li><a href="#" class="icon brands fa-telegram"><span class="label">Telegram</span></a></li>
-									</ul>
-								</header>
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-							<!-- Content -->
-								<section>
-									<header class="main">
-										<h1>对接WX</h1>
-									</header>
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
 
-									<!-- Content -->
-										<h2 id="content">说明</h2>
-										<p>WX框架目前可选方案有可爱猫、vlw等。当前以vlw为例</p>
-										<h3>需要的软件</h3>
-										<ol>
-											<li>win 平台的系统（测试win7可行）</li>
-											<li>vlw(http://a.vlmai.cn/)框架。(群文件夹vlw下载)</li>
-											<li>cn.sxyo.xYo_httpApi_WeChat.vlw.dl插件（群文件夹vlw下载)</li>
-											<li>电脑上安装要求版本的微信，（群文件夹vlw下载）</li>
-										</ol>
-										<h3>vlw的配置</h3>
-										<ol>
-											<li>首先给他安个家，建议英文或拼音目录</li>
-											<li>把插件放到plugin目录下</li>
-										</ol>
-										<span class="image fit"><img src="images/vlw01.png" alt="" /></span>
-										<h3>登录微信</h3>
-										<span class="image fit"><img src="images/vlw02.png" alt="" /></span>
-										<h3>启用插件</h3>
-										<span class="image fit"><img src="images/vlw03.png" alt="" /></span>
-										<h3>插件设置</h3>
-										<span class="image fit"><img src="images/vlw04.png" alt="" /></span>
-										<h3>autMan设置</h3>
-										<span class="image fit"><img src="images/vlw05.png" alt="" /></span>							
-										<pre><code>set wx vlw addr http://域名:端口/wx/receive   ##对应第一条
+				<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo">autMan</a>
+					<ul class="icons">
+						<li><a href="https://github.com/hdbjlizhe/fanli" class="icon brands fa-github"><span
+									class="label">Github</span></a></li>
+						<li><a href="tencent://message/?uin=282617666&Site=&Menu=yes" target="_blank" title="点击添加群主"
+								class="icon brands fa-qq"><span class="label">QQ</span></a></li>
+						<li><a href="#" class="icon brands fa-telegram"><span class="label">Telegram</span></a></li>
+					</ul>
+				</header>
+
+				<!-- Content -->
+				<section>
+					<!-- Content -->
+					<h2 id="content">说明</h2>
+					<p>微信框架目前可选方案有鲲鹏微信、可爱猫、vlw等，都运行在windows平台上。</p>
+					<h1>1.鲲鹏微信的对接</h1>
+					<p>鲲鹏微信的qq群号为1146130363，可在群里获取最新的文件。autMan群文件里也有鲲鹏微信的安装包，包括3个软件：<br />1.鲲鹏机器人软件<br />2.http插件<br />3.微信安装包（此处为要求的版本）</p>
+					<p><b>1.将http插件文件http.kp.dll拖到app文件夹内，双击启动鲲鹏机器人，右键启用“鲲鹏http服务”</b></p>
+					<span class="image"><img src="images/kp-start.png" alt="" /></span>
+					<p></p>
+					<p><b>2.双击“鲲鹏http服务”设置参数</b></p>
+					<span class="image"><img src="images/kp-httpapi.png" alt="" /></span>
+					<p><b>3.配置autMan对接</b></p>
+					<p>1.设置对接模式指令：set wx mode kp，<br />2.设置鲲鹏微信的地址：set wx kp_addr https://鲲鹏机器人ip地址或域名:2022</p>
+					<span class="image"><img src="images/kp-autMan.png" alt="" /></span>
+					<hr class="major" />
+					<h1>2.vlw对接</h1>
+					<ol>
+						<li>win 平台的系统（测试win7可行）</li>
+						<li>vlw(http://a.vlmai.cn/)框架。(群文件夹vlw下载)</li>
+						<li>cn.sxyo.xYo_httpApi_WeChat.vlw.dl插件（群文件夹vlw下载)</li>
+						<li>电脑上安装要求版本的微信，（群文件夹vlw下载）</li>
+					</ol>
+					<h3>vlw的配置</h3>
+					<ol>
+						<li>首先给他安个家，建议英文或拼音目录</li>
+						<li>把插件放到plugin目录下</li>
+					</ol>
+					<span class="image fit"><img src="images/vlw01.png" alt="" /></span>
+					<h3>登录微信</h3>
+					<span class="image fit"><img src="images/vlw02.png" alt="" /></span>
+					<h3>启用插件</h3>
+					<span class="image fit"><img src="images/vlw03.png" alt="" /></span>
+					<h3>插件设置</h3>
+					<span class="image fit"><img src="images/vlw04.png" alt="" /></span>
+					<h3>autMan设置</h3>
+					<span class="image fit"><img src="images/vlw05.png" alt="" /></span>
+					<pre><code>set wx vlw addr http://域名:端口/wx/receive   ##对应第一条
 set wx dynamic_ip true   ##设置动态网络地址，适用于家庭宽带而可爱猫在云服务器的情况下（根据自己情况，我是不是应该关了它）## 对应第二条
 set wx relay_mode true  ##设置图片转发模式，否则可能会出现此图片来自xx未经允许不得使用的提示
 set wx vlw_addr http://域名:端口   ##你的vlw框架的域名+端口；服务器就ip+端口   #对应第八条
 set wx vlw_token 你的token  ##你设置的token  ##对应第九条</code></pre>
-										<h3>排错</h3>
-										<ol>
-											<li>首先访问你的机器人地址，看是否正常</li>
-											<li>然后是访问vlw框架地址，看是否正常</li>
-											<li>给机器人发送 list wx 指令查看设置</li>
-											<li>手动启动机器人./autMan -t，然后微信发送命令，看看终端输出</li>
-										</ol>
-										<div class="row">
-											
-										</div>
-					
-								</section>
-						</div>
-					</div>
-
-				<!-- Sidebar -->
-				<div id="sidebar">
-					<div class="inner">
-
-						<!-- Search -->
-							<section id="search" class="alt">
-								<form method="post" action="#">
-									<input type="text" name="query" id="query" placeholder="Search" />
-								</form>
-							</section>
-
-						<!-- Menu -->
-							<nav id="menu">
-								<header class="major">
-									<h2>目录</h2>
-								</header>
-								<ul>
-									<li><a href="index.html">主页</a></li>
-									<li>
-										<span class="opener">安装</span>
-										<ul>
-											<li><a href="generic.html">安装</a></li>
-											<li><a href="qq.html">对接QQ</a></li>
-											<li><a href="wx.html">对接WX</a></li>
-											<li><a href="tg.html">对接TG</a></li>
-											<li><a href="wxmp.html">对接公众号</a></li>
-										</ul>
-									</li>
-									<li>
-										<span class="opener">基础配置</span>
-										<ul>
-											<li><a href="jd.html">申请京东联盟账号</a></li>
-											<li><a href="tb.html">申请淘宝联盟账号</a></li>
-											<li><a href="pdd.html">申请多多进宝账号</a></li>
-											<li><a href="ddx.html">申请订单侠账号</a></li>
-											<li><a href="ztk.html">申请折淘客账号</a></li>
-										</ul>
-									</li>
-									<li>
-										<span class="opener">返利参数</span>
-										<ul>
-											<li><a href="pbasic.html">基本参数</a></li>
-											<li><a href="pshow.html">显示参数</a></li>
-											<li><a href="ptransfer.html">转发参数</a></li>
-											<li><a href="pwatching.html">价格监控和转链转发</a></li>
-											<li><a href="pcommision.html">佣金分红</a></li>
-										</ul>
-									</li>
-									<li><a href="operation.html">基础操作及咖啡码</a></li>
-									<li><a href="thread.html">进程守护</a></li>
-									<li><a href="verify.html">短链验证</a></li>
-									<li><a href="elements.html">保留</a></li>
-								</ul>
-							</nav>
-
-						<!-- Section -->
-							<section>
-								<header class="major">
-									<h2>打赏</h2>
-								</header>
-								<div class="mini-posts">
-									<article>
-										<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-										<p>支付宝</p>
-									</article>
-									<article>
-										<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-										<p>微信</p>
-									</article>
-									<article>
-										<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-										<p>数字人民币</p>
-									</article>
-								</div>
-
-								<!--
-								<ul class="actions">
-									<li><a href="#" class="button">详细</a></li>
-								</ul>
-								-->
-							</section>
-
-						<!-- Section -->
-							<section>
-								<header class="major">
-									<h2>联系作者</h2>
-								</header>
-								<p></p>
-								<ul class="contact">
-									<li class="icon solid fa-envelope"><a href="#">hdbjlizhe@163.com</a></li>
-									<li class="icon solid fa-phone">QQ：282617666</li>
-									<li class="icon solid fa-home">QQ群：418353744</li>
-								</ul>
-							</section>
-
-						<!-- Footer -->
-							<footer id="footer">
-								<p class="copyright">&copy; All rights reserved.</p>
-							</footer>
+					<h3>排错</h3>
+					<ol>
+						<li>首先访问你的机器人地址，看是否正常</li>
+						<li>然后是访问vlw框架地址，看是否正常</li>
+						<li>给机器人发送 list wx 指令查看设置</li>
+						<li>手动启动机器人./autMan -t，然后微信发送命令，看看终端输出</li>
+					</ol>
+					<div class="row">
 
 					</div>
-				</div>
 
+				</section>
 			</div>
+		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<!-- Sidebar -->
+		<div id="sidebar">
+			<div class="inner">
+				<include src="sidebar.html"></include>
+			</div>
+		</div>
 
-	</body>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/include.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
 </html>

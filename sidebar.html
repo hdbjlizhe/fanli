@@ -1,102 +1,113 @@
-<!-- Sidebar -->
-<div id="sidebar">
-    <div class="inner">
+<!-- Search -->
+<section id="search" class="alt">
+    <form method="post" action="#">
+        <input type="text" name="query" id="query" placeholder="Search" />
+    </form>
+</section>
 
-        <!-- Search -->
-            <section id="search" class="alt">
-                <form method="post" action="#">
-                    <input type="text" name="query" id="query" placeholder="Search" />
-                </form>
-            </section>
+<!-- Menu -->
+<nav id="menu">
+    <header class="major">
+        <h2>目录</h2>
+    </header>
+    <ul>
+        <li><a href="index.html">主页</a></li>
+        <li><a><b>1.安装及部署</b></a></li>
+        <li><a href="generic.html">&nbsp;&nbsp;&nbsp;&nbsp;1.1 安装autMan</a></li>
+        <li><a href="qq.html">&nbsp;&nbsp;&nbsp;&nbsp;1.2 autMan对接QQ</a></li>
+        <li><a href="wx.html">&nbsp;&nbsp;&nbsp;&nbsp;1.3 autMan对接WX</a></li>
+        <li><a href="tg.html">&nbsp;&nbsp;&nbsp;&nbsp;1.4 autMan对接TG</a></li>
+        <li><a href="wxmp.html">&nbsp;&nbsp;&nbsp;&nbsp;1.5 autMan对接公众号</a></li>
+        <li><a><b>2.系统管理</b></a></li>
+        <li><a href="update.html">&nbsp;&nbsp;&nbsp;&nbsp;2.1 系统更新</a></li>
+        <li><a href="operation.html">&nbsp;&nbsp;&nbsp;&nbsp;2.2 基础操作</a></li>
+        <li><a href="thread.html">&nbsp;&nbsp;&nbsp;&nbsp;2.3 进程守护</a></li>
+        <li><a href="ck.html">&nbsp;&nbsp;&nbsp;&nbsp;2.4 CK识别<b>(待补充)</b></a></li>
+        <li><a href="url.html">&nbsp;&nbsp;&nbsp;&nbsp;2.5 URL识别<b>(待补充)</b></a></li>
+        <li><a href="carry.html">&nbsp;&nbsp;&nbsp;&nbsp;2.6 搬运<b>(待补充)</b></a></li>
+        <li><a href="coffee.html">&nbsp;&nbsp;&nbsp;&nbsp;2.7 咖啡码<b>(待补充)</b></a></li>
+        <li><a href="store.html">&nbsp;&nbsp;&nbsp;&nbsp;2.8 存储管理<b>(待补充)</b></a></li>
+        <li><a href="cmds.html">&nbsp;&nbsp;&nbsp;&nbsp;2.9 命令大全</a></li>
+        <li><a href="plugin.html">&nbsp;&nbsp;&nbsp;&nbsp;2.10 插件编写说明<b>(待补充)</b></a></li>
+        <li><a><b>3.返利设置</b></a></li>
+        <li><a href="jd.html">&nbsp;&nbsp;&nbsp;&nbsp;3.1 申请京东联盟账号</a></li>
+        <li><a href="tb.html">&nbsp;&nbsp;&nbsp;&nbsp;3.2 申请淘宝联盟账号</a></li>
+        <li><a href="pdd.html">&nbsp;&nbsp;&nbsp;&nbsp;3.3 申请多多进宝账号</a></li>
+        <li><a href="ztk.html">&nbsp;&nbsp;&nbsp;&nbsp;3.4 申请折淘客账号</a></li>
+        <li><a href="pbasic.html">&nbsp;&nbsp;&nbsp;&nbsp;3.5 返利基本参数设置</a></li>
+        <li><a href="verify.html">&nbsp;&nbsp;&nbsp;&nbsp;3.6 返利短链验证</a></li>
+        <li><a href="pshow.html">&nbsp;&nbsp;&nbsp;&nbsp;3.7 返利显示基本模式</a></li>
+        <li><a href="ptransfer.html">&nbsp;&nbsp;&nbsp;&nbsp;3.8 转链转发设置</a></li>
+        <li><a href="pbasic.html">&nbsp;&nbsp;&nbsp;&nbsp;3.9 返利线报设置</a></li>
+        <li><a href="pwatching.html">&nbsp;&nbsp;&nbsp;&nbsp;3.10 价格监控和自主转链转发</a></li>
+        <li><a href="pcommision.html">&nbsp;&nbsp;&nbsp;&nbsp;3.11 佣金分红</a></li>
+        <li><a><b>4.青龙管理</b></a></li>
+        <li><a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;4.1 容器分类<b>(待补充)</b></a></li>
+        <li><a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;4.2 配置文件管理<b>(待补充)</b></a></li>
+        <li><a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;4.3 环境变量管理<b>(待补充)</b></a></li>
+        <li><a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;4.4 定时任务管理<b>(待补充)</b></a></li>
+        <li><a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;4.5 订阅管理<b>(待补充)</b></a></li>
+        <li><a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;4.6 脚本管理<b>(待补充)</b></a></li>
+        <li><a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;4.7 依赖管理<b>(待补充)</b></a></li>
+        <li><a><b>5.东芝管理</b></a></li>
+        <li><a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;5.1 CK/WSCK<b>(待补充)</b></a></li>
+        <li><a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;5.2 资产查询及推送<b>(待补充)</b></a></li>
+        <li><a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;5.3 洞察变量<b>(待补充)</b></a></li>
+        <li><a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;5.4 店铺签到<b>(待补充)</b></a></li>
+        <li><a><b>6.智家管理</b></a></li>
+        <li><a href="elements.html">保留</a></li>
+    </ul>
+</nav>
 
-        <!-- Menu -->
-            <nav id="menu">
-                <header class="major">
-                    <h2>目录</h2>
-                </header>
-                <ul>
-                    <li><a href="index.html">主页</a></li>
-                    <li>
-                        <span class="opener">安装</span>
-                        <ul>
-                            <li><a href="generic.html">安装</a></li>
-                            <li><a href="qq.html">对接QQ</a></li>
-                            <li><a href="wx.html">对接WX</a></li>
-                            <li><a href="tg.html">对接TG</a></li>
-                            <li><a href="wxmp.html">对接公众号</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="opener">基础配置</span>
-                        <ul>
-                            <li><a href="jd.html">申请京东联盟账号</a></li>
-                            <li><a href="tb.html">申请淘宝联盟账号</a></li>
-                            <li><a href="pdd.html">申请多多进宝账号</a></li>
-                            <li><a href="ddx.html">申请订单侠账号</a></li>
-                            <li><a href="ztk.html">申请折淘客账号</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="opener">返利参数</span>
-                        <ul>
-                            <li><a href="pbasic.html">基本参数</a></li>
-                            <li><a href="pshow.html">显示参数</a></li>
-                            <li><a href="ptransfer.html">转发参数</a></li>
-                            <li><a href="pwatching.html">价格监控和转链转发</a></li>
-                            <li><a href="pcommision.html">佣金分红</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="operation.html">基础操作及咖啡码</a></li>
-                    <li><a href="thread.html">进程守护</a></li>
-                    <li><a href="verify.html">短链验证</a></li>
-                    <li><a href="elements.html">保留</a></li>
-                </ul>
-            </nav>
-
-        <!-- Section -->
-            <section>
-                <header class="major">
-                    <h2>打赏</h2>
-                </header>
-                <div class="mini-posts">
-                    <article>
-                        <a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-                        <p>支付宝</p>
-                    </article>
-                    <article>
-                        <a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-                        <p>微信</p>
-                    </article>
-                    <article>
-                        <a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-                        <p>数字人民币</p>
-                    </article>
-                </div>
-
-                <!--
-                <ul class="actions">
-                    <li><a href="#" class="button">详细</a></li>
-                </ul>
-                -->
-            </section>
-
-        <!-- Section -->
-            <section>
-                <header class="major">
-                    <h2>联系作者</h2>
-                </header>
-                <p></p>
-                <ul class="contact">
-                    <li class="icon solid fa-envelope"><a href="#">hdbjlizhe@163.com</a></li>
-                    <li class="icon solid fa-phone">QQ：282617666</li>
-                    <li class="icon solid fa-home">QQ群：418353744</li>
-                </ul>
-            </section>
-
-        <!-- Footer -->
-            <footer id="footer">
-                <p class="copyright">&copy; All rights reserved.</p>
-            </footer>
-
+<!-- Section -->
+<section>
+    <header class="major">
+        <h2>打赏</h2>
+    </header>
+    <div class="mini-posts">
+        <article>
+            <a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+            <p>支付宝</p>
+        </article>
+        <article>
+            <a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+            <p>微信</p>
+        </article>
+        <article>
+            <a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+            <p>数字人民币</p>
+        </article>
     </div>
-</div>
+
+    <!--
+    <ul class="actions">
+        <li><a href="#" class="button">详细</a></li>
+    </ul>
+    -->
+</section>
+
+<!-- Section -->
+<section>
+    <header class="major">
+        <h2>联系作者</h2>
+    </header>
+    <p></p>
+    <ul class="contact">
+        <li class="icon solid fa-envelope"><a href="#">hdbjlizhe@163.com</a></li>
+        <li class="icon solid fa-phone">QQ：282617666</li>
+        <li class="icon solid fa-home">QQ群：418353744</li>
+    </ul>
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+    <p class="copyright">&copy; All rights reserved.</p>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/include.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>

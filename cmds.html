@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>其它参数</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+							<include src="header.html"></include>
+							<h1></h1>
+							<pre><code>set autMan name 奥特曼 #设置奥特曼机器人名
+set autMan port 8080 #设置奥特曼http服务端口
+set autMan duration 5 #奥特曼消息撤回等待时间，单位秒
+set autMan update_notify false #奥特曼自动升级是否通知
+set autMan auto_update true #是否开启奥特曼自动更新
+set reply 打赏 [CQ:image,file=https://xxxxxxx] #奥特曼内置赞赏码
+set autMan enable_http_server true #是否启动http服务，对接微信公众号等需要，建议开启
+set autMan ignore_notify true # 奥特曼忽略通知命令，默认忽略。
+set qq spy_on ? # 返利间谍模式
+set autMan pushplus [token] # 管理员推送绑定pushplus指令
+set autMan recall 关键词1&关键词2... # 关键词撤回功能#关键词支持正则表达式。
+set reply ? ? ## 关键词回复功能 第一个问号是支持正则的关键词，第二个问号是回复的内容。
+delete reply ? #删除用set设置的关键词回复
+reply ? ? ## 关键词回复功能 第一个问号是支持正则的关键词，第二个问号是回复的内容。
+reply ? nil ##删除reply设置的关键词回复，请区别于用set reply设置关键词的删除方法。
+set autMan recall [\s\S]*[^0-9a-zA-Z=][0-9a-zA-Z]{14}[^0-9a-zA-Z;][\s\S]* # 屏蔽京东口令小妙招
+重启 #重启并静默运行
+命令 #获取奥特曼的命令列表
+
+守护奥特曼 #解决开机自启和崩溃重启
+systemctl disable autMan #linux命令，关闭守护模式，守护模式会导致没法自动升级
+systemctl stop autMan && systemctl disable autMan #linux命令，遇见奥特曼被被杀死，请执行命令
+docker-compose up -d --build #linux命令，docker运行
+
+对接qq
+set qq tempMessageGroupCode ? #设置qq临时消息默认群号
+set qq onGroups g1&g2&g3... #指定要监听的qq群
+set qq auto_friend false #设置是否自动同意好友请求,似乎没用，不用在意。
+set qq onself true #设置是否对监听自身消息
+set qq default_bot 主机器人账号 #奥特曼支持对接多个qq，设置主qq机器人
+set qq masters q1&q2&q3... 设置qq管理员
+set qq notifier q1&q2&q3... 设置接受通知的qq账号
+
+对接telegtam
+set tg token ? #设置telegram机器人token
+set tg http_proxy ? #设置telegram机器人代理
+set tg masters t1&t2&t3... #设置telegram机器人管理员
+set tg notifier t1&t2&t3... 设置接受通知的telegram账号
+
+对接微信公众号
+set wxmp app_id ? #设置微信公众平台app_id
+set wxmp app_secret ? #设置微信公众平台app_secret 
+set wxmp token ? #设置微信公众平台token
+set wxmp encoding_aes_key ? #设置微信公众平台encoding_aes_key
+set wxmp masters w1&w2&w3 #设置微信公众平台管理员
+set wxmp subscribe_reply ? #设置公众号关注事件回复
+set wxmp default_reply 无法回复该消息 设置公众号默认回复
+
+对接微信-可爱猫
+set wx api_url ? #设置插件调用地址，确保奥特曼可以访问可爱猫端口
+set wx keaimao_dynamic_ip true #设置可爱猫是否动态网络地址，适用于可爱猫家庭宽带而奥特曼在云服务器的情况下
+set wx keaimao_port ? #设置可爱猫端口
+set wx relay_mode true #设置图片转发模式，否则可能会出现此图片来自xx未经允许不得使用的提示
+set wx relaier ? #设置指定转发地址，格式为 https://域名/relay?url=%s，不知道不用填
+set wx autMan_dynamic_ip true #设置奥特曼是否动态网络地址，适用于奥特曼家庭宽带而可爱猫在云服务器的情况下
+set autMan enable_http_server true #启动http服务，一定要打开
+
+对接微信-vlw
+set wx vlw_addr http://vlw插件ip:端口 #设置插件调用地址，对应之前插件配置的 序号3 HTTP 外网API调用地址
+set wx vlw_token XXX #设置对接vlw插件的token，对应之前插件配置的 序号2 API调用Token，例如autMan
+set wx relay_mode true #设置图片转发模式，否则可能会出现此图片来自xx未经允许不得使用的提示。不懂就不要设置了。
+set wx relaier ? #设置指定转发地址，格式为 https://域名/relay?url=%s，这个我也不知道干嘛的，不知道就别设置了。
+set autMan enable_http_server true #启动http服务，一定要打开
+
+对接微信-鲲鹏
+set wx kp_addr http://xxx.xxx.xxx.xxx:2022  #设置地址
+set wx mode kp #设置模式
+
+鲲鹏使用httpApi插件设置如下：
+消息推送：http://autMan的地址:autMan端口/wx/receive
+外网服务：开启
+开关服务：开启
+鉴权开关不要打开，暂时没有写鉴权程序
+
+对接青龙
+青龙管理 #多容器青龙配置
+
+# 使用命令
+ql config #获取青龙config.sh设置的内容，但我没测试出来结果，等猫咪大佬解惑
+ql envs #获取青龙config.sh内设置的所有环境变量内容，但我没测试出来结果，等猫咪大佬解惑
+ql env get ? #获取青龙config.sh内指定环境变量的内容，仅精确匹配
+ql env find ? #查找青龙config.sh内指定的环境变量内容，支持模糊匹配
+ql env set ? ? #在青龙config.sh内设置环境变量
+ql env remark ? ? #字面意思是给环境变量设置备注，但我没测试出来结果，等猫咪大佬解惑
+ql env disable ? #禁用（注释）在青龙config.sh内设置的环境变量
+ql env enable ? #启用（取消注释）在青龙config.sh内设置的环境变量
+ql raw ? #下载raw链接的js
+ql task ? #在青龙里面运行指定的js
+ql repo ? #在青龙里面拉库，例：ql repo https://github.com/cdle/carry.git
+ql cookie status #查询青龙里cookie状态
+ql crons #获取青龙所有定时任务，但我没测试出来结果，等猫咪大佬解惑
+ql cron status ? #查看青龙指定定时任务的状态
+ql cron run ? #运行青龙定时任务，支持模糊匹配
+ql cron stop ? #停止运行青龙定时任务，支持模糊匹配
+ql cron enable ? #启用青龙定时任务，支持模糊匹配
+ql cron disable ? #禁用青龙定时任务，支持模糊匹配
+ql cron find ? #查找青龙定时任务，支持模糊匹配
+ql cron logs ? #查找青龙定时任务运行日志，支持模糊匹配
+ql cron hide duplicate #隐藏青龙重复定时任务
+set qinglong autoCronHideDuplicate false #关闭自动隐藏任务命令
+
+短信登陆对接Nark(需要有授权)
+# 设置诺兰登陆地址
+set jd_cookie enable_nark true
+set jd_cookie nark_addr http://ip:端口
+# 设置诺兰登陆地址
+set jd_cookie enable_rabbit true
+set jd_cookie rabbit_addr http://ip:端口
+# 设置
+#使用命令：
+1、“登录”或“登陆”：登录某东
+2、“q“：退出登录
+
+对接小爱同学
+#小爱同学，可以指定API，对小爱说对话模式即可开启连续对话模式，闭嘴可关闭。
+set autMan 小爱同学 http://81.70.100.130/api/xiaoai.php?msg=%s&n=text #挂了就自己换
+set autMan 小爱同学 http://jiuli.xiaoapi.cn/i/xiaoai_tts.php?msg=%s #挂了就自己换
+set autMan 小爱同学gjson text # 处理json格式数据的小爱api，不填获取整个文本
+aut delete 小爱同学gjson # 删除处理json格式数据的小爱api
+# 使用方法：
+1、唤起小爱：发送“小爱+想说的话”，例如：小爱今天天气。
+2、对话模式：发送“小爱对话模式”开启，发送“闭嘴”结束。
+3、成语接龙：发送“成语接龙”开始。这个可应该不是小爱同学的功能，但我懒得单独写它了。
+
+jd_cookie
+set jd_cookie nark_addr xxxxxxxxxxxxxxx 设置Nark服务地址
+set jd_cookie enable_nark true/false 设置是否启用nark登录
+set jd_cookie rabbit_addr xxxxxxxxxxxx  设置rabbit服务地址
+set jd_cookie enable_rabbit true/false 设置是否启用rabbit登录
+
+洞察变量-填写说明
+任务开关：想开就开，想关就关
+静默运行：在别人的群里可能会需要这个功能。
+任务名称：自己随意起名字，自己好识别就行了。
+目的脚本：想运行哪个脚本，如：jd_team60.js
+激活变量：哪个变量激活脚本如export ccc="123"，ccc就是激活变量
+监听目标：把监听的群号放进去，多个用英文逗号隔开
+指定容器：设置的容器的名称，不要知道的用命令：青龙管理，多个用英文逗号隔开
+
+内置店铺签到：
+set jd_cookie dpqd_parallel true/false   	#是否开启多进程并行签到（可能会导致autMan重启，默认关闭）
+set jd_cookie dpqd_limit_num 50  			#设置签到CK限制数量
+set jd_cookie dpqd_cron 5 5,14 * * * 		#设置自动签到时间,默认是0点0分
+set jd_cookie dpqd_vess 青龙1,青龙2,青龙3 	 #指定执行签到的容器，不指定则取默认容器
+set jd_cookie dpqd_notify true/false 		#设置是否通知到个人
+提取token并自动过滤无效后执行签到并加入到token库(注：短链之间的链接符无所谓)
+1. tokens pick https://u.jd.com/xxxxxxx;https://u.jd.com/xxxxxxx 
+2. tokens check 检查token并剔除无效
+3. tokens sign 手动执行签到任务
+添加新token并执行签到时识别以下格式(连接符可任意，这里以&为例):
+1. 从APP分享店铺首页到autMan
+2. TOKEN:xxxxxxxx&xxxxxxxx&xxxxxx
+3. DPQDTK=xxxxxxxxx&xxxxxxx&xxxxxxx
+4. {"token":"xxxxxxxx"}
+5. 签到xx天得xx豆
+
+内置外卖返利
+set fanli enable_ele true/false 开关饿了么外卖，默认开启
+set fanli enable_mt true/false 开关美团外卖，默认开启
+set fanli ele_cron 0 11,17 * * *	设置饿了么推送时间
+set fanli mt_cron 0 11,17 * * *	    设置美团推送时间
+set fanli ele_ad	设置饿了么文案
+set fanli mt_ad	    设置美团文案
+set fanli ele_to_groups qqgroup:123 设置饿了么推送群
+set fanli mt_to_groups qqgroup:123 设置美团推送群
+</code></pre>
+							
+						</div>
+					</div>
+				<!-- Sidebar -->
+				<div id="sidebar">
+					<div class="inner">
+						<include src="sidebar.html"></include>
+					</div>
+				</div>
+				
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/include.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/paramsfanli.js"></script>
+	</body>
+</html>
