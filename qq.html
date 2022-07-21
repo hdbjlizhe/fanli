@@ -34,13 +34,20 @@
 					</ul>
 				</header>
 
+				<!--页面内目录-->
+				<section>
+					<p><b>本页面目录</b></p>
+					<div><a href="#1.对接Linux版QQ">1.对接Linux版QQ</a></div>
+					<div><a href="#2.对接Windows版QQ">2.对接Windows版QQ</a></div>
+				</section>
+
 				<!-- Content -->
 				<section>
 					<header class="main">
 						<p><b>说明：你要准备2个QQ号，1个用来做机器人，1个用来做管理员。<br />QQ框架目前可选方案有node-onebot、oicq、go-cqhttp等。下面以对接node-onebot为例，对接oicq可参见：https://github.com/takayama-lily/oicq/tree/master/http-api</b></p>
 					</header>
 
-					<h1>1.对接Linux版QQ</h1>
+					<h1><a id="1.对接Linux版QQ"></a>1.对接Linux版QQ</h1>
 					<!-- Content -->
 					<h3>对接node-onebot</h3>
 					<h4>1.安装node</h4>
@@ -66,7 +73,7 @@ git --version #检查是否返回版本号</code></pre>
 					<pre><code>apt install git #安装所需依赖包
 git --version #检查是否返回版本号</code></pre>
 					<h4>3.安装pm2(centos系统)</h4>
-					<pre><code>yum install pm2 -g #安装pm2
+					<pre><code>npm install pm2 -g #安装pm2
 pm2 list #查看是否安装成功</code></pre>
 					<h4>3.安装pm2(debian系统)</h4>
 					<pre><code>apt install pm2 -g #安装pm2
@@ -75,7 +82,7 @@ pm2 list #查看是否安装成功</code></pre>
 					<h4>4.安装onebot</h4>
 					<pre><code>mkdir onebot
 cd onebot #cd到你想要安装目录就行，不一定要和我一样
-git clone https://ghproxy.com/https://github.com/takayama-lily/node-onebot.git #如果拉取速度很慢，参考站内教程自建或白嫖一个前缀。
+git clone https://github.com/takayama-lily/node-onebot.git #如果拉取速度很慢，参考站内教程自建或白嫖一个前缀。
 cd node-onebot #cd到刚刚拉取的目录
 cp config.sample.js config.js #复制并重命名样本配置文件为config.js
 vi config.js #打开配置文件开始编辑</code></pre>
@@ -165,7 +172,7 @@ pm2 delete "node main 机器人QQ号" #结束qq守护进程
 					</div>
 					<hr class="major" />
 
-					<h1>2.对接Windows版QQ</h1>
+					<h1><a id="2.对接Windows版QQ"></a>2.对接Windows版QQ</h1>
 					<h4>1.下载windows版go-cqhttp，地址如下：</h4>
 					<p><a href="https://github.com/Mrs4s/go-cqhttp/releases/">https://github.com/Mrs4s/go-cqhttp/releases/</a></p>
 					<span class="image"><img src="images/go-cqhttp-win.png" alt="" /></span>
@@ -173,7 +180,7 @@ pm2 delete "node main 机器人QQ号" #结束qq守护进程
 					<p>先双击运行一下exe文件go-cqhttp，会生成配置文件，配置文件中选择模式（如：手表模式），填写机器人qq号，反向ws地址那里填入ws:\\autMan地址:autMan端口</p>
 					<h4>3.配置</h4>
 					<p>命令行启动运行,启动时扫码登录或输入密码登录</p>
-					<span class="image"><img src="images/go-cqhttp-run.png" alt="" /></span>
+					<span class="image fit"><img src="images/go-cqhttp-run.png" alt="" /></span>
 				</section>
 
 			</div>
