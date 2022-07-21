@@ -34,6 +34,14 @@
 					</ul>
 				</header>
 
+				<!--页面内目录-->
+				<section>
+					<p><b>本页面目录</b></p>
+					<div><a href="#1.Linux类系统">1.Linux类系统</a></div>
+					<div><a href="#2.Windows系统">2.Windows系统</a></div>
+					<div><a href="#3.稳定版和尝鲜版">3.稳定版和尝鲜版</a></div>
+				</section>
+
 				<!-- Content -->
 				<section>
 					<!-- Content -->
@@ -42,14 +50,19 @@
 					<h1>1.鲲鹏微信的对接</h1>
 					<p>鲲鹏微信的qq群号为1146130363，可在群里获取最新的文件。autMan群文件里也有鲲鹏微信的安装包，包括3个软件：<br />1.鲲鹏机器人软件<br />2.http插件<br />3.微信安装包（此处为要求的版本）</p>
 					<p><b>1.将http插件文件http.kp.dll拖到app文件夹内，双击启动鲲鹏机器人，右键启用“鲲鹏http服务”</b></p>
-					<span class="image"><img src="images/kp-start.png" alt="" /></span>
+					<span class="image fit"><img src="images/kp-start.png" alt="" /></span>
 					<p></p>
 					<p><b>2.双击“鲲鹏http服务”设置参数</b></p>
-					<span class="image"><img src="images/kp-httpapi.png" alt="" /></span>
+					<span class="image fit"><img src="images/kp-httpapi.png" alt="" /></span>
 					<p><b>3.配置autMan对接</b></p>
 					<p>1.设置对接模式指令：set wx mode kp，<br />2.设置鲲鹏微信的地址：set wx kp_addr https://鲲鹏机器人ip地址或域名:2022</p>
 					<span class="image"><img src="images/kp-autMan.png" alt="" /></span>
+					<p><b>4.排错要点</b></p>
+					<p>1.设置完参数后最好重启一下机器人<br />2.检查autMan运行控制台（./autMan -t启动）是否能收到微信消息，没收到说明鲲鹏微信的消息未到达autMan<br />3.检查鲲鹏微信的主机防火墙是否开启了8022的端口<br />4.autMan主机和鲲鹏微信主机逻辑上能否相互访问</p>
+					
 					<hr class="major" />
+
+					
 					<h1>2.vlw对接</h1>
 					<ol>
 						<li>win 平台的系统（测试win7可行）</li>
@@ -57,26 +70,26 @@
 						<li>cn.sxyo.xYo_httpApi_WeChat.vlw.dl插件（群文件夹vlw下载)</li>
 						<li>电脑上安装要求版本的微信，（群文件夹vlw下载）</li>
 					</ol>
-					<h3>vlw的配置</h3>
+					<h3>1.vlw的配置</h3>
 					<ol>
 						<li>首先给他安个家，建议英文或拼音目录</li>
 						<li>把插件放到plugin目录下</li>
 					</ol>
 					<span class="image fit"><img src="images/vlw01.png" alt="" /></span>
-					<h3>登录微信</h3>
+					<h3>2.登录微信</h3>
 					<span class="image fit"><img src="images/vlw02.png" alt="" /></span>
-					<h3>启用插件</h3>
+					<h3>3.启用插件</h3>
 					<span class="image fit"><img src="images/vlw03.png" alt="" /></span>
-					<h3>插件设置</h3>
+					<h3>4.插件设置</h3>
 					<span class="image fit"><img src="images/vlw04.png" alt="" /></span>
-					<h3>autMan设置</h3>
+					<h3>5.autMan设置</h3>
 					<span class="image fit"><img src="images/vlw05.png" alt="" /></span>
 					<pre><code>set wx vlw addr http://域名:端口/wx/receive   ##对应第一条
 set wx dynamic_ip true   ##设置动态网络地址，适用于家庭宽带而可爱猫在云服务器的情况下（根据自己情况，我是不是应该关了它）## 对应第二条
 set wx relay_mode true  ##设置图片转发模式，否则可能会出现此图片来自xx未经允许不得使用的提示
 set wx vlw_addr http://域名:端口   ##你的vlw框架的域名+端口；服务器就ip+端口   #对应第八条
 set wx vlw_token 你的token  ##你设置的token  ##对应第九条</code></pre>
-					<h3>排错</h3>
+					<h3>6.排错</h3>
 					<ol>
 						<li>首先访问你的机器人地址，看是否正常</li>
 						<li>然后是访问vlw框架地址，看是否正常</li>
