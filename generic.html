@@ -34,18 +34,22 @@
 					</ul>
 				</header>
 
+				<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+				<hr class="major" />
+
+				<!--页面内目录-->
+				<section>
+					<p><b>本页面目录</b></p>
+					<div><a href="#1.Linux类系统">1.Linux类系统</a></div>
+					<div><a href="#2.Windows系统">2.Windows系统</a></div>
+					<div><a href="#3.稳定版和尝鲜版">3.稳定版和尝鲜版</a></div>
+				</section>
+
 				<!-- Content -->
 				<section>
-					<header class="main">
-						<h1>安装</h1>
-					</header>
-
-					<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
 					<h3><b>安装完成并启动后可进入autMan后台地址：http://autMan的ip:autMan端口/fanli/static<br />获取后台地址的指令：设置</b></h3>
 
-					<hr class="major" />
-
-					<h1>Linux类系统</h1>
+					<h1><a id="1.Linux类系统"></a>1.Linux类系统</h1>
 					<p>稳定版：</p>
 					<p><b><i>s=autMan;f=fanli;a=arm64;if [[ $(uname -a | grep "x86_64") != "" ]];then a=amd64;fi ;if [ !
 								-d $s ];then mkdir $s;fi ;cd $s;wget
@@ -60,10 +64,10 @@
 								$s;$(pwd)/$s -t;</i></b></p>
 					<p>autMan(Linux系统含amd64\arm64)运行：</p>
 					<p><b><i>1.进入autMan文件夹：cd /root/autMan<br />2.指令启动：./autMan -t<br />3. 静默指令：重启</i></b></p>
-					<span class="image"><img src="images/start_autMan.jpg" alt="" /></span>
+					<span class="image main"><img src="images/start_autMan.jpg" alt="" /></span>
 					<hr class="major" />
 
-					<h1>Windows系统</h1>
+					<h1><a id="2.Windows系统"></a>2.Windows系统</h1>
 					<p>下载解压后直接运行exe文件</p>
 					<p>稳定版</p>
 					<p><a
@@ -76,8 +80,14 @@
 					<p><b><i>1.启动windows命令提示符或powershell等命令行工具<br />2.进入autMan文件夹<br />3.指令启动：.\\autMan.exe -t<br />4.
 								静默指令：重启</i></b></p>
 					<p>autMan(Windows版本)运行：</p>
+					<span class="image main"><img src="images/start_autMan_win.png" alt="" /></span>
 
-					<span class="image"><img src="images/start_autMan_win.png" alt="" /></span>
+					<h1><a id="3.稳定版和尝鲜版"></a>3.稳定版和尝鲜版</h1>
+					<p>稳定版->尝鲜版<br />1.指令：set autMan taste true<br />2.指令：更新</p>
+					<p>尝鲜版->稳定版<br />1.指令：set autMan taste false<br />2.指令：更新</p>
+					<p>示例：</p>
+					<span class="image main"><img src="images/taste.jpg" alt="" /></span>
+
 				</section>
 
 			</div>
