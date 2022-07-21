@@ -32,61 +32,16 @@
 
 							<!-- Content -->
 								<section>
-									<header class="main">
-										<h1>基本操作</h1>
-									</header>
-
 									<!-- Content -->
-									<h2 id="content">命令大全</h2>
-									<h3>autMan</h3>
-<pre><code>set autMan ignore_notify true/false 	//是否忽略通知
-</code></pre>
-									<h3>QQ/WX/TG</h3>
-<pre><code>set qq/wx/tg notifier xxxxx	//设置系统级通知接收者
-</code></pre>
-									<h3>jd_cookie</h3>
-<pre><code>查询 	//查询绑定的京东账户京豆资产
-查询 hdbjlizhe 		//查询pt_pin为hdbjlizhe的京豆资产
-查询 1-3      		//查询某青龙1-3号ck的资产
-remart hdbjlizhe 群主		//给hdbjlizhe这个ck备注为“群主”这个名字
-set jd_cookie asset_push 0 9 * * * 		//资产推送时间设置
-set jd_cookie asset_query_alias 查豆	//查询京豆时自定义指令
-set jd_cookie ban_wxsv true/false  	//是否禁止微信服务号查询京豆
-</code></pre>
-									<h3>users</h3>
-<pre><code>set users transfer true	//搬运工功能开关
-set users transfer_from 1234567,7654321	//搬运原始地
-set users transfer_to qqindiv:1234567,qqgroup:7654321,wxindiv:abcde,wxgroup:12345678,tgindiv:xxx,tggroup:xxxx 	//搬运目的地，区分个人和群
-</code></pre>
+									<h1 id="content">1.后台地址及登录</h1>
+									<p>后台地址：http://autMan的IP或域名:autMan的端口/fanli/static</p>
+									<p>登录密码指令设置：set autMan adminPassword xxxxxx</p>
+									<h3>1.登录界面</h3>
+									<span class="image"><img src="images/web-login.jpg" alt="" /></span>
+									<hr class="major" />
+									<h3>2.功能目录</h3>
+									<span class="image"><img src="images/web-index.jpg" alt="" /></span>
 
-									<p>指令：更新/升级/update/upgrade</p>
-
-									<h2 id="content">软件更新</h2>
-									<p>指令：更新/升级/update/upgrade</p>
-									<h2>咖啡码</h2>
-									<p>咖啡码即授权码，新装用户会自动获得7天体验期全功能咖啡码。咖啡码有效时：所有转成的短链均为自己的，咖啡码无效时：所有转成的短链均为作者的</p>
-
-
-
-<h3>咖啡码的获取、续期</h3>
-<p>（1）自行获取，将京东商品分享给群主机器人或群主测试机器人，通过返回的短链购买京东商品。确认收货后给自己机器人以下指令注入咖啡码：<br />指令：喝咖啡xxxxxxxxxx+2021-12-31 10:00:00
-	<br />指令：coffeexxxxxxxxxx+2021-12-31 10:00:00
-	<br />说明：xxxxxxxxxx为订单号，后面为下单时间</p>
-<p>（2）打赏获取，打赏群主机器人或群主测试机器人后，联系群主索取。</p>
-
-<h3>咖啡码的迁入迁出</h3>
-<p>前提条件：老机器人和新机器人绑定的管理员账户一致！
-	<br />重要：老机器人迁出咖啡码后，老机器人仍然可用，但咖啡码失效且无法再次注入咖啡码	
-	<br />咖啡码迁出指令：迁出咖啡码
-	<br />咖啡码迁入：将老机器人迁出的咖啡码整条信息直接转发给新机器人即可。</p>
-
-									<span class="image fit"><img src="images/coffee.jpg" alt="" /></span>
-									
-										<div class="row">
-											
-										</div>
-
-					
 								</section>
 
 						</div>
