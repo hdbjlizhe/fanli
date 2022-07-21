@@ -32,16 +32,24 @@
 					</ul>
 				</header>
 
+				<!--页面内目录-->
+				<section>
+					<p><b>本页面目录</b></p>
+					<div><a href="#1.简介">1.简介</a></div>
+					<div><a href="#2.参数获取和配置">2.参数获取和配置</a></div>
+					<div><a href="#3.启用服务器配置">3.启用服务器配置</a></div>
+				</section>
+
 				<!-- Content -->
 				<section>
 					<header class="main">
 						<h1>对接公众号</h1>
 					</header>
 
-					<h2>1.简介</h2>
+					<h2><a id="1.简介"></a>1.简介</h2>
 					<p>微信公众号分为订阅号（个人）和服务号（公司），个人是可以申请的哈。具体怎么申请参见官方文档：https://kf.qq.com/faq/120911VrYVrA151009eIrYvy.html
 					</p>
-					<h2>2.参数获取和配置</h2>
+					<h2><a id="2.参数获取和配置"></a>2.参数获取和配置</h2>
 					<p>主要就是几个参数：开发者ID(AppID)、开发者密码(AppSecret)、服务器地址(URL)、令牌(Token)、消息加解密密钥(EncodingAESKey)</p>
 					<p>1、登陆公众号后台👉开发-基本配置👉启用开发者密码👉设置IP白名单。成功get到：开发者ID(AppID)、开发者密码(AppSecret)，IP白名单填你的服务器IP地址。这里启用后就要copy一下密码，因为启用后就只能重置了。
 					</p>
@@ -49,8 +57,7 @@
 					<span class="image fit"><img src="images/wxmp04.png" alt="" /></span>
 					<span class="image fit"><img src="images/wxmp02.png" alt="" /></span>
 					<span class="image fit"><img src="images/wxmp03.png" alt="" /></span>
-
-					<h2>3.启用服务器配置</h2>
+					<h2><a id="3.启用服务器配置"></a>3.启用服务器配置</h2>
 					<p>修改配置?验证?启用
 
 						成功get到：服务器IP地址、 令牌（token）、 消息加解密密钥(EncodingAESKey)
@@ -63,8 +70,6 @@
 set wxmp app_secret xxxxxx
 set wxmp token xxxxxx
 set wxmp encoding_aes_key xxxxxx</code></pre>
-
-
 					<span class="image fit"><img src="images/wxmp05.png" alt="" /></span>
 					<span class="image fit"><img src="images/wxmp06.png" alt="" /></span>
 					<span class="image fit"><img src="images/wxmp07.png" alt="" /></span>
