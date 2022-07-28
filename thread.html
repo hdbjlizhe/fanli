@@ -55,7 +55,7 @@ After=network.target mysql.service mariadb.service mysqld.service
 [Service]
 Type=forking
 ExecStart=/root/autMan/autMan -d
-PIDFile=/var/run/autMan.pid
+PIDFile=/root/autMan/autMan.pid
 Restart=always
 User=root
 Group=root
