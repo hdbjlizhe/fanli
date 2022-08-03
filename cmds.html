@@ -56,12 +56,14 @@ set qq onself true #设置是否对监听自身消息
 set qq default_bot 主机器人账号 #奥特曼支持对接多个qq，设置主qq机器人
 set qq masters q1&q2&q3... 设置qq管理员
 set qq notifier q1&q2&q3... 设置接受通知的qq账号
+list qq  查询qq下的各类参数设置
 
 对接telegtam
 set tg token ? #设置telegram机器人token
 set tg http_proxy ? #设置telegram机器人代理
 set tg masters t1&t2&t3... #设置telegram机器人管理员
 set tg notifier t1&t2&t3... 设置接受通知的telegram账号
+list tg  查询tg下的各类参数设置
 
 对接微信公众号
 set wxmp app_id ? #设置微信公众平台app_id
@@ -80,6 +82,7 @@ set wx relay_mode true #设置图片转发模式，否则可能会出现此图�
 set wx relaier ? #设置指定转发地址，格式为 https://域名/relay?url=%s，不知道不用填
 set wx autMan_dynamic_ip true #设置奥特曼是否动态网络地址，适用于奥特曼家庭宽带而可爱猫在云服务器的情况下
 set autMan enable_http_server true #启动http服务，一定要打开
+list wx 查询wx下的各类参数设置
 
 对接微信-vlw
 set wx vlw_addr http://vlw插件ip:端口 #设置插件调用地址，对应之前插件配置的 序号3 HTTP 外网API调用地址
@@ -91,7 +94,6 @@ set autMan enable_http_server true #启动http服务，一定要打开
 对接微信-鲲鹏
 set wx kp_addr http://xxx.xxx.xxx.xxx:2022  #设置地址
 set wx mode kp #设置模式
-
 鲲鹏使用httpApi插件设置如下：
 消息推送：http://autMan的地址:autMan端口/wx/receive
 外网服务：开启
@@ -125,7 +127,7 @@ ql cron logs ? #查找青龙定时任务运行日志，支持模糊匹配
 ql cron hide duplicate #隐藏青龙重复定时任务
 set qinglong autoCronHideDuplicate false #关闭自动隐藏任务命令
 
-短信登陆对接Nark(需要有授权)
+短信登陆
 # 设置诺兰登陆地址
 set jd_cookie enable_nark true
 set jd_cookie nark_addr http://ip:端口
@@ -148,12 +150,6 @@ aut delete 小爱同学gjson # 删除处理json格式数据的小爱api
 2、对话模式：发送“小爱对话模式”开启，发送“闭嘴”结束。
 3、成语接龙：发送“成语接龙”开始。这个可应该不是小爱同学的功能，但我懒得单独写它了。
 
-jd_cookie
-set jd_cookie nark_addr xxxxxxxxxxxxxxx 设置Nark服务地址
-set jd_cookie enable_nark true/false 设置是否启用nark登录
-set jd_cookie rabbit_addr xxxxxxxxxxxx  设置rabbit服务地址
-set jd_cookie enable_rabbit true/false 设置是否启用rabbit登录
-
 洞察变量-填写说明
 任务开关：想开就开，想关就关
 静默运行：在别人的群里可能会需要这个功能。
@@ -164,6 +160,7 @@ set jd_cookie enable_rabbit true/false 设置是否启用rabbit登录
 指定容器：设置的容器的名称，不要知道的用命令：青龙管理，多个用英文逗号隔开
 
 内置店铺签到：
+指令：签到管理
 set jd_cookie dpqd_parallel true/false   	#是否开启多进程并行签到（可能会导致autMan重启，默认关闭）
 set jd_cookie dpqd_limit_num 50  			#设置签到CK限制数量
 set jd_cookie dpqd_cron 5 5,14 * * * 		#设置自动签到时间,默认是0点0分
@@ -179,15 +176,16 @@ set jd_cookie dpqd_notify true/false 		#设置是否通知到个人
 3. DPQDTK=xxxxxxxxx&xxxxxxx&xxxxxxx
 4. {"token":"xxxxxxxx"}
 5. 签到xx天得xx豆
+等
 
-内置外卖返利
+内置外卖返利，前提条件是设置了订单侠平台的apikey账号
 set fanli enable_ele true/false 开关饿了么外卖，默认开启
 set fanli enable_mt true/false 开关美团外卖，默认开启
 set fanli ele_cron 0 11,17 * * *	设置饿了么推送时间
 set fanli mt_cron 0 11,17 * * *	    设置美团推送时间
 set fanli ele_ad	设置饿了么文案
 set fanli mt_ad	    设置美团文案
-set fanli ele_to_groups qqgroup:123 设置饿了么推送群
+set fanli ele_to_groups qqgroup:123,wxgroup:456, 设置饿了么推送群
 set fanli mt_to_groups qqgroup:123 设置美团推送群
 </code></pre>
 							
