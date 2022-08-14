@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>js插件编写说明</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+
+				<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo">autMan</a>
+					<ul class="icons">
+						<li><a href="https://github.com/hdbjlizhe/fanli" class="icon brands fa-github"><span
+									class="label">Github</span></a></li>
+						<li><a href="tencent://message/?uin=282617666&Site=&Menu=yes" target="_blank" title="点击添加群主"
+								class="icon brands fa-qq"><span class="label">QQ</span></a></li>
+						<li><a href="#" class="icon brands fa-telegram"><span class="label">Telegram</span></a></li>
+					</ul>
+				</header>
+
+				<!--页面内目录-->
+				<section>
+					<p><b>本页面目录</b></p>
+					<div><a href="#1.对接Linux版QQ">1.对接Linux版QQ</a></div>
+					<div><a href="#2.对接Windows版QQ">2.对接Windows版QQ</a></div>
+				</section>
+
+				<!-- Content -->
+				<section>
+					<header class="main">
+						<p><b>说明：你要准备2个QQ号，1个用来做机器人，1个用来做管理员。<br />QQ框架目前可选方案有node-onebot、oicq、go-cqhttp等。下面以对接node-onebot为例，对接oicq可参见：https://github.com/takayama-lily/oicq/tree/master/http-api</b>
+						</p>
+					</header>
+
+					<h2><a id="1.头标注"></a>1.头标注</h2>
+					<!-- Content -->
+					<pre><code>//[rules: 规则] 匹配规则，多个规则时向下依次写多个[rules:规则]
+//[cron: 定时] cron定时，如：*/1 * * * *
+//[admin: true或false] 是否为管理员指令 
+//[disable: true或false] 禁用开关，true表示禁用，false表示可用
+//[priority: 123] 优先级，数字越大表示优先级越高
+//[server: xxx] 
+//[show: 插件说明] 自定义插件说明
+//[imType:qq,wx] 白名单,只在qq,wx生效
+//[imType+:qq,wx] 同上,不写+号默认为白名单模式
+//[imType-:qq] 黑名单qq,除了qq生效
+//[userId+:id1,id2] 同样支持黑白名单模式
+//[groupId+:id1,id2] 同样支持黑白名单模式
+					</code></pre>
+
+					<h2><a id="2.内置函数"></a>1.内置函数</h2>
+					<pre><code>//[rules: 规则] 匹配规则，多个规则时向下依次写多个[rules:规则]
+call(param)//参数有machineId(获取机器码),uuid(生成随机uuid),md5(对字符串计算md5),timeFormat(定义时间格式))
+cancall(param)//检查是否可调用某函数，返回布尔值
+request({
+	useproxy: true/false,//是否使用代理
+	url: "xxx",//地址
+	headers:{//请求头
+		"User-Agent":"xxx"
+		"Content-Type":"xxx"
+	},
+	method: "post",//网络请求方法get,post,put,delete
+	dataType: "json",//数据类型json(json数据类型)、location(跳转页)
+	body:{//请求体
+		code: xxx,
+	},
+	formData:{//请求参数
+		key1: xxx,
+		key1: xxx,
+		key1: xxx,
+		key1: xxx,
+	},
+	timeOut: 
+})//网络请求函数
+Delete()//删除用户信息
+timeFmt(2006-01-02 15:04:05)//返回对应格式的时间
+GetUserID()//获取当前会话用户ID
+GetContent()//获取当前会话用户发的信息内容
+GetChatID()//获取当前会话群ID
+GetImType()//获取当前会话的渠道，返回qq,wx等
+ImType()//同上
+GetUsername()//获取当前会话用户名
+GetChatname()//获取当前会话群名称
+GetMessageID()//获取当前信息ID
+RecallMessage(messageID)//撤回信息，参数为信息id
+notifyMasters(content)//将信息发送给管理员
+input(waitTime)//等待用户输入，参数为等待时间（单位毫秒），返回用户输入的信息
+breakIn(content)//将信息送入内部格式对应的处理通道进行处理
+Debug()//输出调试信息
+GroupKick(userid,reject_add_request)//踢群，参数分别为用户id,是否拒绝再次加群请求
+GroupBan(userid,duration)//禁言，参数分别为用户id,时长
+sleep(waitTime)//睡眠一段时间，单位毫秒
+isAdmin()//返回当前会话是否为管理员
+set(key,value)//存储key,value
+param(integer)//获取匹配规则里规定的第几个匹配值
+get(key)//获取otto桶key的值
+bucketGet(bucket,key)//获取bucket桶的key值
+bucketSet(bucket,key,value)//设置bucket桶的key的值为value
+sendText(text)//给会话用户发送信息
+image(url)//将图片url转换为CQ码格式
+sendImage(url)//发送图片，参数为网址
+sendVideo(url)//发送视频
+Sender//当前会话的Sender模块
+fmt//控制台输出信息模块
+strings//字符串模块
+importJs(filepath)//引入js文件，参数为文件路径
+importDir(dir)//引入js文件夹，参数为路径
+</code></pre>
+				</section>
+
+			</div>
+		</div>
+
+		<!-- Sidebar -->
+		<div id="sidebar">
+			<div class="inner">
+				<include src="sidebar.html"></include>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/include.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
