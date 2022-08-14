@@ -37,17 +37,13 @@
 				<!--页面内目录-->
 				<section>
 					<p><b>本页面目录</b></p>
-					<div><a href="#1.对接Linux版QQ">1.对接Linux版QQ</a></div>
-					<div><a href="#2.对接Windows版QQ">2.对接Windows版QQ</a></div>
+					<div><a href="#1.头标注">1.头标注</a></div>
+					<div><a href="#2.内联函数">2.内联函数</a></div>
 				</section>
 
 				<!-- Content -->
 				<section>
-					<header class="main">
-						<p><b>说明：你要准备2个QQ号，1个用来做机器人，1个用来做管理员。<br />QQ框架目前可选方案有node-onebot、oicq、go-cqhttp等。下面以对接node-onebot为例，对接oicq可参见：https://github.com/takayama-lily/oicq/tree/master/http-api</b>
-						</p>
-					</header>
-
+					
 					<h2><a id="1.头标注"></a>1.头标注</h2>
 					<!-- Content -->
 					<pre><code>//[rules: 规则] 匹配规则，多个规则时向下依次写多个[rules:规则]
@@ -62,9 +58,9 @@
 //[imType-:qq] 黑名单qq,除了qq生效
 //[userId+:id1,id2] 同样支持黑白名单模式
 //[groupId+:id1,id2] 同样支持黑白名单模式
-					</code></pre>
+</code></pre>
 
-					<h2><a id="2.内置函数"></a>1.内置函数</h2>
+					<h2><a id="2.内联函数"></a>1.内联函数</h2>
 					<pre><code>//[rules: 规则] 匹配规则，多个规则时向下依次写多个[rules:规则]
 call(param)//参数有machineId(获取机器码),uuid(生成随机uuid),md5(对字符串计算md5),timeFormat(定义时间格式))
 cancall(param)//检查是否可调用某函数，返回布尔值
