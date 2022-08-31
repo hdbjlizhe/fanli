@@ -41,10 +41,10 @@
 					</header>
 
 					<!-- Content -->
-					<h2>守护autMan进程</h2>
-					<p>守护autMan进程能有效解决掉线问题，windows版本不用守护，此指令只适用于centos、debian、ubuntu等部分linux系统，不适用于群晖、openwrt</p>
-					<p>指令：守护奥特曼</p>
-					<P>原理如下：</P>
+					<p><b>守护autMan进程能有效解决掉线问题，windows版本不用守护，此指令只适用于centos、debian、ubuntu等部分linux系统，不适用于群晖、openwrt</b></p>
+					<p><b>指令：守护奥特曼，发送指令后要重启服务器，不是重启autMan，重启autMan没用，重启服务器时即可实现自动启动autMan</b></p>
+					<p><b>守护进程默认加载/root/autMan/autMan.cache数据文件</b></p>
+					<P>原理如下：<b>（原理可了解可不了解，守护控制的命令建议了解一下）</b>></P>
 					<p>1.vim /usr/lib/systemd/system/autMan.service #新建机器人系统服务文件
 						按键盘字母 i 进入编辑模式，复制下面esc 退出编辑模式，再输入命令 :wq 保存并退出。</p>
 					<pre><code>[Unit]
@@ -65,6 +65,7 @@ Alias=autMan.service</code></pre>
 					<p>分别输入下面的命令激活</p>
 					<pre><code>systemctl daemon-reload #重新加载所有被修改过的服务配置，否则配置不会生效
 systemctl enable autMan.service #设置为开机自启动
+systemctl disable autMan.service #取消开机自启动
 systemctl start autMan.service #启动autMan服务
 # 其他常用的管理命令
 systemctl restart autMan.service #重启autMan服务
