@@ -42,7 +42,8 @@
 					<div><a href="#1.Linux类系统">1.Linux类系统</a></div>
 					<div><a href="#2.Windows系统">2.Windows系统</a></div>
 					<div><a href="#3.稳定版和尝鲜版">3.稳定版和尝鲜版</a></div>
-					<div><a href="#4.后台登录">4.后台登录</a></div>
+					<div><a href="#4.守护奥特曼情况下的更新">4.4.守护奥特曼情况下的更新</a></div>
+					<div><a href="#5.后台登录">4.后台登录</a></div>
 				</section>
 
 				<!-- Content -->
@@ -98,7 +99,16 @@
 					</div>
 					<hr class="major" />
 
-					<h1><a id="4.后台登录"></a>4.后台登录</h1>
+					<h1><a id="4.守护奥特曼情况下的更新"></a>4.守护奥特曼情况下的更新</h1>
+					<p>1.root账号ssh登陆，进入autMan文件夹</p>
+					<p>2.输入命令停止守护：systemctl stop autMan</p>
+					<p>3.手动运行奥特曼：./autMan -t</p>
+					<p>4.在奥特曼运行交互界面输入指令：更新</p>
+					<p>5.更新完成后关闭奥特曼，并杀死奥特曼后台。指令：pkill -9 autMan</p>
+					<p>6.启用守护：systemctl start autMan</p>
+					<hr class="major" />
+
+					<h1><a id="5.后台登录"></a>5.后台登录</h1>
 					<p>安装完成并启动后可进入autMan后台地址：http://autMan的ip:autMan端口/fanli/static</p>
 					<p>首次使用需要设置登录密码,设置完成后跳转到登录页面，输入密码登录成功</p>
 					<p>示例：</p>
