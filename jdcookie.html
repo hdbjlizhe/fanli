@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>东芝规则</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+
+				<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo">autMan</a>
+					<ul class="icons">
+						<li><a href="https://github.com/hdbjlizhe/fanli" class="icon brands fa-github"><span
+									class="label">Github</span></a></li>
+						<li><a href="tencent://message/?uin=282617666&Site=&Menu=yes" target="_blank" title="点击添加群主"
+								class="icon brands fa-qq"><span class="label">QQ</span></a></li>
+						<li><a href="#" class="icon brands fa-telegram"><span class="label">Telegram</span></a></li>
+					</ul>
+				</header>
+
+				<!-- Content -->
+				<section>
+					<header class="main">
+						<h1>东芝规则</h1>
+					</header>
+
+					<!-- Content -->
+					<h2 id="content">容器分类</h2>
+					<p>东芝规则目前支持：聚合、分配、同步、普惠、wsck专用</p>
+					<div class="row">
+						<div class="col-6 col-12-small">
+							<h3>聚合容器</h3>
+							<p>功能：将指定的聚合源容器的CK汇集到聚合容器，聚合容器同时可以设置机长和头等舱人员</p>
+						</div>
+						<div class="col-6 col-12-small">
+							<h3>分配容器</h3>
+							<p>分配容器区分为“分配母容器”和“分配子容器”，母容器内的CK通过一定的规则分配到子容器，<br/>
+								分配流：此处填写分配子容器的名称，此处名称要与“青龙管理”下面的名称一致，否则不生效<br/>
+								内置规则包括：<br/>
+								1.平均分配：几个子容器中谁最少就优先分配给谁。<br/>
+								2.依次分配：老大优先分配，达到老大的最大容量时，给老二分配，依次类推<br/>
+								3.随机分配：几个容器的分配就看运气吧。<br/>
+							</p>
+						</div>
+						<div class="col-6 col-12-small">
+							<h3>同步容器</h3>
+							<p>同步容器为同步的源容器，“同步流”选项设置同步的目的容器
+							</p>
+						</div>
+						<div class="col-6 col-12-small">
+							<h3>普惠容器</h3>
+							<p>普惠容器即ck轮动容器，每天将排位最后的n个ck移动到最前面，n为可设置的轮动数</p>
+						</div>
+						<div class="col-6 col-12-small">
+							<h3>WSCK容器</h3>
+							<p>即WSCK专用容器，提交给机器人的WSCK会进入WSCK专用容器</p>
+						</div>
+						
+					</div>
+
+					<hr class="major" />
+
+				</section>
+
+			</div>
+		</div>
+
+		<!-- Sidebar -->
+		<div id="sidebar">
+			<div class="inner">
+				<include src="sidebar.html"></include>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/include.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
