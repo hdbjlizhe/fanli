@@ -64,19 +64,23 @@ export PATH=$PATH:$NODEJS_HOME/bin #加入文本末尾
 source /etc/profile #刷新立即生效
 node -v #测试是否返回版本号，返回则代表安装成功
 </code></pre>
-					<h4>2.安装git(centos系统)</h4>
-					<pre><code>yum -y install curl-devel expat-devel gettext-devel openssl-devel zlib-devel git #安装所需依赖包
+					<h4>2.安装git</h4>
+					<pre><code>centos系统安装git
+yum -y install curl-devel expat-devel gettext-devel openssl-devel zlib-devel git #安装所需依赖包
 yum -y install git #安装git
-git --version #检查是否返回版本号</code></pre>
+git --version #检查是否返回版本号
 					
-					<h4>2.安装git(debian系统)</h4>
-					<pre><code>apt install git #安装所需依赖包
+#debian系统安装git
+apt install git #安装所需依赖包
 git --version #检查是否返回版本号</code></pre>
-					<h4>3.安装pm2(centos系统)</h4>
-					<pre><code>npm install pm2 -g #安装pm2
-pm2 list #查看是否安装成功</code></pre>
-					<h4>3.安装pm2(debian系统)</h4>
-					<pre><code>apt install pm2 -g #安装pm2
+
+					<h4>3.安装pm2</h4>
+					<pre><code>centos系统安装pm2
+npm install pm2 -g #安装pm2
+pm2 list #查看是否安装成功
+
+debian系统安装pm2
+apt install pm2 -g #安装pm2
 pm2 list #查看是否安装成功</code></pre>	
 
 					<h4>4.安装onebot</h4>
@@ -86,6 +90,7 @@ git clone https://github.com/takayama-lily/node-onebot.git #如果拉取速度�
 cd node-onebot #cd到刚刚拉取的目录
 cp config.sample.js config.js #复制并重命名样本配置文件为config.js
 vi config.js #打开配置文件开始编辑</code></pre>
+					
 					<h4>5.编辑onebot配置文件</h4>
 					<p>按键盘字母i进入编辑模式，然后对应配置，按键盘esc退出编辑模式，输入命令:wq保存并退出。请注意看我 # 后面的注释，是需要注意的地方</p>
 					<pre><code>"use strict";
