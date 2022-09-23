@@ -48,6 +48,14 @@
 					<h2>1.2更新(windows系统版本)</h2>
 					<span class="image main"><img src="images/update-windows.jpg" alt="" /></span>
 					<p></p>
+					<h2>1.3守护状态下的更新</h2>
+					<p>
+						1.关闭守护（ssh进入系统）systemctl stop autMan<br/>
+						2.手动启动autMan(进入autMan文件夹)使用命令./autMan -t启动交互后直接输入“更新”指令<br/>
+						3.待更新完成后会autMan会自动重启，关闭autMan后台：pkill -9 autMan<br/>
+						4.开启守护：systemctl start autMan
+					</p>
+					<p></p>
 
 					<h1><a id="2.更新时的代理"></a>2.更新时的代理</h1>
 					<p>软件发布在github上，<br />
@@ -59,8 +67,6 @@
 					<p>
 						<span class="image"><img src="images/update-windows.jpg" alt="" /></span>
 					<p></p>
-
-
 
 				</section>
 
