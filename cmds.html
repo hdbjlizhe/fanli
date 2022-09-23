@@ -178,6 +178,16 @@ set jd_cookie dpqd_notify true/false 		#设置是否通知到个人
 5. 签到xx天得xx豆
 等
 
+#jd口令解析对接
+set jd_cookie jd_cmd_addr http://ikuai.zhelee.cn:9000 #对接解析服务器
+set jd_cookie jd_cmd_groups 123,456  #指定开放解析的群
+#对接诺兰公益解析接口
+set jd_cookie jd_cmd_nolan_addr https://api.nolanstore.top #对接解析服务器
+set jd_cookie jd_cmd_nolan_groups 123,456  #指定开放解析的群
+
+set jd_cookie dpqd_token_api_addr http://rpi.zhelee.cn:9999/ #奥特曼对接可提取店铺签到token
+
+
 内置外卖返利，前提条件是设置了订单侠平台的apikey账号
 set fanli enable_ele true/false 开关饿了么外卖，默认开启
 set fanli enable_mt true/false 开关美团外卖，默认开启
