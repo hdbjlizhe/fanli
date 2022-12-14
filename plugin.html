@@ -46,7 +46,8 @@
 					
 					<h2><a id="1.头标注"></a>1.头标注</h2>
 					<!-- Content -->
-					<pre><code>//[rules: 规则] 匹配规则，多个规则时向下依次写多个[rules:规则]
+					<pre><code>//[event: 事件] 这里响应事件，事件列表见下文
+//[rule: 规则] 匹配规则，多个规则时向下依次写多个[rule:规则]
 //[cron: 定时] cron定时，如：*/1 * * * *，推荐5位域，秒位可选，6位位域也可但可能存在部分系统不兼容问题
 //[admin: true或false] 是否为管理员指令 
 //[disable: true或false] 禁用开关，true表示禁用，false表示可用
@@ -58,6 +59,16 @@
 //[imType-:qq] 黑名单qq,除了qq生效
 //[userId+:id1,id2] 同样支持黑白名单模式
 //[groupId+:id1,id2] 同样支持黑白名单模式
+</code></pre>
+
+以下为上传云插件所需的头注
+<pre><code>//[tile: 名字]要与文件名相同，也可以不加，上传aut云时会自动将文件名设置为此头注
+//[author: 作者]作者,可以自定义，不定义的话，上传时会增加为aut云注册的用户名
+//[version: 1.0.0] 版本格式：1.0.0，不定义的话，上传时会自动增加此头注，默认为1.0.0 
+//[platform: qq,wx,tg]适用的平台 qq\wx\tg\wxmp之间选择，中间用英文逗号隔开
+//[public: true] 是否公开发布？值为true 或 false，不定义的话，上传aut云时会自动设置为true
+//[price: 0.5] 上架价格
+//[description: 关于插件的描述] 尽量写具体
 </code></pre>
 
 					<h2><a id="2.内联函数"></a>1.内联函数</h2>
