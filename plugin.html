@@ -105,7 +105,7 @@ push(
 		content: 'xxxxxxxx',
 	}
 )//信息推送函数
-waitPay(timeout)//等待支付,timeout为超时时间，单位毫秒
+waitPay(timeout)//等待微信支付（支持微信赞赏码、微信收款码、微信转账，暂不支持微信红包）,timeout为超时时间，单位毫秒
 Delete()//删除用户信息
 timeFmt(2006-01-02 15:04:05)//返回对应格式的时间
 GetUserID()//获取当前会话用户ID
@@ -129,7 +129,8 @@ set(key,value)//存储key,value
 param(integer)//获取匹配规则里规定的第几个匹配值
 get(key)//获取otto桶key的值
 bucketGet(bucket,key)//获取bucket桶的key值
-bucketKeys(bucket)//获取桶内所有的key
+bucketKeys(value)//通过值返查key，返回的是key的数组
+bucketAllKeys(bucket)//获取桶内所有的key
 bucketSet(bucket,key,value)//设置bucket桶的key的值为value
 bucketDel(bucket,key)//删除bucket桶的key值
 sendText(text)//给会话用户发送信息
