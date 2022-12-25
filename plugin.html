@@ -107,7 +107,11 @@ push(
 )//信息推送函数
 waitPay(timeout)//等待微信支付（支持微信赞赏码、微信收款码、微信转账，暂不支持微信红包）,timeout为超时时间，单位毫秒
 Delete()//删除用户信息
-timeFmt("2006-01-02 15:04:05")//返回对应格式的时间
+
+//以下为时间函数参数sec为unix秒数，nsec为纳秒，后面的时间格式yyyy为年，MM为月份，dd为日期，hh为12小时制，HH为24小时制，mm为分，ss为秒，如："yyyy-MM-dd hh:mm:ss"
+timeFmt(format)//按照format格式输出前时间
+unixTimeFmt(sec,nsec,format)//按照format格式输入unix时间
+
 GetUserID()//获取当前会话用户ID
 GetContent()//获取当前会话用户发的信息内容
 GetChatID()//获取当前会话群ID
