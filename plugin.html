@@ -75,6 +75,8 @@
 					<pre><code>
 call(param)//参数有machineId(获取机器码),uuid(生成随机uuid),md5(对字符串计算md5),timeFormat(定义时间格式))
 cancall(param)//检查是否可调用某函数，返回布尔值
+
+//网络请求函数
 request({
 	useproxy: true/false,//是否使用代理
 	url: "xxx",//地址
@@ -96,7 +98,10 @@ request({
 	timeOut: //单位为毫秒ms
 }function(error,response,header,body){
 	//网络请求处理函数
-})//网络请求函数
+})
+//另一种使用方式
+body=request()
+//信息推送函数
 push(
 	{
 		imType: 'qq',
@@ -104,7 +109,7 @@ push(
 		userID: 'xxxxxxx',
 		content: 'xxxxxxxx',
 	}
-)//信息推送函数
+)
 waitPay(timeout)//等待微信支付（支持微信赞赏码、微信收款码、微信转账，暂不支持微信红包）,timeout为超时时间，单位毫秒
 Delete()//删除用户信息
 
