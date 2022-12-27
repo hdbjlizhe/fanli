@@ -155,6 +155,35 @@ importFs(filepath)//读取文件
 importJs(filepath)//引入js文件，参数为文件路径
 importDir(dir)//引入js文件夹，参数为路径
 </code></pre>
+					<pre><code>以下为部分事件的对应表
+	/////////////////////////QQ类事件//////////////////////////////////////////////////////
+	//元数据类
+	"qq-meta_event-lifecycle-connect": "QQ完成连接",
+	"qq-meta_event-lifecycle-enable":  "QQ开始工作",
+	"qq-meta_event-lifecycle-disable": "QQ连接失效",
+	"qq-meta_event-heartbeat":"ws连接心跳事件"
+	//通知类
+	"qq-notice-group_increase": "QQ有人加群",
+	"qq-notice-group_decrease": "QQ有人退群",
+
+	"qq-notice-group_decrease-leave":   "QQ群有人主动退群",
+	"qq-notice-group_decrease-kick":    "QQ群成员被踢",
+	"qq-notice-group_decrease-kick_me": "QQ群成员登录号被踢",
+
+	"qq-notice-group-recall":       "QQ群内消息撤回", //{"self_id":363586159,"time":1670485977,"post_type":"notice","notice_type":"group","sub_type":"recall","group_id":825897018,"user_id":79873111,"operator_id":79873111,"message_id":"MTowOgTCxFcAANg4WKS9z2ORl9cB"}
+	"qq-notice-friend_recall":      "QQ好友私聊消息撤回",
+	"qq-notice-group_admin-set":    "设置群管理员",
+	"qq-notice-group_admin_unset":  "取消管理员",
+	"qq-notice-group_upload":       "群文件上传",
+	"qq-notice-group_ban-ban":      "群禁言",
+	"qq-notice-group_ban-lift_ban": "解除禁言",
+	//请求类
+	"qq-request-friend-single": "QQ有人请求加机器人为好友", //{"self_id":363586159,"time":1670977881,"post_type":"request","request_type":"friend","sub_type":"single","user_id":3554541945,"nickname":"winBBA","source":"QQ号查找","comment":"","sex":"unknown","age":0,"flag":"~d3de01795efbedb064840"}
+	"qq-request-group-add":     "QQ请求加群",
+
+	/////////////////////////微信类事件//////////////////////////
+	"wx-received-sent-pay": "微信机器人收到或发送支付（含转账、赞赏码、收款码）",
+</code></pre>
 				</section>
 
 			</div>
