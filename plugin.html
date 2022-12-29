@@ -128,7 +128,12 @@ GetMessageID()//获取当前信息ID
 GetMessageByID(id)//通过信息id获取最近的消息
 RecallMessage(messageID)//撤回信息，参数为信息id
 notifyMasters(content)//将信息发送给管理员
-input(waitTime)//等待用户输入，参数为等待时间（单位毫秒），返回用户输入的信息
+input(waitTime,recallTime,"group")//等待用户输入，参数为等待时间（单位毫秒），返回用户输入的信息
+使用样例：
+msg=input(60000)//表示等待用户输入，等待用户输入时间为60秒
+msg=input(60000,60000)//表示等待用户输入（60秒），用户输入后60秒撤回，recallTime为0表示不撤回
+msg=input(60000,60000,"group")//表示等待群内任意用户的输入
+
 breakIn(content)//将信息送入内部格式对应的处理通道进行处理
 Debug()//输出调试信息
 GroupKick(userid,reject_add_request)//踢群，参数分别为用户id,是否拒绝再次加群请求
