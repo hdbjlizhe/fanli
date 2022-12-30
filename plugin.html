@@ -118,8 +118,8 @@ Delete()//删除用户信息
 //以下为时间函数参数sec为unix秒数，nsec为纳秒，后面的时间格式yyyy为年，MM为月份，dd为日期，hh为12小时制，HH为24小时制，mm为分，ss为秒，如："yyyy-MM-dd hh:mm:ss"
 timeFmt(format,second,nanosecond)//按照format格式输出系统当前时间
 //使用样例
-timeFmt()//输入当前系统时间，格式默认"yyyy-MM-dd hh:mm:ss"
-timeFmt(format)//格式自定义，yyyy为年，MM为月份，dd为日期，hh为12小时制，HH为24小时制，mm为分，ss为秒，如："yyyy-MM-dd hh:mm:ss"
+timeFmt()//输出当前系统时间，格式默认"yyyy-MM-dd hh:mm:ss"
+timeFmt(format)//输出时间，格式自定义，yyyy为年，MM为月份，dd为日期，hh为12小时制，HH为24小时制，mm为分，ss为秒，如："yyyy-MM-dd hh:mm:ss"
 timeFmt(format,second)//second为unix时间戳，即从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数
 timeFmt(format,second,nanosecond)//nanosecond为纳秒，取值范围[0-999999999]
 
