@@ -154,6 +154,11 @@ param(integer)//获取匹配规则里规定的第几个匹配值
 get(key)//获取otto桶key的值
 bucketGet(bucket,key)//获取bucket桶的key值
 bucketKeys(bucket,value)//通过值反查key，返回的是key的数组
+使用样例：
+bucketKeys()//返回otto存储桶内所有的key值
+bucketKeys(bucket)//返回bucket存储桶内所有的key集合
+bucketkeys(bucket,value)//返回bucket存储桶内所有值为value的key集合
+
 bucketAllKeys(bucket)//获取桶内所有的key
 bucketSet(bucket,key,value)//设置bucket桶的key的值为value
 bucketDel(bucket,key)//删除bucket桶的key值
