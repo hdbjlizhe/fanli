@@ -97,7 +97,12 @@ request({
 		key1: xxx,
 		key1: xxx,
 	},
-	timeOut: //单位为毫秒ms
+	fileData:{//post时有效，携带文件，第一个参数xxxfile1是表单的字段名,第二个参数xxxxx是需要发送的文件名或者文件路径
+		"xxxfile1":"xxxxxx",
+		"xxxfile2":"xxxxxx",
+		"xxxfile3":"xxxxxx",
+	},
+	timeOut: //单位为毫秒ms，也可以都小写timeout
 }function(error,response,header,body){
 	//网络请求处理函数
 })
