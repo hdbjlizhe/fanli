@@ -54,7 +54,6 @@
 //[disable: true或false] 禁用开关，true表示禁用，false表示可用
 //[priority: 123] 优先级，数字越大表示优先级越高
 //[server: xxx] 
-//[show: 插件说明] 自定义插件说明
 //[imType:qq,wx] 白名单,只在qq,wx生效
 //[imType+:qq,wx] 同上,不写+号默认为白名单模式
 //[imType-:qq] 黑名单qq,除了qq生效
@@ -75,7 +74,7 @@
 
 					<h2><a id="2.内联函数"></a>2.内联函数</h2>
 					<pre><code>
-call(param)//参数有machineId(获取机器码),uuid(生成随机uuid),md5(对字符串计算md5),timeFormat(定义时间格式))
+call(param)//参数有version(获取当前autMan版本)，machineId(获取机器码),uuid(生成随机uuid),md5(对字符串计算md5),timeFormat(定义时间格式))
 cancall(param)//检查是否可调用某函数，返回布尔值
 
 //网络请求函数
