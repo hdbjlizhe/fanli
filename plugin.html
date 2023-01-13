@@ -75,6 +75,15 @@
 					<h2><a id="2.内联函数"></a>2.内联函数</h2>
 					<pre><code>
 call(param)//参数有version(获取当前autMan版本)，machineId(获取机器码),uuid(生成随机uuid),md5(对字符串计算md5),timeFormat(定义时间格式))
+示例：
+version=call("version")()//获取当前系统版本
+machineId=call("machineId")()//获取当前机器码
+uuid=call("uuid")()//获取一个随机uuid
+md5=call("md5")(str)//获取str的md5值
+time=call("timeFormat")("yyyy-MM-dd hh:mm:ss")//按格式输出当前系统时间
+time=call("unixTimeFormat")(second,nanosecond,"yyyy-MM-dd hh:mm:ss")//将unixtime按格式输出
+
+
 cancall(param)//检查是否可调用某函数，返回布尔值
 
 //网络请求函数
