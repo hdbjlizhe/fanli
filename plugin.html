@@ -134,12 +134,12 @@ url=encodeQR(content)//生成二维码
 content=decodeQR(url)//将url二维码解析出内容
 
 //下载网络图片
-obj=imgDownload(url)
+img=imageDownload(url)
 返回值：
-obj["suceess"]下载成功与否，
-obj["local"]图片本地存储位置，
-obj["url"]图片在autMan的网络地址，
-obj["base64"]图片的base64字符串
+img["suceess"]下载成功与否，
+img["local"]图片本地存储位置，
+img["url"]图片在autMan的网络地址，
+img["base64"]图片的base64字符串
 
 //以下为时间函数参数sec为unix秒数，nsec为纳秒，后面的时间格式yyyy为年，MM为月份，dd为日期，hh为12小时制，HH为24小时制，mm为分，ss为秒，如："yyyy-MM-dd hh:mm:ss"
 timeFmt(format,second,nanosecond)//按照format格式输出系统当前时间
@@ -163,13 +163,15 @@ GetMessageID()//获取当前信息ID
 GetMessageByID(id)//通过信息id获取最近的消息
 RecallMessage(messageID)//撤回信息，参数为信息id
 notifyMasters(content)//将信息发送给管理员
+
+//用户输入
 input(waitTime,recallTime,"group")//等待用户输入，参数为等待用户输入时间（单位毫秒）、撤回“用户输入信息”的时间（单位毫秒）、group表示开放任意群成员输入，返回用户输入的信息
 使用样例：
 msg=input(60000)//表示等待用户输入，等待用户输入时间为60秒
 msg=input(60000,60000)//表示等待用户输入（60秒），用户输入后60秒撤回，recallTime为0表示不撤回
 msg=input(60000,60000,"group")//表示等待群内任意用户的输入
 
-breakIn(content)//将信息送入内部格式对应的处理通道进行处理
+breakIn(content)//将信息送入对应的处理通道进行处理
 Debug()//输出调试信息
 GroupKick(userid,reject_add_request)//踢群，参数分别为用户id,是否拒绝再次加群请求
 GroupBan(userid,duration)//禁言，参数分别为用户id,时长
