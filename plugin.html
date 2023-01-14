@@ -172,7 +172,15 @@ msg=input(60000,60000)//表示等待用户输入（60秒），用户输入后60�
 msg=input(60000,60000,"group")//表示等待群内任意用户的输入
 
 breakIn(content)//将信息送入对应的处理通道进行处理
+
+//调试
 Debug()//输出调试信息
+console.debug()
+console.info()
+console.warn()
+console.error()
+console.log()
+
 GroupKick(userid,reject_add_request)//踢群，参数分别为用户id,是否拒绝再次加群请求
 GroupBan(userid,duration)//禁言，参数分别为用户id,时长
 GroupWholeBan(true/false)//true表示群禁言，false表示群解禁
