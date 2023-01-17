@@ -126,7 +126,11 @@ push(
 		content: 'xxxxxxxx',
 	}
 )
-waitPay(timeout)//等待微信支付（支持微信赞赏码、微信收款码、微信转账，暂不支持微信红包）,timeout为超时时间，单位毫秒
+waitPay(timeOut,exitCode)//等待微信支付（支持微信赞赏码、微信收款码、微信转账，暂不支持微信红包）,timeout为超时时间，单位毫秒
+示例
+pay=waitPay(120000)//等待支付2分钟，pay为JSON数据
+pay=waitPay(120000,"q")//等待支付2分钟，期间用户输入q会主动退出“等待支付”进程。
+
 Delete()//删除用户信息
 
 //二维码
