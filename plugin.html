@@ -149,6 +149,11 @@ img["base64"]图片的base64字符串
 drawList(icons, msgs, headImageRelativePath, footImageRelativePath)
 说明icons、msgs为数组，icons数组存储图标的路径，msgs为文本内容，icons和msgs一一对应。headImageRelativePath为图头的相对路径, footImageRelativePath为图尾的相对路径
 如drawList(["jdicons/bean.jpg","jdicons/jdzh.jpg"],["豆豆总量：123","账户信息：123"],"jdicons/head.jpg","jdicons/foot.jpg")
+返回值：
+img["suceess"]下载成功与否，
+img["local"]图片本地存储位置，
+img["url"]图片在autMan的网络地址，
+img["base64"]图片的base64字符串
 
 //以下为时间函数参数sec为unix秒数，nsec为纳秒，后面的时间格式yyyy为年，MM为月份，dd为日期，hh为12小时制，HH为24小时制，mm为分，ss为秒，如："yyyy-MM-dd hh:mm:ss"
 timeFmt(format,second,nanosecond)//按照format格式输出系统当前时间
