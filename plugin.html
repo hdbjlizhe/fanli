@@ -138,8 +138,8 @@ url=encodeQR(content)//生成二维码
 content=decodeQR(url)//将url二维码解析出内容
 
 //下载网络图片
-img=imageDownload(url)
-img=imageDownload(url,path)//下载到指令目录
+img=imageDownload(url)//下载到默认路径
+img=imageDownload(url,path)//下载到指定目录
 返回值：
 img["suceess"]下载成功与否，
 img["local"]图片本地存储位置，
