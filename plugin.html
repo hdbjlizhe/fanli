@@ -146,10 +146,39 @@ img["url"]图片在autMan的网络地址，
 img["base64"]图片的base64字符串,
 
 //画清单图
-drawList(icons, msgs, headImageRelativePath, footImageRelativePath)
-说明icons、msgs为数组，icons数组存储图标的路径，msgs为文本内容，icons和msgs一一对应。headImageRelativePath为图头的相对路径, footImageRelativePath为图尾的相对路径
-如img=drawList(["jdicons/bean.jpg","jdicons/jdzh.jpg"],["豆豆总量：123","账户信息：123"],"jdicons/head.jpg","jdicons/foot.jpg")
-返回值：
+drawList()
+//简单参数
+img=drawList({
+	icon:{
+		images: icons,
+	},
+	text:{
+		texts: msgs,
+	}
+})
+//复杂数据
+img = drawList({
+            //背景
+            "background": {
+                "color": { r: 255, g: 255, b: 255, a: 255 },//背景底色，默认为白色
+                "image": "jdicons/foot.jpg"//背景图，支持本地相对路径、网络url、base64编码字符串图片（非必要）
+            },
+            "icon": {//必需的
+                "images": icons,//字符串数组,图标类型支持path本地相对路径、url网络图版、base64编码图片
+            },
+            "text": {//必需的
+                "color": { r: 0, g: 0, b: 0, a: 255 },//文字颜色，r红基色，g绿基色，b蓝基色，a透明度，非必需，默认为黑色
+                "size": 48,//文字大小，非必需，默认为48
+                "texts": msgs,//文字内容，必需的。
+            },
+            "head": {
+                "image": "jdicons/head.jpg"//图片头（非必要）
+            },
+            "foot": {
+                "image": "jdicons/foot.jpg"//图片尾（非必要）
+            }
+ })
+返回值img：
 img["suceess"]下载成功与否，
 img["local"]图片本地存储位置，
 img["url"]图片在autMan的网络地址，
