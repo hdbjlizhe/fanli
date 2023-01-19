@@ -147,7 +147,13 @@ img["base64"]图片的base64字符串,
 
 //画清单图
 drawList()
-//简单参数
+//无行图标清单图
+img=drawList({
+	text:{
+		texts: msgs,
+	}
+})
+//带行图标的清单图
 img=drawList({
 	icon:{
 		images: icons,
@@ -156,7 +162,7 @@ img=drawList({
 		texts: msgs,
 	}
 })
-//复杂数据
+//绘制复杂参数的清单图
 img = drawList({
             //背景
             "background": {
