@@ -258,7 +258,12 @@ bucketSet(bucket,key,value)//设置bucket桶的key的值为value
 bucketDel(bucket,key)//删除bucket桶的key值
 sendText(text)//给会话用户发送信息
 image(url)//将图片url转换为CQ码格式
-sendImage(url)//发送图片，参数为网址
+
+sendImage(url)//发送图片，参数为
+1.绝对路径，例如 file:///C:\\Users\Alice\Pictures\1.png，格式使用 file URI
+2.网络 URL，例如 https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png
+3.Base64 编码，例如 base64://iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAIAAADJt1n/AAAAKElEQVQ4EWPk5+RmIBcwkasRpG9UM4mhNxpgowFGMARGEwnBIEJVAAAdBgBNAZf+QAAAAABJRU5ErkJggg==
+
 sendVideo(url)//发送视频
 Sender//当前会话的Sender模块
 fmt//控制台输出信息模块
