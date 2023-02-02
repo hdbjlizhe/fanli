@@ -89,6 +89,7 @@ cancall(param)//检查是否可调用某函数，返回布尔值
 //网络请求函数
 request({
 	useproxy: true/false,//是否使用代理
+	proxyAddr://代理地址，支持http\sock5\socks5代理。不设置则根据userproxy情况使用系统代理，设置则使用自定义的代理。
 	url: "xxx",//地址
 	headers:{//请求头
 		"User-Agent":"xxx"
