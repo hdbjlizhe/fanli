@@ -140,7 +140,7 @@ url=encodeQR(content)//生成二维码
 content=decodeQR(url)//将url二维码解析出内容
 
 //下载网络图片
-img=imageDownload(url)//下载到默认路径
+img=imageDownload(url)//下载到默认路径,url支持http路径，支持base64://路径，支持data:image
 img=imageDownload(url,path)//下载到指定目录
 返回值：
 img["suceess"]下载成功与否，
