@@ -261,6 +261,8 @@ bucketDel(bucket,key)//删除bucket桶的key值
 sendText(text)//给会话用户发送信息
 image(url)//将图片url转换为CQ码格式
 
+msg=spread(msg)//转链，当信息中含有京东、淘宝、拼多多短链时，会自动转换成自己的短链。前提是“返利排错”正常
+
 sendImage(url)//发送图片，参数为
 1.绝对路径，例如 file:///C:\\Users\Alice\Pictures\1.png，格式使用 file URI
 2.网络 URL，例如 https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png
