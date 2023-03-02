@@ -236,7 +236,11 @@ EmailSet({
 	"user":"xxx@qq.com"
 	"pwd":"xxxxxxx"
 })
-EmailSend()
+EmailSend({
+	"addresses":["xxx@qq.com","xxx@qq.com"],
+	"subject":"邮件标题",
+	"body":"邮件内容",
+})
 
 //调试
 Debug()//输出调试信息
