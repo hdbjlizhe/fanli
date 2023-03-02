@@ -230,7 +230,12 @@ msg=input(60000,60000,"group")//表示等待群内任意用户的输入
 breakIn(content)//将信息送入对应的处理通道进行处理
 
 //关于邮件
-EmailSet()
+EmailSet({
+	"host":"smtp.qq.com",
+	"port":25,
+	"user":"xxx@qq.com"
+	"pwd":"xxxxxxx"
+})
 EmailSend()
 
 //调试
