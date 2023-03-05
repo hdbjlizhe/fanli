@@ -256,6 +256,8 @@ console.log()
 GroupKick(userid,reject_add_request)//踢群，参数分别为用户id,是否拒绝再次加群请求
 GroupBan(userid,duration)//禁言，参数分别为用户id,时长
 GroupWholeBan(true/false)//true表示群禁言，false表示群解禁
+GroupInviteIn(userid,chatid)//当前仅支持可爱猫、西瓜、千寻等部分微信框架
+GroupNoticeSend(content)//当前仅支持go-cqhttp群内发公告
 sleep(waitTime)//睡眠一段时间，单位毫秒
 isAdmin()//返回当前会话是否为管理员
 set(key,value)//存储key,value
