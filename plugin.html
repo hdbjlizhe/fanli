@@ -148,6 +148,39 @@ img["local"]图片本地存储位置，
 img["url"]图片在autMan的网络地址，
 img["base64"]图片的base64字符串,
 
+//使用aut云1分钟图床
+/*********************************************** 这个是上传base64格式图片，获取url地址，限制5M ***********************************/
+username=bucketGet("cloud","username")
+password=bucketGet("cloud","password")
+ib=encodeURIComponent("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAXCAIAAACeQxh6AAAAMUlEQVQ4EWP8//8/AzUAEzUMAZkxahDhkBwNo9EwIhwChFWMpqPRMCIcAoRVUC0dAQAx7QMrXoq/sgAAAABJRU5ErkJggg==")
+body=request({
+    url: "http://aut.zhelee.cn/imgUpload",
+    method: "post",
+    dataType: "json",
+    formData:{
+        username:username,
+        password:password,
+        imgBase64:ib
+    },
+})
+sendText(JSON.stringify(body))
+/************************************************** 这个是上传图片file，获取url地址，限制5M************************************/
+username=bucketGet("cloud","username")
+password=bucketGet("cloud","password")
+body=request({
+    url: "http://aut.zhelee.cn/imgUpload",
+    method: "post",
+    dataType: "json",
+    formData:{
+        username:username,
+        password:password,
+    },
+    fileData:{
+        imgefile:"/root/autMan/xxxx.jpg"
+    }
+})
+sendText(JSON.stringify(body))
+
 //画清单图
 drawList()
 //无行图标清单图
