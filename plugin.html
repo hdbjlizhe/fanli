@@ -130,6 +130,25 @@ push(
 		content: 'xxxxxxxx',
 	}
 )
+
+//定时指令
+cron.get()//获取所有定时
+cron.get(id)//获取序号为id的定时指令，id为number类型
+cron.add({//添加定时指令
+	cron: "*/5 * * * *",
+	cmd:'export varient="abc"',
+	toSelf:true,
+	toOthers:"qqgroup:123,wxgroup:456,tggroup:789,qqindiv:321,wxindiv:654,tgindiv:987"
+})
+cron.update({//更新定时指令
+	id:3,
+	cron: "*/5 * * * *",
+	cmd:'export varient="abc"',
+	toSelf:true,
+	toOthers:"qqgroup:123,wxgroup:456,tggroup:789,qqindiv:321,wxindiv:654,tgindiv:987"
+})
+cron.delete(id)//删除定时指令
+
 waitPay(timeOut,exitCode)//等待微信支付（支持微信赞赏码、微信收款码、微信转账，暂不支持微信红包）,timeout为超时时间，单位毫秒
 示例
 pay=waitPay(120000)//等待支付2分钟，pay为JSON数据
