@@ -50,7 +50,7 @@
 					<h3><b>安装完成并启动后可进入autMan后台地址：http://autMan的ip:autMan端口<br />获取后台地址的指令：设置</b></h3>
 
 					<h1><a id="1.Linux类系统"></a>1.Linux类系统</h1>
-					<p>【说明】以下一键需要安装依赖&nbsp; debian/ubuntu： <i>apt install jq -y</i>&nbsp; centos：<i>yum install jq -y</i></p>
+					<p>【说明】以下一键需要安装依赖 <br/> debian/ubuntu： <i>apt install jq -y</i><br/> centos：<i>yum install jq -y</i></p>
 					<p><b></i>tag=$(curl --silent "https://api.github.com/repos/hdbjlizhe/fanli/releases/latest" | jq -r .tag_name);if [ ! "$tag" ];then exit;fi;s=autMan;a=arm64;if [[ $(uname -a | grep "x86_64") != "" ]];then a=amd64;fi;if [ ! -d $s ];then mkdir $s;fi;cd $s;wget https://github.com/hdbjlizhe/fanli/releases/download/${tag}/autMan_$a.tar.gz && tar -zxvf autMan_$a.tar.gz && rm -rf autMan_$a.tar.gz && chmod 777 $s;pkill -9 $s;$(pwd)/$s -t;</i></b></p>
 					
 					<p>autMan(Linux系统含amd64\arm64)运行：</p>
