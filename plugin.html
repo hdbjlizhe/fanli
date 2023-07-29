@@ -151,6 +151,7 @@ cron.update({//更新定时指令
 cron.delete(id)//删除定时指令
 
 waitPay(timeOut,exitCode)//等待微信支付（支持微信赞赏码、微信收款码、微信转账，暂不支持微信红包）,timeout为超时时间，单位毫秒
+is=atWaitPay()//判断当前是否处于等待微信支付的状态
 示例
 pay=waitPay(120000)//等待支付2分钟，pay为JSON数据
 pay=waitPay(120000,"q")//等待支付2分钟，期间用户输入q会主动退出“等待支付”进程。
