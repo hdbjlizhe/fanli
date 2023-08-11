@@ -15,6 +15,9 @@ if [[ $os == *"Debian"* ]]; then
     curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
     sudo apt install -y nodejs
 
+    echo "Installing PHP on Debian..."
+    sudo apt install -y php
+
 elif [[ $os == *"CentOS"* ]]; then
     # CentOS 安装命令
     echo "Installing Python 3 and pip on CentOS..."
@@ -25,6 +28,9 @@ elif [[ $os == *"CentOS"* ]]; then
     curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash -
     sudo yum install -y nodejs
 
+    echo "Installing PHP on CentOS..."
+    sudo yum install -y php
+
 elif [[ $os == *"OpenWrt"* ]]; then
     # OpenWrt 安装命令
     echo "Installing Python 3 and pip on OpenWrt..."
@@ -33,6 +39,9 @@ elif [[ $os == *"OpenWrt"* ]]; then
 
     echo "Installing Node.js on OpenWrt..."
     opkg install node
+    
+    echo "Installing PHP on OpenWrt..."
+    opkg install php7
 
 else
     echo "Unsupported operating system: $os"
@@ -57,17 +66,19 @@ if [ ! "$latest_version" ];then
     exit;
 fi;
 
+
+s=autMan;
 a=arm64;
 if [[ $(uname -a | grep "x86_64") != "" ]];then 
     a=amd64;
 fi;
 if [ ! -d $s ];then 
-    mkdir autMan;
+    mkdir $s;
 fi;
-cd autMan;
+cd $s;
 wget https://github.com/hdbjlizhe/fanli/releases/download/${latest_version}/autMan_$a.tar.gz;
-tar -zxvf autMan_$a.tar.gz; 
+tar -zxvf autMan_$a.tar.gz;
 rm -rf autMan_$a.tar.gz;
-chmod 777 autMan;
-pkill -9 autMan;
-autMan/autMan -t;
+chmod 777 $s;
+pkill -9 $s;
+$(pwd)/$s -t;
