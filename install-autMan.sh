@@ -5,7 +5,7 @@ os=$(awk -F= '/^NAME/{print $2}' /etc/os-release)
 os=${os//\"/}
 
 # 判断系统类型并执行相应的安装命令
-if [[ $os == *"Debian"* ]]; then
+if [[ $os == *"Debian"* ]] || [[ $os == *"Ubuntu"* ]]; then
     # Debian 安装命令
     echo "Installing Python 3 and pip on Debian..."
     sudo apt update
