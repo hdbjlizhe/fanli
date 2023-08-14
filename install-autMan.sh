@@ -14,8 +14,8 @@ if [[ $os == *"Debian"* ]] || [[ $os == *"Ubuntu"* ]]; then
 
     echo "Installing Node.js on Debian..."
     curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-    sudo apt install -y nodejs npm
-    npm install axios
+    sudo apt install -y nodejs
+    sudo npm install axios
 
     echo "Installing PHP on Debian..."
     sudo apt install -y php
@@ -25,10 +25,12 @@ elif [[ $os == *"CentOS"* ]]; then
     echo "Installing Python 3 and pip on CentOS..."
     sudo yum install -y epel-release
     sudo yum install -y python3 python3-pip
+    pip3 install requests
 
     echo "Installing Node.js on CentOS..."
     curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash -
     sudo yum install -y nodejs
+    npm install axios
 
     echo "Installing PHP on CentOS..."
     sudo yum install -y php
@@ -38,13 +40,29 @@ elif [[ $os == *"OpenWrt"* ]]; then
     echo "Installing Python 3 and pip on OpenWrt..."
     opkg update
     opkg install python3 python3-pip
+    pip3 install requests
 
     echo "Installing Node.js on OpenWrt..."
     opkg install node
+    npm install axios
     
     echo "Installing PHP on OpenWrt..."
     opkg install php7
 
+elif [[ $os==*"Oracle"* ]]; then 
+    #Oracle Linux 安装命令
+    echo "Installing Python 3 and pip on Oracle Linux..."
+    sudo yum install -y python3 python3-pip
+    pip3 install requests
+
+    echo "Installing Node.js on Oracle Linux..."
+    curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash -
+    sudo yum install -y nodejs
+    npm install axios
+
+    echo "Installing PHP on Oracle Linux..."
+    sudo yum install -y php
+    
 else
     echo "Unsupported operating system: $os"
     exit 1
