@@ -10,10 +10,12 @@ if [[ $os == *"Debian"* ]] || [[ $os == *"Ubuntu"* ]]; then
     echo "Installing Python 3 and pip on Debian..."
     sudo apt update
     sudo apt install -y python3 python3-pip
+    pip3 install requests
 
     echo "Installing Node.js on Debian..."
     curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-    sudo apt install -y nodejs
+    sudo apt install -y nodejs npm
+    npm install axios
 
     echo "Installing PHP on Debian..."
     sudo apt install -y php
