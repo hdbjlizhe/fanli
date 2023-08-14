@@ -20,7 +20,7 @@ if [[ $os == *"Debian"* ]] || [[ $os == *"Ubuntu"* ]]; then
     echo "Installing PHP on Debian..."
     sudo apt install -y php
 
-elif [[ $os == *"CentOS"* ]]; then
+elif [[ $os == *"CentOS"* ]] || [[ $os==*"Oracle"* ]]; then
     # CentOS 安装命令
     echo "Installing Python 3 and pip on CentOS..."
     sudo yum install -y epel-release
@@ -48,21 +48,6 @@ elif [[ $os == *"OpenWrt"* ]]; then
     
     echo "Installing PHP on OpenWrt..."
     opkg install php7
-
-elif [[ $os==*"Oracle"* ]]; then 
-    #Oracle Linux 安装命令
-    echo "Installing Python 3 and pip on Oracle Linux..."
-    sudo yum install -y python3 python3-pip
-    pip3 install requests
-
-    echo "Installing Node.js on Oracle Linux..."
-    curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash -
-    sudo yum install -y nodejs
-    npm install axios
-
-    echo "Installing PHP on Oracle Linux..."
-    sudo yum install -y php
-    
 else
     echo "Unsupported operating system: $os"
     exit 1
