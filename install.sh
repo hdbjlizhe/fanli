@@ -1,6 +1,5 @@
 #!/bin/bash
-color()
-{
+color(){
     green='\e[1;32m'
     res='\e[0m'
     yellow='\e[1;33m'
@@ -28,8 +27,7 @@ hello(){
     echo "当前架构为：" $cpu
     sleep 3s
 }
-change()
-{
+change(){
     if [[ "$os" == "debian"  &&  "$cpu" == "amd64" ]];then
         apt-get install wget git tar -y
         url=https://dl.golang.com.cn/dl/go/go1.18.linux-amd64.tar.gz
@@ -50,8 +48,7 @@ change()
     fi
 }
 
-maingo()
-{
+maingo(){
     color
     GO111MODULE=on
     GOPROXY=https://goproxy.cn
@@ -89,5 +86,4 @@ maingo()
         sillyGirl
     fi
 }
-
-maingo
+maingo()
