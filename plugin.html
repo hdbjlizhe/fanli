@@ -150,6 +150,20 @@ cron.update({//更新定时指令
 	toOthers:"qqgroup:123,wxgroup:456,tggroup:789,qqindiv:321,wxindiv:654,tgindiv:987"
 })
 cron.delete(id)//删除定时指令
+//知识库
+reply.get()//获取所有知识库
+reply.get(id)//获取某个知识规则
+reply.add({
+	rules:["test1","test2"]
+	content:"reply test"
+})
+reply.update({
+	id:3
+	rules:["test1","test2"]
+	content:"reply test"					
+})
+reply.delete(id)//删除某条知识
+						
 
 waitPay(timeOut,exitCode)//等待微信支付（支持微信赞赏码、微信收款码、微信转账，暂不支持微信红包）,timeout为超时时间，单位毫秒
 is=atWaitPay()//判断当前是否处于等待微信支付的状态
