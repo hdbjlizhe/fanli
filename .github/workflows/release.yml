@@ -57,20 +57,19 @@ jobs:
     - name: Build Docker image
       run: |
         docker build --platform linux/${{ matrix.arch }} -t ${{ secrets.DOCKER_HUB_USERNAME }}/autman:latest-${{ matrix.arch }} .
-        docker tag ${{ secrets.DOCKER_HUB_USERNAME }}/autman:${{ env.RELEASE_VERSION }}-${{ matrix.arch }} ${{ secrets.DOCKER_HUB_USERNAME }}/autman:latest-${{ matrix.arch }}
+        docker tag ${{ secrets.DOCKER_HUB_USERNAME }}/autman:latest-${{ matrix.arch }} ${{ secrets.DOCKER_HUB_USERNAME }}/autman:latest-${{ matrix.arch }}
 
     - name: Push Docker image
       run: |
-        # docker push ${{ secrets.DOCKER_HUB_USERNAME }}/autman:${{ env.RELEASE_VERSION }}-${{ matrix.arch }}
         docker push ${{ secrets.DOCKER_HUB_USERNAME }}/autman:latest-${{ matrix.arch }}
 
     - name: Create and push manifest
       if: matrix.arch == 'amd64'
       run: |
-        docker manifest create ${{ secrets.DOCKER_HUB_USERNAME }}/autman:${{ env.RELEASE_VERSION }} \
-          ${{ secrets.DOCKER_HUB_USERNAME }}/autman:${{ env.RELEASE_VERSION }}-amd64 \
-          ${{ secrets.DOCKER_HUB_USERNAME }}/autman:${{ env.RELEASE_VERSION }}-arm64
-        docker manifest push ${{ secrets.DOCKER_HUB_USERNAME }}/autman:${{ env.RELEASE_VERSION }}
+        docker manifest create ${{ secrets.DOCKER_HUB_USERNAME }}/autman:latest \
+          ${{ secrets.DOCKER_HUB_USERNAME }}/autman:latest-amd64 \
+          ${{ secrets.DOCKER_HUB_USERNAME }}/autman:latest-arm64
+        docker manifest push ${{ secrets.DOCKER_HUB_USERNAME }}/autman:latest
 
         docker manifest create ${{ secrets.DOCKER_HUB_USERNAME }}/autman:latest \
           ${{ secrets.DOCKER_HUB_USERNAME }}/autman:latest-amd64 \
