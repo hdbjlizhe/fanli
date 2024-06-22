@@ -30,9 +30,8 @@ COPY ./autMan ./MSYH.TTF ./robots.txt /app/autMan/
 COPY ./views2 /app/autMan/views2
 COPY ./jdicons /app/autMan/jdicons
 COPY ./plugin/web /app/autMan/plugin/web
-COPY ./plugin/scripts/middleware.js ./plugin/scripts/middleware.py ./plugin/scripts/middleware.sh ./plugin/scripts/middleware.php /app/autMan/plugin/scripts/
+COPY ./plugin/scripts/middleware.js ./plugin/scripts/middleware.py ./plugin/scripts/middleware.sh ./plugin/scripts/middleware.php ./plugin/golang/go.mod /app/autMan/plugin/scripts/
 COPY ./task/configs/config.sh.sample ./task/configs/extra.sh.sample ./task/configs/task_before.sh.sample ./task/configs/task_after.sh.sample /app/autMan/task/configs/
-COPY ./plugin/golang/go.mod /app/autMan/plugin/scripts/go.mod
 
 
 #设置golang环境变量
