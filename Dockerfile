@@ -23,7 +23,7 @@ RUN npm install --save axios request require crypto-js global-agent got@11 doten
 
 # 复制入口脚本和解压后的文件
 COPY ./docker-entrypoint.sh /bin/
-COPY ./app /app
+COPY ./app /app/autMan/
 
 # 设置golang环境变量
 ENV GO111MODULE=on \
