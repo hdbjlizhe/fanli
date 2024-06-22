@@ -22,6 +22,9 @@ jobs:
       run: |
         echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
         echo "GITHUB_REF: $GITHUB_REF"
+        
+    - name: Wait for a few seconds
+      run: sleep 10
 
     - name: Download release .tar.gz
       run: |
