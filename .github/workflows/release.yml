@@ -15,9 +15,16 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: Install jq
+      run: sudo apt-get install -y jq
+
     - name: Download release .tar.gz
       run: |
         RELEASE_URL=$(curl -s https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/latest | jq -r '.assets[] | select(.name | endswith("_${{ matrix.arch }}.tar.gz")) | .browser_download_url')
+        if [ -z "$RELEASE_URL" ]; then
+          echo "No release asset found for architecture: ${{ matrix.arch }}"
+          exit 1
+        fi
         curl -L $RELEASE_URL -o release_${{ matrix.arch }}.tar.gz
 
     - name: Extract release .tar.gz
