@@ -37,10 +37,10 @@ jobs:
         curl -L $RELEASE_URL -o release_arm64.tar.gz
 
     - name: Create extraction directory
-      run: mkdir -p ./app
+      run: mkdir -p ./app/autMan
 
     - name: Extract release .tar.gz
-      run: tar -xzf release_arm64.tar.gz -C ./app --strip-components=1
+      run: tar -xzf release_arm64.tar.gz -C ./app/autMan --strip-components=1
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
