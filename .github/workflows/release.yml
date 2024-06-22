@@ -7,18 +7,21 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        arch: [amd64, arm64]
+        
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
 
     - name: Download release .tar.gz
       run: |
-        RELEASE_URL=$(curl -s https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/latest | jq -r '.tarball_url')
-        curl -L $RELEASE_URL -o release.tar.gz
+        RELEASE_URL=$(curl -s https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/latest | jq -r '.assets[] | select(.name | endswith("_${{ matrix.arch }}.tar.gz")) | .browser_download_url')
+        curl -L $RELEASE_URL -o release_${{ matrix.arch }}.tar.gz
 
     - name: Extract release .tar.gz
-      run: tar -xzf release.tar.gz --strip-components=1
+      run: tar -xzf release_${{ matrix.arch }}.tar.gz --strip-components=1
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
@@ -31,14 +34,27 @@ jobs:
 
     - name: Extract version number from Git tag
       id: extract_version
-      run: echo "RELEASE_VERSION=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
+      run: echo "RELEASE_VERSION=${GITHUB_REF/refs/tags/}" >> $GITHUB_ENV
 
     - name: Build Docker image
       run: |
-        docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/autman:${{ env.RELEASE_VERSION }} .
-        docker tag ${{ secrets.DOCKER_HUB_USERNAME }}/autman:${{ env.RELEASE_VERSION }} ${{ secrets.DOCKER_HUB_USERNAME }}/autman:latest
+        docker build --platform linux/${{ matrix.arch }} -t ${{ secrets.DOCKER_HUB_USERNAME }}/autman:${{ env.RELEASE_VERSION }}-${{ matrix.arch }} .
+        docker tag ${{ secrets.DOCKER_HUB_USERNAME }}/autman:${{ env.RELEASE_VERSION }}-${{ matrix.arch }} ${{ secrets.DOCKER_HUB_USERNAME }}/autman:latest-${{ matrix.arch }}
 
     - name: Push Docker image
       run: |
-        docker push ${{ secrets.DOCKER_HUB_USERNAME }}/autman:${{ env.RELEASE_VERSION }}
-        docker push ${{ secrets.DOCKER_HUB_USERNAME }}/autman:latest
+        docker push ${{ secrets.DOCKER_HUB_USERNAME }}/autman:${{ env.RELEASE_VERSION }}-${{ matrix.arch }}
+        docker push ${{ secrets.DOCKER_HUB_USERNAME }}/autman:latest-${{ matrix.arch }}
+
+    - name: Create and push manifest
+      if: matrix.arch == 'amd64'
+      run: |
+        docker manifest create ${{ secrets.DOCKER_HUB_USERNAME }}/autman:${{ env.RELEASE_VERSION }} \
+          ${{ secrets.DOCKER_HUB_USERNAME }}/autman:${{ env.RELEASE_VERSION }}-amd64 \
+          ${{ secrets.DOCKER_HUB_USERNAME }}/autman:${{ env.RELEASE_VERSION }}-arm64
+        docker manifest push ${{ secrets.DOCKER_HUB_USERNAME }}/autman:${{ env.RELEASE_VERSION }}
+
+        docker manifest create ${{ secrets.DOCKER_HUB_USERNAME }}/autman:latest \
+          ${{ secrets.DOCKER_HUB_USERNAME }}/autman:latest-amd64 \
+          ${{ secrets.DOCKER_HUB_USERNAME }}/autman:latest-arm64
+        docker manifest push ${{ secrets.DOCKER_HUB_USERNAME }}/autman:latest
