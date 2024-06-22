@@ -50,7 +50,7 @@ jobs:
     - name: Extract version number from Git tag
       id: extract_version
       run: |
-        VERSION_TAG=${GITHUB_REF#refs/tags/}
+        VERSION_TAG=${GITHUB_REF#tags//tags/}
         echo "RELEASE_VERSION=${VERSION_TAG}" >> $GITHUB_ENV
         echo "Extracted RELEASE_VERSION: ${VERSION_TAG}"
 
