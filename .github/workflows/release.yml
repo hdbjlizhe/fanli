@@ -47,21 +47,21 @@ jobs:
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
-    - name: Extract version number from Git tag
-      id: extract_version
-      run: |
-        VERSION_TAG=${GITHUB_REF#tags//tags/}
-        echo "RELEASE_VERSION=${VERSION_TAG}" >> $GITHUB_ENV
-        echo "Extracted RELEASE_VERSION: ${VERSION_TAG}"
+    # - name: Extract version number from Git tag
+    #   id: extract_version
+    #   run: |
+    #     VERSION_TAG=${GITHUB_REF#tags//tags/}
+    #     echo "RELEASE_VERSION=${VERSION_TAG}" >> $GITHUB_ENV
+    #     echo "Extracted RELEASE_VERSION: ${VERSION_TAG}"
 
     - name: Build Docker image
       run: |
-        docker build --platform linux/${{ matrix.arch }} -t ${{ secrets.DOCKER_HUB_USERNAME }}/autman:${{ env.RELEASE_VERSION }}-${{ matrix.arch }} .
+        docker build --platform linux/${{ matrix.arch }} -t ${{ secrets.DOCKER_HUB_USERNAME }}/autman:latest-${{ matrix.arch }} .
         docker tag ${{ secrets.DOCKER_HUB_USERNAME }}/autman:${{ env.RELEASE_VERSION }}-${{ matrix.arch }} ${{ secrets.DOCKER_HUB_USERNAME }}/autman:latest-${{ matrix.arch }}
 
     - name: Push Docker image
       run: |
-        docker push ${{ secrets.DOCKER_HUB_USERNAME }}/autman:${{ env.RELEASE_VERSION }}-${{ matrix.arch }}
+        # docker push ${{ secrets.DOCKER_HUB_USERNAME }}/autman:${{ env.RELEASE_VERSION }}-${{ matrix.arch }}
         docker push ${{ secrets.DOCKER_HUB_USERNAME }}/autman:latest-${{ matrix.arch }}
 
     - name: Create and push manifest
