@@ -38,6 +38,9 @@ jobs:
         fi
         curl -L $RELEASE_URL -o release_${{ matrix.arch }}.tar.gz
 
+    - name: Create extraction directory
+      run: mkdir -p ./app
+
     - name: Extract release .tar.gz
       run: tar -xzf release_${{ matrix.arch }}.tar.gz -C ./app --strip-components=1
 
@@ -59,7 +62,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build --platform linux/${{ matrix.arch }} -t ${{ secrets.DOCKER_HUB_USERNAME }}/autman:${{ env.RELEASE_VERSION }}-${{ matrix.arch }} .
+        docker build --platform linux/${{ matrix.arch }} -t ${{ secrets.DOCKER_HUB_USERNAME }}/autman:${{ env.RELEASE_VERSION }}-${{ matrix.arch }} -f Dockerfile .
         docker tag ${{ secrets.DOCKER_HUB_USERNAME }}/autman:${{ env.RELEASE_VERSION }}-${{ matrix.arch }} ${{ secrets.DOCKER_HUB_USERNAME }}/autman:latest-${{ matrix.arch }}
 
     - name: Push Docker image
