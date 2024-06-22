@@ -2,9 +2,7 @@ FROM ponycool/alpine-3.16
 
 WORKDIR /app
 
-RUN mkdir /lib64 && ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2 \
-    && ln -s /lib/libc.so.6 /usr/lib/libresolv.so.2 \
-    && apk add --no-cache libaio libnsl libc6-compat \
+RUN apk add --no-cache libaio libnsl libc6-compat \
     && mkdir /app \
     && cd /app \
     && apk update \
