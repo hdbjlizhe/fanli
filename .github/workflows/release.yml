@@ -10,17 +10,25 @@ jobs:
     strategy:
       matrix:
         arch: [amd64, arm64]
-        
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
 
     - name: Install jq
-      run: sudo apt-get install -y jq
+      run: sudo apt-get update && sudo apt-get install -y jq
+
+    - name: Debug Info
+      run: |
+        echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
+        echo "GITHUB_REF: $GITHUB_REF"
 
     - name: Download release .tar.gz
       run: |
-        RELEASE_URL=$(curl -s https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/latest | jq -r '.assets[] | select(.name | endswith("_${{ matrix.arch }}.tar.gz")) | .browser_download_url')
+        RELEASE_TAG=${GITHUB_REF/refs\/tags\//}
+        echo "RELEASE_TAG: $RELEASE_TAG"
+        RELEASE_URL=$(curl -s https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/tags/${RELEASE_TAG} | jq -r '.assets[] | select(.name | endswith("_${{ matrix.arch }}.tar.gz")) | .browser_download_url')
+        echo "Release URL: $RELEASE_URL"
         if [ -z "$RELEASE_URL" ]; then
           echo "No release asset found for architecture: ${{ matrix.arch }}"
           exit 1
