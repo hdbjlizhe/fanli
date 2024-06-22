@@ -9,8 +9,8 @@ RUN mkdir /lib64 && ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
     && cd /app \
     && apk update \
     && apk add curl jq wget tar ffmpeg python3 py3-pip icu-data-full nodejs npm php php-cli php-fpm php-mysqli php-json php-openssl php-curl go \
-    && pip3 install --disable-pip-version-check --root-user-action=ignore requests PyExecJS aiohttp bs4 sseclient-py sseclient -i https://pypi.tuna.tsinghua.edu.cn/simple \
-    && npm install --save axios request require crypto-js global-agent got@11 dotenv base-64 jquery node-rsa fs png-js cheerio MD5 md5 -g --registry=https://registry.npmmirror.com
+    && pip3 install --disable-pip-version-check --root-user-action=ignore requests PyExecJS aiohttp bs4 sseclient-py sseclient \
+    && npm install --save axios request require crypto-js global-agent got@11 dotenv base-64 jquery node-rsa fs png-js cheerio MD5 md5 -g
 
 # 复制入口脚本和解压后的文件
 COPY ./docker-entrypoint.sh /bin/
