@@ -16,10 +16,10 @@ RUN apk update \
     && apk add --no-cache curl jq wget tar ffmpeg python3 py3-pip icu-data-full nodejs npm php php-cli php-fpm php-mysqli php-json php-openssl php-curl go
 
 # 安装 Python 包
-RUN pip3 install --disable-pip-version-check --root-user-action=ignore requests PyExecJS aiohttp bs4 sseclient-py sseclient -i https://pypi.tuna.tsinghua.edu.cn/simple
+RUN pip3 install --disable-pip-version-check --root-user-action=ignore requests PyExecJS aiohttp bs4 sseclient-py sseclient
 
 # 安装 Node.js 包
-RUN npm install --save axios request require crypto-js global-agent got@11 dotenv base-64 jquery node-rsa fs png-js cheerio MD5 md5 -g --registry=https://registry.npmmirror.com
+RUN npm install --save axios request require crypto-js global-agent got@11 dotenv base-64 jquery node-rsa fs png-js cheerio MD5 md5 -g
 
 # 复制入口脚本和解压后的文件
 COPY ./docker-entrypoint.sh /bin/
