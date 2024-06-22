@@ -1,0 +1,65 @@
+name: Docker Image CI
+
+on:
+  workflow_dispatch: 
+  # schedule:
+  #   - cron: '0 0 * * *'
+    
+env:
+  DOCKERHUB_REPO: hdbjlizhe/autman
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get GitHub Release Tag
+        id: get_tag
+        run: |
+          API_RESPONSE=$(curl -s "https://api.github.com/repos/hdbjlizhe/fanli/releases/latest")
+          browser_download_url=$(echo "$API_RESPONSE" | jq -r '.assets[] | select(.name == "autMan_amd64.tar.gz").browser_download_url')
+          TAG_NAME=$(echo "$API_RESPONSE" | jq -r '.tag_name')
+          echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
+          echo "browser_download_url=$browser_download_url" >> $GITHUB_ENV
+          
+      - name: Check Docker Hub Tag
+        id: check_docker_hub_tag
+        run: |
+          DOCKERHUB_TAGS=$(curl -s "https://hub.docker.com/v2/repositories/${{ env.DOCKERHUB_REPO }}/tags/")
+          SECOND_TAG_NAME=$(echo "$DOCKERHUB_TAGS" | jq -r '.results[1].name')
+          echo $SECOND_TAG_NAME
+          echo ${{ env.TAG_NAME }}
+          if [ "$SECOND_TAG_NAME" = "${{ env.TAG_NAME }}" ]; then
+            echo "The second tag on Docker Hub matches TAG_NAME. Exiting..."
+            exit 78
+          fi
+          
+      - name: download tar 
+        run: |
+          curl -L -o autMan_amd64.tar.gz "$browser_download_url"
+          tar -zxvf autMan_amd64.tar.gz
+          rm -f autMan_amd64.tar.gz
+
+      - name: edit dockerfile
+        run: |
+          curl -O https://raw.githubusercontent.com/hansaes/autMan/master/Dockerfile && curl -O https://raw.githubusercontent.com/hansaes/autMan/master/docker-entrypoint.sh
+          ls 
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      - name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          push: true
+          platforms: |
+            linux/amd64
+            linux/arm64
+          tags: |
+            ${{ env.DOCKERHUB_REPO }}:latest
+            ${{ env.DOCKERHUB_REPO }}:${{ env.TAG_NAME }}
