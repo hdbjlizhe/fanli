@@ -1,4 +1,4 @@
-FROM --platform=$TARGETPLATFORM ponycool/alpine-3.16
+FROM ponycool/alpine-3.16
 
 WORKDIR /autMan
 
