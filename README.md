@@ -1,10 +1,10 @@
-- APP：https://github.com/hdbjlizhe/autAp/releases
-- 论坛：https://bbs.autman.cn
-- 教程：https://bbs.autman.cn/d/3-autmanzong-he-tie
-- QQ群：[735467280](https://qm.qq.com/q/Ih4JhU9Puo)
-- 微信：加微autManFather发“拉我进群”
-- QQ频道：https://pd.qq.com/s/baga1c6ip
-- TG群：https://t.me/+iV5g-_LoIM0yZDc1
-- KOOK：https://kook.top/mS1zry
-- Discord：https://discord.gg/jBe85G4XCv
-- 微信客服：https://work.weixin.qq.com/kfid/kfcc7c2e580425bb408
+- [autAPP](https://github.com/hdbjlizhe/autAp/releases)
+- [autMan论坛](https://bbs.autman.cn)
+- [autMan教程](https://bbs.autman.cn/d/3-autmanzong-he-tie)
+- [QQ群735467280](https://qm.qq.com/q/Ih4JhU9Puo)
+- autMan微信:加微autManFather发“拉我进群”
+- [autManQQ频道](https://pd.qq.com/s/baga1c6ip)
+- [autMan TG群](https://t.me/+iV5g-_LoIM0yZDc1)
+- [autMan KOOK](https://kook.top/mS1zry)
+- [autMan Discord](https://discord.gg/jBe85G4XCv)
+- [autMan微信客服](https://work.weixin.qq.com/kfid/kfcc7c2e580425bb408)
