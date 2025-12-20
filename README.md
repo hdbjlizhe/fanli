@@ -1,7 +1,7 @@
 - APP：https://github.com/hdbjlizhe/autAp/releases
 - 论坛：https://bbs.autman.cn
 - 教程：https://bbs.autman.cn/d/3-autmanzong-he-tie
-- QQ群：735467280
+- QQ群：[735467280](https://qm.qq.com/q/Ih4JhU9Puo)
 - 微信：加微autManFather发“拉我进群”
 - QQ频道：https://pd.qq.com/s/baga1c6ip
 - TG群：https://t.me/+iV5g-_LoIM0yZDc1
